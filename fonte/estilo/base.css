@@ -35,7 +35,7 @@
 /* cor de cada parte */
 body.p1 { --c: #0f766e; --c-dark: #0b4f4a; --c-mid: #2a9d8f; --c-light: #e3f4f1; --c-tint: #f1faf8; --c-2: #e9a23b; }
 body.p2 { --c: #4d7c0f; --c-dark: #355708; --c-mid: #6f9f2a; --c-light: #edf5df; --c-tint: #f6faef; --c-2: #d9663b; }
-body.p3 { --c: #b45309; --c-dark: #7c3a0a; --c-mid: #d97a2b; --c-light: #fbefe1; --c-tint: #fdf7f0; --c-2: #2f6f8f; }
+body.p3 { --c: #b45309; --c-dark: #7c3a0a; --c-mid: #d97a2b; --c-light: #fbefe1; --c-tint: #fdf7f0; --c-2: #2f6f8f;  --c-cov: #c6e6f5; }
 body.p4 { --c: #1d4ed8; --c-dark: #1e3a8a; --c-mid: #3b6ff0; --c-light: #e4ecfd; --c-tint: #f3f6fe; --c-2: #f2b33d; }
 
 /* ---------- Página ---------- */
@@ -93,7 +93,7 @@ body {
 }
 .cover .titles { position: absolute; left: 20mm; right: 20mm; top: 88mm; }
 .cover .kicker {
-  font: 700 9pt/1 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--c-2);
+  font: 700 9pt/1 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--c-cov, var(--c-2));
   margin-bottom: 6mm;
 }
 .cover h1.ctitle {
@@ -121,7 +121,7 @@ body {
 }
 .cover .inside h4 {
   font: 700 7.4pt/1 var(--sans); letter-spacing: .22em; text-transform: uppercase;
-  color: var(--c-2); margin: 0 0 3.2mm;
+  color: var(--c-cov, var(--c-2)); margin: 0 0 3.2mm;
 }
 .cover .inside ol { margin: 0; padding: 0; list-style: none; counter-reset: ci; }
 .cover .inside li {
@@ -130,7 +130,7 @@ body {
 }
 .cover .inside li::before {
   content: counter(ci, decimal-leading-zero); position: absolute; left: 0; top: 1.75mm;
-  font: 700 7.6pt/1.45 var(--sans); color: var(--c-2);
+  font: 700 7.6pt/1.45 var(--sans); color: var(--c-cov, var(--c-2));
 }
 .cover .foot {
   position: absolute; left: 20mm; right: 20mm; bottom: 15mm;
@@ -416,10 +416,10 @@ figcaption .cred { display: block; margin-top: .8mm; color: var(--muted); font-s
 
 /* ---------- Resumo e encerramento ---------- */
 .recap { background: var(--c-dark); color: #fff; border-radius: 3mm; padding: 5mm 6mm 3.6mm; margin: 4mm 0 6mm; break-inside: avoid; }
-.recap h4 { margin: 0 0 3mm; color: var(--c-2); font: 800 7.6pt/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; }
+.recap h4 { margin: 0 0 3mm; color: var(--c-cov, var(--c-2)); font: 800 7.6pt/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; }
 .recap ul { margin: 0; padding-left: 5mm; }
 .recap li { font: 400 9.1pt/1.5 var(--sans); color: rgba(255,255,255,.94); margin-bottom: 1.4mm; }
-.recap li::marker { color: var(--c-2); }
+.recap li::marker { color: var(--c-cov, var(--c-2)); }
 .recap strong, .recap b { color: #fff; }
 
 .anki {

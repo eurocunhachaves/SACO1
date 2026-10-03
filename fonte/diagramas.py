@@ -707,6 +707,304 @@ def build_p2():
     p2_diderichsen(); p2_lalonde(); p2_iceberg(); p2_almaata(); p2_ottawa(); p2_conferencias(); p2_pnps_temas(); p2_mapa()
 
 
+# =========================================================================== P3
+P3_PERIODOS = [
+    ("Colônia e Império", "1500–1889", "cd", ["miasmas e quarentenas", "lazareto (alvará de 1810)", "Santas Casas, medicina liberal"]),
+    ("República Velha", "1889–1930", "c", ["Oswaldo Cruz (1903)", "Revolta da Vacina (1904)", "DNSP (1920) · CAPs (1923)"]),
+    ("Era Vargas", "1930–1945", "cm", ["MESP (1930)", "IAPs (1933)", "SESP (1942)"]),
+    ("Período democrático", "1945–1963", "c", ["Ministério da Saúde (1953)", "IAPs ampliam a assistência", "LOPS (1960)"]),
+    ("Regime Militar", "1964–1984", "cd", ["INPS (1966) · MPAS (1974)", "SINPAS/INAMPS (1977)", "PIASS (1976) · AIS (1983)"]),
+    ("Nova República", "1985–1988", "c2", ["8ª CNS (1986)", "SUDS (1987)", "CF 1988: nasce o SUS"]),
+]
+
+
+def p3_linha():
+    s = SVG(680, 262)
+    n = len(P3_PERIODOS)
+    x0, gap = 14, 5
+    bw = (652 - gap * (n - 1)) / n
+    xs = [x0 + i * (bw + gap) for i in range(n)]
+    # modelos dominantes (faixas superiores)
+    def faixa(xa, xb, y, txt, cls, tcls):
+        s.rect(xa, y, xb - xa, 24, 12, cls)
+        ctext(s, (xa + xb) / 2, y + 16, txt, 10.2, 800, tcls, ls=0.6)
+    s.text(x0, 14, "MODELO DOMINANTE", 8.6, 800, "mut", ls=1.4)
+    faixa(xs[1], xs[3] + bw * 0.62, 22, "SANITARISMO CAMPANHISTA", "cl", "cd")
+    faixa(xs[3] + bw * 0.38, xs[5] + bw * 0.55, 52, "MÉDICO-ASSISTENCIAL PRIVATISTA", "c", "w")
+    s.arrow(xs[5] + bw * 0.58, 64, xs[5] + bw - 4, 64, "sc", "c", 2, 7)
+    s.text(xs[5] + bw - 2, 48, "SUS", 10, 850, "c2", "end", ls=0.8)
+    # faixas dos períodos
+    yb = 88
+    for i, (nome, anos, cls, evs) in enumerate(P3_PERIODOS):
+        x = xs[i]
+        s.rect(x, yb, bw, 58, 10, cls)
+        ctext(s, x + bw / 2, yb + 22, nome, 11.2, 800, "w", width=bw - 12, lh=1.15)
+        nl = len(wrap(nome, bw - 12, 11.2, 800))
+        ctext(s, x + bw / 2, yb + 22 + nl * 12.9 + 2, anos, 9.6, 600, "w")
+        # eventos
+        for k, ev in enumerate(evs):
+            ctext(s, x + bw / 2, yb + 82 + k * 30, ev, 9.6, 600 if k == 0 else 500, "ink" if k == 0 else "ink2", width=bw - 6, lh=1.2)
+        s.line(x + bw / 2, yb + 60, x + bw / 2, yb + 68, "scl", 1.6)
+    s.text(666, 256, "Períodos fora de escala, com as datas usadas nos slides da Aula 3.", 8.8, 400, "mut", "end", italic=True)
+    s.save("p3-linha.svg")
+
+
+def p3_dicotomia():
+    s = SVG(680, 364)
+    L, R, cw = 14, 380, 286
+    cols = [
+        (L, "c2", "AÇÕES PREVENTIVAS E COLETIVAS", "Saúde pública", "shield-plus",
+         [("1903", "Oswaldo Cruz na Saúde Pública"), ("1920", "DNSP, com Carlos Chagas"),
+          ("1930", "Ministério da Educação e Saúde"), ("1942", "SESP, com apoio dos EUA"),
+          ("1953", "Ministério da Saúde")],
+         "Sanitarismo campanhista", "campanhas contra doenças específicas, polícia sanitária, direção centralizada"),
+        (R, "c", "AÇÕES CURATIVAS E INDIVIDUAIS", "Medicina previdenciária", "stethoscope",
+         [("1923", "CAPs, por empresa"), ("1933", "IAPs, por categoria profissional"),
+          ("1966", "INPS unifica os institutos"), ("1974", "MPAS, FAS e PPA"),
+          ("1977", "INAMPS (SINPAS)")],
+         "Médico-assistencial privatista", "hospital, especialista, compra de serviços privados, exclusão de quem não contribuía"),
+    ]
+    for (x, cls, head, sub, ic, items, model, mdesc) in cols:
+        s.rect(x, 8, cw, 50, 12, cls)
+        s.icon(ic, x + 14, 19, 28, "sw", 2)
+        s.text(x + 52, 29, head, 10.2, 800, "w", ls=0.6)
+        s.text(x + 52, 47, sub, 12.6, 700, "w")
+        y = 70
+        for (yr, t) in items:
+            s.rect(x, y, cw, 28, 8, "ct")
+            s.rect(x, y, 5, 28, 2.5, cls)
+            s.text(x + 16, y + 18.5, yr, 10, 800, "cd" if cls == "c" else "c2")
+            s.text(x + 66, y + 18.5, t, 10.2, 500, "ink", width=cw - 74)
+            y += 32
+        s.rect(x, y + 2, cw, 58, 12, "cl")
+        s.text(x + 14, y + 22, model, 12.2, 800, "cd")
+        s.text(x + 14, y + 39, mdesc, 9.8, 500, "ink2", width=cw - 26)
+    # dicotomia no meio
+    mx = (L + cw + R) / 2
+    s.arrow(L + cw + 8, 136, R - 8, 136, "scd", "cd", 2.2, 8, both=True)
+    s.text(mx, 126, "DICOTOMIA", 9.4, 850, "cd", "middle", ls=1)
+    s.text(mx, 154, ["dois", "ministérios,", "dois", "orçamentos"], 9, 500, "mut", "middle", lh=1.2)
+    # convergência no SUS
+    yb = 318
+    for (x, cls, *_r) in cols:
+        s.arrow(x + cw / 2, 292, x + cw / 2, yb - 3, "scm", "cm", 2.4, 8)
+    s.rect(110, yb, 460, 40, 20, "cd")
+    ctext(s, 340, yb + 17, "SUS (1988): UM SISTEMA ÚNICO", 11.4, 850, "w", ls=0.6)
+    ctext(s, 340, yb + 31, "integralidade junta prevenir e curar", 9.6, 500, "w")
+    s.save("p3-dicotomia.svg")
+
+
+def p3_previdencia(hide=None, name="p3-previdencia.svg"):
+    s = SVG(680, 330)
+    nodes = [
+        ("caps", "CAPs", "1923", "building-2", "Lei Eloy Chaves",
+         [("Organização", "por empresa"), ("Financiamento", "bipartite: empregados e empresa"), ("Gestão", "privada, colegiada")],
+         "ferroviários; depois portuários e marítimos"),
+        ("iaps", "IAPs", "1933", "users", "Era Vargas",
+         [("Organização", "por categoria profissional"), ("Financiamento", "tripartite: + Estado"), ("Gestão", "semipública: Estado nomeia o presidente")],
+         "marítimos, comerciários, bancários, industriários..."),
+        ("inps", "INPS", "1966", "landmark", "Regime Militar",
+         [("Organização", "instituto único, benefícios iguais"), ("Financiamento", "contribuições sobre a folha"), ("Gestão", "centralizada; fim da tripartite")],
+         "trabalhador urbano com carteira; rurais (1971), domésticas (1972), autônomos (1973)"),
+    ]
+    gap, x0 = 30, 14
+    w = (652 - 2 * gap) / 3
+    for i, (key, nome, ano, ic, era, rows, cob) in enumerate(nodes):
+        x = x0 + i * (w + gap)
+        cls = ["cm", "c", "cd"][i]
+        s.rect(x, 10, w, 312, 14, "ct")
+        s.rect(x, 10, w, 56, 14, cls)
+        s.rect(x, 50, w, 16, 0, cls)
+        s.icon(ic, x + 14, 22, 30, "sw", 2)
+        s.text(x + 54, 40, nome, 19, 850, "w")
+        s.text(x + w - 14, 40, ano, 15, 700, "w", "end")
+        s.text(x + 54, 57, era, 9.4, 600, "w")
+        y = 88
+        for (k, v) in rows:
+            s.text(x + 14, y, k.upper(), 8.4, 800, "c" if cls != "c" else "cd", ls=0.9)
+            if hide == key:
+                s.rect(x + 12, y + 6, w - 24, 22, 6, "c2")
+                ctext(s, x + w / 2, y + 21, "?", 13, 850, "w")
+            else:
+                s.text(x + 14, y + 17, v, 11.2, 650, "ink", width=w - 26)
+            y += 56
+        s.line(x + 14, 250, x + w - 14, 250, "sr", 1)
+        s.text(x + 14, 266, "QUEM ERA COBERTO", 8.2, 800, "mut", ls=0.9)
+        s.text(x + 14, 281, cob, 9.4, 500, "ink2", width=w - 24, lh=1.2)
+        if i < 2:
+            ax = x + w + 4
+            s.arrow(ax, 160, ax + gap - 8, 160, "scd", "cd", 2.4, 8)
+    s.save(name)
+
+
+def p3_sinpas():
+    s = SVG(680, 252)
+    s.rect(250, 8, 180, 40, 10, "cd")
+    ctext(s, 340, 25, "MPAS (1974)", 12.4, 850, "w")
+    ctext(s, 340, 40, "Ministério da Previdência e Assistência Social", 7.8, 500, "w")
+    s.line(340, 48, 340, 64, "scd", 2)
+    s.rect(196, 64, 288, 34, 10, "c")
+    ctext(s, 340, 86, "SINPAS (1977, Lei 6.439)", 12, 800, "w")
+    org = [("INPS", "concede benefícios (aposentadorias, pensões)", True),
+           ("INAMPS", "assistência médica: rede própria, contratada e conveniada", True),
+           ("IAPAS", "arrecadação e gestão financeira", False),
+           ("LBA", "assistência social", False),
+           ("FUNABEM", "bem-estar do menor", False),
+           ("DATAPREV", "processamento de dados", False),
+           ("CEME", "medicamentos", False)]
+    n = len(org)
+    w, gap = 88, 6
+    x0 = (680 - (n * w + (n - 1) * gap)) / 2
+    yb = 128
+    s.line(x0 + w / 2, 114, x0 + (n - 1) * (w + gap) + w / 2, 114, "scl", 2)
+    s.line(340, 98, 340, 114, "scl", 2)
+    for i, (sig, d, hi) in enumerate(org):
+        x = x0 + i * (w + gap)
+        s.line(x + w / 2, 114, x + w / 2, yb, "scl", 2)
+        s.rect(x, yb, w, 112, 10, "c2" if hi else "ct")
+        ctext(s, x + w / 2, yb + 22, sig, 11.4 if len(sig) < 7 else 10.2, 850, "w" if hi else "cd")
+        ctext(s, x + w / 2, yb + 42, d, 9.2, 500, "w" if hi else "ink2", width=w - 10, lh=1.22)
+    s.save("p3-sinpas.svg")
+
+
+def p3_privatista():
+    s = SVG(680, 330)
+    # nós
+    def node(x, y, w, h, title, desc, cls="ct", tcls="cd", dcls="ink2", ic=None):
+        s.rect(x, y, w, h, 12, cls)
+        tx = x + 14
+        if ic:
+            s.icon(ic, x + 12, y + 12, 22, "sc" if cls in ("ct", "cl") else "sw", 2)
+            tx = x + 42
+        s.text(tx, y + 27, title, 11.6, 800, tcls, width=w - (tx - x) - 10)
+        nl = len(wrap(title, w - (tx - x) - 10, 11.6, 800))
+        s.text(x + 14, y + 27 + nl * 14.8 + 2, desc, 9.6, 500, dcls, width=w - 26, lh=1.25)
+    node(14, 14, 200, 86, "Trabalhadores e empresas", "contribuem sobre a folha de salários", "ct", "cd", "ink2", "briefcase")
+    node(262, 14, 200, 86, "INPS / INAMPS", "o fundo da previdência paga a assistência dos segurados", "c", "w", "w", "landmark")
+    node(510, 14, 156, 86, "Excluídos", "sem carteira: Santas Casas, saúde pública ou pagar do bolso", "cl", "cd", "ink2", "user-x")
+    node(262, 150, 200, 92, "Hospitais e clínicas privados", "contratados ou conveniados, pagos por procedimento (unidades de serviço)", "cd", "w", "w", "hospital")
+    node(14, 150, 200, 92, "FAS (1974)", "empréstimos com juros subsidiados para construir e reformar hospitais privados", "ct", "cd", "ink2", "hand-coins")
+    node(510, 150, 156, 92, "PPA (1974)", "urgência em qualquer serviço: amplia os contratos privados", "ct", "cd", "ink2", "siren")
+    s.arrow(214, 57, 258, 57, "scd", "cd", 2.4, 8)
+    s.arrow(362, 102, 362, 146, "scd", "cd", 2.4, 8)
+    s.text(372, 128, "compra serviços", 9.4, 600, "cd")
+    s.arrow(214, 196, 258, 196, "scd", "cd", 2.4, 8)
+    s.arrow(510, 196, 466, 196, "scd", "cd", 2.4, 8)
+    # resultado
+    s.rect(14, 268, 652, 52, 12, "c2")
+    s.icon("trending-up", 28, 282, 24, "sw", 2)
+    s.text(64, 289, "Resultado: mais procedimentos, custos crescentes e fraudes", 12, 800, "w")
+    s.text(64, 307, "O dinheiro público financiou a expansão privada; a crise da previdência explode no início dos anos 1980.", 9.6, 500, "w")
+    s.arrow(362, 244, 362, 264, "scd", "cd", 2.4, 8)
+    s.save("p3-privatista.svg")
+
+
+def p3_reforma():
+    s = SVG(680, 266)
+    steps = [("1976", "CEBES", "revista Saúde em Debate"),
+             ("1979", "ABRASCO", "e o simpósio da Câmara"),
+             ("1983", "AIS", "integra MS, INAMPS e secretarias"),
+             ("1986", "8ª CNS", "marco da Reforma Sanitária"),
+             ("1987", "SUDS", "convênios e estadualização"),
+             ("1988", "CF 1988", "saúde: direito de todos"),
+             ("1990", "Leis 8.080 e 8.142", "o SUS regulamentado")]
+    n = len(steps)
+    x0, w, gap = 14, 88, 6
+    base = 222
+    for i, (yr, t, d) in enumerate(steps):
+        x = x0 + i * (w + gap)
+        h = 86 + i * 20
+        y = base - h
+        cls = "c2" if t == "8ª CNS" else ["cl", "cl", "cm", "c2", "c", "cd", "cd"][i]
+        tcls = "cd" if cls == "cl" else "w"
+        s.rect(x, y, w, h, 10, cls)
+        ctext(s, x + w / 2, y + 20, yr, 12.4, 850, tcls)
+        ctext(s, x + w / 2, y + 38, t, 10.4 if len(t) < 10 else 9.4, 800, tcls, width=w - 8, lh=1.15)
+        nl = len(wrap(t, w - 8, 10.4 if len(t) < 10 else 9.4, 800))
+        ctext(s, x + w / 2, y + 38 + nl * 12.5 + 4, d, 8.6, 500, tcls, width=w - 10, lh=1.2)
+    # selo do marco
+    i8 = 3
+    xm = x0 + i8 * (w + gap) + w / 2
+    ym = base - (86 + i8 * 20) - 22
+    s.rect(xm - 34, ym - 12, 68, 20, 10, "cd")
+    ctext(s, xm, ym + 2, "MARCO", 9.2, 850, "w", ls=1.2)
+    s.line(x0, base + 6, x0 + n * (w + gap) - gap, base + 6, "scd", 2)
+    s.text(x0, base + 26, "Atores: departamentos de medicina preventiva das universidades, CEBES, ABRASCO, sindicatos, movimentos populares,", 9.4, 500, "ink2")
+    s.text(x0, base + 39, "estudantes, intelectuais e parlamentares. Universalização, integralidade e descentralização eram as bandeiras.", 9.4, 500, "ink2")
+    s.save("p3-reforma.svg")
+
+
+def p3_endemia():
+    s = SVG(680, 214)
+    gx0, gx1, gy0, gy1 = 56, 470, 18, 178
+    s.line(gx0, gy1, gx1, gy1, "sm", 1.4)
+    s.line(gx0, gy0, gx0, gy1, "sm", 1.4)
+    s.text(gx1, gy1 + 18, "tempo", 9.6, 600, "mut", "end")
+    s.text(18, 24, ["nº de", "casos"], 9.6, 600, "mut")
+    # faixa endêmica
+    lo, hi = 132, 150
+    s.rect(gx0 + 2, lo, gx1 - gx0 - 4, hi - lo, 0, "cl")
+    s.line(gx0 + 2, lo - 14, gx1, lo - 14, "s2", 1.4, 'stroke-dasharray="5 4"')
+    s.text(gx0 + 8, lo - 19, "limiar epidêmico", 9, 700, "c2")
+    s.text(gx0 + 8, hi + 14, "nível endêmico (o esperado)", 9, 700, "cd")
+    pts = [(60, 142), (84, 138), (104, 145), (126, 136), (148, 143), (170, 139), (192, 146), (214, 137),
+           (236, 142), (254, 130), (270, 96), (284, 48), (298, 34), (312, 58), (326, 102), (342, 132),
+           (360, 141), (382, 137), (404, 144), (426, 139), (448, 143), (466, 138)]
+    d = "M" + " L".join(f"{x},{y}" for x, y in pts)
+    s.path(d, "scd nf", 2.6)
+    s.text(306, 26, "epidemia", 11, 800, "cd")
+    # legenda à direita
+    lx = 492
+    defs = [("Endemia", "casos em nível constante e esperado numa região (ex.: malária na Amazônia)"),
+            ("Epidemia", "aumento claro acima do esperado num período e lugar"),
+            ("Surto", "epidemia restrita a um local pequeno"),
+            ("Pandemia", "epidemia que atinge vários países ou continentes")]
+    y = 30
+    for (t, d2) in defs:
+        s.text(lx, y, t, 11, 800, "cd")
+        y += 14
+        y += s.text(lx, y, d2, 9.4, 500, "ink2", width=176, lh=1.22) + 6
+    s.save("p3-endemia.svg")
+
+
+def p3_mapa():
+    s = SVG(680, 346)
+    cx, cy = 340, 173
+    bw, bh = 238, 96
+    branches = [
+        ("Colônia e Império", ["• miasmas, quarentena, lazaretos", "• Santas Casas para os pobres", "• medicina liberal para a elite"], "L", 50, "cd"),
+        ("República Velha", ["• Oswaldo Cruz: polícia sanitária", "• Revolta da Vacina (1904)", "• DNSP (1920) · CAPs (1923)"], "L", 173, "c"),
+        ("Era Vargas e 1945–64", ["• MESP (1930) · IAPs (1933)", "• SESP (1942)", "• Ministério da Saúde (1953)"], "L", 296, "cm"),
+        ("Regime Militar", ["• INPS (1966): unifica os IAPs", "• FAS e PPA (1974): setor privado", "• SINPAS/INAMPS (1977)"], "R", 50, "cd"),
+        ("Crise e reformas", ["• PIASS (1976) · PREV-SAÚDE (1980)", "• CONASP (1981)", "• AIS (1983)"], "R", 173, "c"),
+        ("Reforma Sanitária", ["• CEBES (1976) · ABRASCO (1979)", "• 8ª CNS (1986): o marco", "• SUDS (1987) → CF 1988"], "R", 296, "c2"),
+    ]
+    for (t, items, side, y, c) in branches:
+        x = 14 + bw if side == "L" else 680 - 14 - bw
+        s.path(f"M{cx},{cy} C{(cx+x)/2},{cy} {(cx+x)/2},{y} {x},{y}", "scl nf", 3)
+    s.circle(cx, cy, 64, "cd")
+    ctext(s, cx, cy - 8, "ANTES", 12.4, 800, "w", ls=1.4)
+    ctext(s, cx, cy + 10, "DO SUS", 12.4, 800, "w", ls=1.4)
+    ctext(s, cx, cy + 30, "1500–1988", 10.4, 700, "cl")
+    for (t, items, side, y, c) in branches:
+        bx = 14 if side == "L" else 680 - 14 - bw
+        s.rect(bx, y - bh / 2, bw, bh, 12, "ct")
+        s.rect(bx, y - bh / 2, bw, 28, 12, c)
+        s.rect(bx, y - bh / 2 + 16, bw, 12, 0, c)
+        ctext(s, bx + bw / 2, y - bh / 2 + 19, t, 12.4, 800, "w")
+        for k, it in enumerate(items):
+            if tw(it, 10.8, 500) > bw - 24:
+                print("  aviso: linha longa no mapa:", it)
+            s.text(bx + 14, y - 4 + k * 18, it, 10.8, 500, "ink")
+    s.save("p3-mapa.svg")
+
+
+def build_p3():
+    p3_linha(); p3_dicotomia(); p3_previdencia(); p3_sinpas(); p3_privatista(); p3_reforma(); p3_endemia(); p3_mapa()
+    for k in ("caps", "iaps", "inps"):
+        p3_previdencia(hide=k, name=f"p3-previdencia-oculta-{k}.svg")
+
+
 if __name__ == "__main__":
     alvo = sys.argv[1:] or ["p1", "p2", "p3", "p4"]
     for a in alvo:

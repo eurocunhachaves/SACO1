@@ -1,0 +1,40 @@
+<svg class="dg" viewBox="0 0 680 330" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif"><rect x="14.0" y="14.0" width="200.0" height="86.0" rx="12" class="ct" /><g transform="translate(26.0,26.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+  <rect width="20" height="14" x="2" y="6" rx="2" />
+</g><text x="56.0" y="41.0" font-size="11.6" font-weight="800" class="cd" text-anchor="start"><tspan x="56.0" dy="0.0">Trabalhadores e</tspan><tspan x="56.0" dy="14.8">empresas</tspan></text><text x="28.0" y="72.6" font-size="9.6" font-weight="500" class="ink2" text-anchor="start"><tspan x="28.0" dy="0.0">contribuem sobre a folha de salários</tspan></text><rect x="262.0" y="14.0" width="200.0" height="86.0" rx="12" class="c" /><g transform="translate(274.0,26.0) scale(0.9167)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10 18v-7" />
+  <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" />
+  <path d="M14 18v-7" />
+  <path d="M18 18v-7" />
+  <path d="M3 22h18" />
+  <path d="M6 18v-7" />
+</g><text x="304.0" y="41.0" font-size="11.6" font-weight="800" class="w" text-anchor="start"><tspan x="304.0" dy="0.0">INPS / INAMPS</tspan></text><text x="276.0" y="57.8" font-size="9.6" font-weight="500" class="w" text-anchor="start"><tspan x="276.0" dy="0.0">o fundo da previdência paga a</tspan><tspan x="276.0" dy="12.0">assistência dos segurados</tspan></text><rect x="510.0" y="14.0" width="156.0" height="86.0" rx="12" class="cl" /><g transform="translate(522.0,26.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <circle cx="9" cy="7" r="4" />
+  <line x1="17" x2="22" y1="8" y2="13" />
+  <line x1="22" x2="17" y1="8" y2="13" />
+</g><text x="552.0" y="41.0" font-size="11.6" font-weight="800" class="cd" text-anchor="start"><tspan x="552.0" dy="0.0">Excluídos</tspan></text><text x="524.0" y="57.8" font-size="9.6" font-weight="500" class="ink2" text-anchor="start"><tspan x="524.0" dy="0.0">sem carteira: Santas Casas,</tspan><tspan x="524.0" dy="12.0">saúde pública ou pagar do</tspan><tspan x="524.0" dy="12.0">bolso</tspan></text><rect x="262.0" y="150.0" width="200.0" height="92.0" rx="12" class="cd" /><g transform="translate(274.0,162.0) scale(0.9167)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 7v4" />
+  <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+  <path d="M14 9h-4" />
+  <path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" />
+  <path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" />
+</g><text x="304.0" y="177.0" font-size="11.6" font-weight="800" class="w" text-anchor="start"><tspan x="304.0" dy="0.0">Hospitais e clínicas</tspan><tspan x="304.0" dy="14.8">privados</tspan></text><text x="276.0" y="208.6" font-size="9.6" font-weight="500" class="w" text-anchor="start"><tspan x="276.0" dy="0.0">contratados ou conveniados, pagos</tspan><tspan x="276.0" dy="12.0">por procedimento (unidades de</tspan><tspan x="276.0" dy="12.0">serviço)</tspan></text><rect x="14.0" y="150.0" width="200.0" height="92.0" rx="12" class="ct" /><g transform="translate(26.0,162.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" />
+  <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" />
+  <path d="m2 16 6 6" />
+  <circle cx="16" cy="9" r="2.9" />
+  <circle cx="6" cy="5" r="3" />
+</g><text x="56.0" y="177.0" font-size="11.6" font-weight="800" class="cd" text-anchor="start"><tspan x="56.0" dy="0.0">FAS (1974)</tspan></text><text x="28.0" y="193.8" font-size="9.6" font-weight="500" class="ink2" text-anchor="start"><tspan x="28.0" dy="0.0">empréstimos com juros subsidiados</tspan><tspan x="28.0" dy="12.0">para construir e reformar hospitais</tspan><tspan x="28.0" dy="12.0">privados</tspan></text><rect x="510.0" y="150.0" width="156.0" height="92.0" rx="12" class="ct" /><g transform="translate(522.0,162.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 18v-6a5 5 0 1 1 10 0v6" />
+  <path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z" />
+  <path d="M21 12h1" />
+  <path d="M18.5 4.5 18 5" />
+  <path d="M2 12h1" />
+  <path d="M12 2v1" />
+  <path d="m4.929 4.929.707.707" />
+  <path d="M12 12v6" />
+</g><text x="552.0" y="177.0" font-size="11.6" font-weight="800" class="cd" text-anchor="start"><tspan x="552.0" dy="0.0">PPA (1974)</tspan></text><text x="524.0" y="193.8" font-size="9.6" font-weight="500" class="ink2" text-anchor="start"><tspan x="524.0" dy="0.0">urgência em qualquer</tspan><tspan x="524.0" dy="12.0">serviço: amplia os contratos</tspan><tspan x="524.0" dy="12.0">privados</tspan></text><line x1="214.0" y1="57.0" x2="251.6" y2="57.0" class="scd nf" stroke-width="2.4" stroke-linecap="round" /><polygon points="258.0,57.0 250.0,52.6 250.0,61.4" class="cd"/><line x1="362.0" y1="102.0" x2="362.0" y2="139.6" class="scd nf" stroke-width="2.4" stroke-linecap="round" /><polygon points="362.0,146.0 366.4,138.0 357.6,138.0" class="cd"/><text x="372.0" y="128.0" font-size="9.4" font-weight="600" class="cd" text-anchor="start"><tspan x="372.0" dy="0.0">compra serviços</tspan></text><line x1="214.0" y1="196.0" x2="251.6" y2="196.0" class="scd nf" stroke-width="2.4" stroke-linecap="round" /><polygon points="258.0,196.0 250.0,191.6 250.0,200.4" class="cd"/><line x1="510.0" y1="196.0" x2="472.4" y2="196.0" class="scd nf" stroke-width="2.4" stroke-linecap="round" /><polygon points="466.0,196.0 474.0,200.4 474.0,191.6" class="cd"/><rect x="14.0" y="268.0" width="652.0" height="52.0" rx="12" class="c2" /><g transform="translate(28.0,282.0) scale(1.0000)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 7h6v6" />
+  <path d="m22 7-8.5 8.5-5-5L2 17" />
+</g><text x="64.0" y="289.0" font-size="12" font-weight="800" class="w" text-anchor="start"><tspan x="64.0" dy="0.0">Resultado: mais procedimentos, custos crescentes e fraudes</tspan></text><text x="64.0" y="307.0" font-size="9.6" font-weight="500" class="w" text-anchor="start"><tspan x="64.0" dy="0.0">O dinheiro público financiou a expansão privada; a crise da previdência explode no início dos anos 1980.</tspan></text><line x1="362.0" y1="244.0" x2="362.0" y2="257.6" class="scd nf" stroke-width="2.4" stroke-linecap="round" /><polygon points="362.0,264.0 366.4,256.0 357.6,256.0" class="cd"/></svg>
