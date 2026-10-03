@@ -20,7 +20,8 @@ async def main(out, width, names):
         b = await p.chromium.launch()
         pg = await b.new_page(device_scale_factor=2, viewport={"width": width // 2, "height": 800})
         for name in names:
-            parte = name[1] if name.startswith("p") and name[1].isdigit() else "1"
+            base = Path(name).name
+            parte = base[1] if base.startswith("p") and base[1].isdigit() else "1"
             src = (FONTE / "svg" / name).read_text() if not name.startswith("/") else Path(name).read_text()
             html = (f'<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="{css}">'
                     f'<style>@page{{margin:0}} body{{margin:0;background:#fff}} #w{{width:{width//2}px;padding:10px;box-sizing:border-box}}</style>'

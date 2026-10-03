@@ -1,0 +1,824 @@
+# Aula 4 · O SUS na CF88 (formato descrito em aula1.yaml)
+aula: 4
+cards:
+
+# ---------------------------------------------------------------- 1 · Sistema de saúde e sistema de serviços
+- id: sistema-oms
+  tag: sistemas
+  tema: "Sistema de saúde"
+  cloze: "Sistema de saúde (OMS, 2000): um conjunto coerente de diversos componentes {{c1::inter-relacionados}}, {{c2::setoriais e intersetoriais}}, que {{c3::produzem efeito na população}}."
+  fonte: "Parte 4 · seção 1 · slide 3"
+
+- id: sistema-servicos
+  tag: sistemas
+  tema: "Sistema de saúde"
+  frente: "Qual a diferença entre sistema de saúde e sistema de serviços de saúde?"
+  verso: "O sistema de saúde inclui **tudo o que produz efeito na saúde**, dentro e fora do setor. O sistema de serviços é a **rede de unidades e profissionais**, uma parte dele."
+  img: p4-sistemas.svg
+  fonte: "Parte 4 · seção 1 · slides 3 e 4"
+
+- id: saude-social
+  tag: sistemas
+  tema: "Sistema de saúde"
+  frente: "Uma UBS que trabalha junto com a escola do bairro atua em qual sistema? Que estratégia é essa?"
+  verso: "No **sistema de saúde**, e não só no de serviços. É a **intersetorialidade**."
+  extra: "O slide 4 resume: a saúde é social."
+  fonte: "Parte 4 · seção 1 · slide 4"
+
+- id: componentes
+  tag: sistemas
+  tema: "Sistema de serviços"
+  cloze: "Os quatro componentes do sistema de serviços de saúde: {{c1::Estado}}, {{c2::prestadores de serviços}}, {{c3::seguradoras e planos de saúde}} e {{c4::população}}."
+  img: p4-componentes.svg
+  fonte: "Parte 4 · seção 1 · slide 5"
+
+- id: intermediario
+  tag: sistemas
+  tema: "Sistema de serviços"
+  frente: "Entre quem presta o serviço e quem o recebe, quem paga a conta?"
+  verso: "O **Estado**, com dinheiro público, ou a **seguradora**, com dinheiro privado."
+  fonte: "Parte 4 · seção 1 · slide 5"
+
+- id: ans
+  tag: sistemas
+  tema: "Saúde suplementar"
+  frente: "Que órgão regula os planos de saúde no Brasil?"
+  verso: "A **ANS** (Agência Nacional de Saúde Suplementar), criada pela Lei nº 9.961/2000."
+  fonte: "Parte 4 · seção 1"
+
+- id: so-sus
+  tag: sistemas
+  tema: "Saúde suplementar"
+  frente: "Em 2019, quantos brasileiros dependiam só do SUS para a assistência?"
+  verso: "Cerca de **7 em cada 10** (Pesquisa Nacional de Saúde, IBGE)."
+  fonte: "Parte 4 · seção 1"
+
+# ---------------------------------------------------------------- 2 · Proteção social
+- id: protecao-definicao
+  tag: protecao
+  tema: "Proteção social"
+  frente: "O que é um sistema de proteção social?"
+  verso: "Mecanismos que a sociedade cria para proteger as pessoas contra o que limita suas necessidades fundamentais: **doença, velhice, invalidez, desemprego e pobreza**."
+  fonte: "Parte 4 · seção 2 · slide 6"
+
+- id: protecao-atrelado
+  tag: protecao
+  tema: "Proteção social"
+  frente: "Qual é a relação entre sistema de saúde e proteção social (slide 8)?"
+  verso: "O sistema de saúde está **atrelado** ao de proteção social: quem protege só quem trabalha terá saúde só para quem trabalha."
+  fonte: "Parte 4 · seção 2 · slide 8"
+
+- id: modelo-oculta-seguridade
+  tag: protecao
+  tema: "Modelos de proteção social"
+  frente: "Que modelo de proteção social tem estas características?"
+  oculta: p4-protecao-oculta-seguridade.svg
+  revelada: p4-protecao.svg
+  verso: "**Seguridade social** (base: cidadania)."
+  fonte: "Parte 4 · seção 2 · slides 8 e 9"
+
+- id: modelo-oculta-seguro
+  tag: protecao
+  tema: "Modelos de proteção social"
+  frente: "Que modelo de proteção social tem estas características?"
+  oculta: p4-protecao-oculta-seguro.svg
+  revelada: p4-protecao.svg
+  verso: "**Seguro social** (base: trabalho)."
+  fonte: "Parte 4 · seção 2 · slide 10"
+
+- id: modelo-oculta-assistencia
+  tag: protecao
+  tema: "Modelos de proteção social"
+  frente: "Que modelo de proteção social tem estas características?"
+  oculta: p4-protecao-oculta-assistencia.svg
+  revelada: p4-protecao.svg
+  verso: "**Assistência** (base: mercado)."
+  fonte: "Parte 4 · seção 2 · slides 11 e 12"
+
+- id: seguridade-financiamento
+  tag: protecao
+  tema: "Seguridade social"
+  frente: "Como a seguridade social é financiada, e que tipo de sistema ela produz?"
+  verso: "Por **impostos e contribuições** de toda a sociedade. Produz **sistemas universais**."
+  fonte: "Parte 4 · seção 2 · slides 8 e 9"
+
+- id: seguridade-paises
+  tag: protecao
+  tema: "Seguridade social"
+  frente: "Cite dois países com modelo de seguridade social."
+  verso: "**Reino Unido** (NHS, 1948) e **Canadá**."
+  img: p4-nhs.jpg
+  fonte: "Parte 4 · seção 2 · slide 9"
+
+- id: canada
+  tag: protecao
+  tema: "Seguridade social"
+  frente: "No Canadá, médicos e hospitais são, em geral, privados. Por que o modelo é de seguridade?"
+  verso: "Porque **qualquer cidadão é atendido** e o **Estado paga a conta**."
+  fonte: "Parte 4 · seção 2 · slide 9"
+
+- id: beveridge
+  tag: protecao
+  tema: "Seguridade social"
+  frente: "Que nome recebe o modelo de seguridade, e de onde ele vem?"
+  verso: "**Beveridgiano**, do **Relatório Beveridge** (Reino Unido, 1942)."
+  img: p4-beveridge.jpg
+  fonte: "Parte 4 · seção 2"
+
+- id: bismarck
+  tag: protecao
+  tema: "Seguro social"
+  frente: "Que nome recebe o modelo de seguro social, e de onde ele vem?"
+  verso: "**Bismarckiano**, da lei alemã do seguro-doença de **1883**."
+  img: p4-bismarck.jpg
+  fonte: "Parte 4 · seção 2"
+
+- id: seguro-direito
+  tag: protecao
+  tema: "Seguro social"
+  frente: "No seguro social, quem tem direito e quem paga?"
+  verso: "Tem direito **quem trabalha e contribui**, e seus dependentes. Pagam **trabalhadores e empregadores**, sobre a **folha de salários**."
+  extra: "Exemplos do slide 10: Alemanha e França."
+  fonte: "Parte 4 · seção 2 · slide 10"
+
+- id: assistencia-modelo
+  tag: protecao
+  tema: "Assistência"
+  frente: "No modelo de assistência, como a saúde é vista, e quem o Estado cobre?"
+  verso: "Como **bem de consumo**. O Estado cobre só os **comprovadamente pobres** e os **idosos**."
+  fonte: "Parte 4 · seção 2 · slides 11 e 12"
+
+- id: medicaid-medicare
+  tag: protecao
+  tema: "Assistência"
+  cloze: "Nos Estados Unidos, o {{c1::Medicaid}} cobre os comprovadamente pobres, e o {{c2::Medicare}}, os idosos acima de 65 anos (ambos de 1965)."
+  fonte: "Parte 4 · seção 2 · slide 12"
+
+- id: fleury
+  tag: protecao
+  tema: "As cidadanias de Fleury"
+  cloze: "Para Sonia Fleury, a cidadania é {{c1::invertida}} na assistência, {{c2::regulada}} no seguro social e {{c3::universal}} na seguridade."
+  fonte: "Parte 4 · seção 2"
+
+- id: cidadania-invertida
+  tag: protecao
+  tema: "As cidadanias de Fleury"
+  frente: "Por que Fleury chama a cidadania do modelo de assistência de **invertida**?"
+  verso: "Porque a pessoa precisa **provar que fracassou no mercado** para ser atendida."
+  fonte: "Parte 4 · seção 2"
+
+# ---------------------------------------------------------------- 3 · Do seguro à seguridade
+- id: trajetoria
+  tag: cf88
+  tema: "A trajetória brasileira"
+  cloze: "Proteção social no Brasil:\n\n- até 1923: {{c1::caridade}};\n- de 1923 a 1988: {{c2::seguro social}} (CAPs, IAPs, INPS, INAMPS);\n- desde a CF88: {{c3::seguridade social}}."
+  img: p4-trajetoria.svg
+  fonte: "Parte 4 · seção 3 · slide 13"
+
+- id: sus-origem
+  tag: cf88
+  tema: "O SUS nasce na CF88"
+  frente: "Segundo o slide 14, o SUS foi fruto de quê?"
+  verso: "De **reivindicações populares** e do **Movimento da Reforma Sanitária Brasileira**."
+  extra: "O grande momento do movimento foi a 8ª CNS (1986), cujas propostas entraram em boa parte na Constituição."
+  fonte: "Parte 4 · seção 3 · slide 14"
+
+- id: cf-promulgacao
+  tag: cf88
+  tema: "O SUS nasce na CF88"
+  frente: "Quando a Constituição de 1988 foi promulgada, e que apelido recebeu?"
+  verso: "Em **5 de outubro de 1988**. Ulysses Guimarães a chamou de **Constituição Cidadã**."
+  img: p4-ulysses.jpg
+  fonte: "Parte 4 · seção 3 · slide 14"
+
+- id: heranca-8cns
+  tag: cf88
+  tema: "O SUS nasce na CF88"
+  cloze: "Da 8ª CNS, a CF88 herdou o {{c1::conceito ampliado de saúde}}, a saúde como {{c2::direito de todos e dever do Estado}}, um {{c3::sistema único}} e a {{c4::participação da comunidade}}."
+  fonte: "Parte 4 · seção 3"
+
+- id: onde-fica
+  tag: cf88
+  tema: "A saúde na CF88"
+  frente: "Em que parte da CF88 fica a saúde?"
+  verso: "Título VIII (**Ordem Social**), Capítulo II (**Seguridade Social**), Seção II (**Da Saúde**): **arts. 196 a 200**."
+  img: p4-ulysses-alt.jpg
+  fonte: "Parte 4 · seção 3"
+
+- id: slide15
+  tag: cf88
+  tema: "Cidadania no lugar da contribuição"
+  frente: "O slide 15 risca quatro ideias e põe uma no centro. Quais?"
+  verso: "Risca **seguro social, assistência, poder aquisitivo e caridade**. No centro, a **cidadania**."
+  img: a4-s15.jpg
+  fonte: "Parte 4 · seção 3 · slide 15"
+
+- id: nao-seguro
+  tag: cf88
+  tema: "Cidadania no lugar da contribuição"
+  frente: "Por que o SUS **não é seguro social**?"
+  verso: "Porque o direito **não depende de carteira assinada nem de contribuição**."
+  fonte: "Parte 4 · seção 3 · slide 15"
+
+- id: nao-assistencia
+  tag: cf88
+  tema: "Cidadania no lugar da contribuição"
+  frente: "Por que o SUS **não é assistência** nem caridade?"
+  verso: "Não é para quem pode pagar, nem favor aos pobres: é **direito de cidadania**, garantido pelo Estado a todos."
+  fonte: "Parte 4 · seção 3 · slide 15"
+
+- id: seguro-pegadinha
+  tag: cf88
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “por adotar uma concepção ampla do direito à saúde, a CF88 escolheu o seguro social”."
+  verso: "**Errado.** A CF88 adotou a **seguridade social**."
+  prova: "Prova 82 (Q4, item I); Compilado B (Q4)"
+  fonte: "Parte 4 · seção 3 · Na prova"
+
+- id: antes-depois
+  tag: cf88
+  tema: "Antes e depois da CF88"
+  frente: "Diferencie a proteção social no Brasil antes e depois da CF88."
+  verso: "Antes: **seguro social**, só para quem contribuía (CAPs, IAPs, INPS, INAMPS). Depois: **seguridade social**, com a saúde como **direito de todos**."
+  prova: "Roteiro de estudo (Q7)"
+  fonte: "Parte 4 · seção 3 · slide 13"
+
+- id: artigos-relance
+  tag: cf88
+  tema: "Os artigos num relance"
+  cloze: "Art. 194: {{c1::seguridade social}}.\nArt. 195: {{c2::financiamento da seguridade}}.\nArt. 196: {{c3::direito de todos e dever do Estado}}.\nArt. 197: {{c4::relevância pública}}.\nArt. 198: {{c5::sistema único, rede e diretrizes}}.\nArt. 199: {{c6::iniciativa privada}}.\nArt. 200: {{c7::competências do SUS}}."
+  fonte: "Parte 4 · Resumo"
+
+# ---------------------------------------------------------------- 4 · Seguridade social (arts. 194 e 195)
+- id: art194
+  tag: seguridade
+  tema: "Art. 194"
+  cloze: "Art. 194: a seguridade social é um {{c1::conjunto integrado de ações}} de iniciativa {{c2::dos Poderes Públicos e da sociedade}}, para assegurar os direitos relativos à {{c3::saúde, à previdência e à assistência social}}."
+  fonte: "Parte 4 · seção 4 · slide 16"
+
+- id: tripe-oculta-previdencia
+  tag: seguridade
+  tema: "O tripé da seguridade"
+  frente: "Qual pilar da seguridade social é este?"
+  oculta: p4-tripe-oculta-previdencia.svg
+  revelada: p4-tripe.svg
+  verso: "**Previdência social.**"
+  fonte: "Parte 4 · seção 4 · slide 17"
+
+- id: tripe-oculta-saude
+  tag: seguridade
+  tema: "O tripé da seguridade"
+  frente: "Qual pilar da seguridade social é este?"
+  oculta: p4-tripe-oculta-saude.svg
+  revelada: p4-tripe.svg
+  verso: "**Saúde** (o SUS)."
+  fonte: "Parte 4 · seção 4 · slide 17"
+
+- id: tripe-oculta-assistencia
+  tag: seguridade
+  tema: "O tripé da seguridade"
+  frente: "Qual pilar da seguridade social é este?"
+  oculta: p4-tripe-oculta-assistencia.svg
+  revelada: p4-tripe.svg
+  verso: "**Assistência social.**"
+  fonte: "Parte 4 · seção 4 · slide 17"
+
+- id: previdencia
+  tag: seguridade
+  tema: "O tripé da seguridade"
+  frente: "Previdência social: para quem é, e que caráter tem?"
+  verso: "Para o **trabalhador e seus dependentes**. É **contributiva e obrigatória**: o único pilar que exige contribuição."
+  fonte: "Parte 4 · seção 4 · slide 17"
+
+- id: assistencia-social
+  tag: seguridade
+  tema: "O tripé da seguridade"
+  frente: "Assistência social: para quem é? Exige contribuição?"
+  verso: "Para **quem dela necessitar**, **independente de contribuição**."
+  extra: "Exemplo: o Benefício de Prestação Continuada (BPC), para idosos e pessoas com deficiência de baixa renda."
+  fonte: "Parte 4 · seção 4 · slide 17"
+
+- id: duas-assistencias
+  tag: seguridade
+  tema: "Pegadinha"
+  frente: "Qual a diferença entre **assistência social** (pilar da seguridade) e **assistência** (modelo de proteção)?"
+  verso: "Assistência social é **direito** de quem precisa, sem contribuição. Assistência como modelo é o **de mercado**: o Estado só ajuda os comprovadamente pobres."
+  fonte: "Parte 4 · seção 4"
+
+- id: objetivos-194
+  tag: seguridade
+  tema: "Art. 194"
+  cloze: "Dois objetivos da seguridade (art. 194, parágrafo único) que reaparecem no SUS: a {{c1::universalidade}} da cobertura e do atendimento e a gestão {{c2::democrática e descentralizada}}."
+  fonte: "Parte 4 · seção 4"
+
+- id: art195
+  tag: seguridade
+  tema: "Art. 195"
+  frente: "Quem financia a seguridade social, e por quais fontes (art. 195)?"
+  verso: "**Toda a sociedade**: pelos **orçamentos** da União, dos Estados, do DF e dos Municípios e pelas **contribuições sociais**."
+  img: p4-financiamento.svg
+  fonte: "Parte 4 · seção 4 · slides 18 e 19"
+
+- id: contribuicoes
+  tag: seguridade
+  tema: "Art. 195"
+  cloze: "Contribuições sociais do art. 195:\n\n- do {{c1::empregador}}, sobre folha, faturamento e lucro;\n- do {{c2::trabalhador}};\n- sobre a receita de {{c3::concursos de prognósticos}} (loterias);\n- do {{c4::importador}}."
+  fonte: "Parte 4 · seção 4 · slide 19"
+
+- id: aposentadoria
+  tag: seguridade
+  tema: "Art. 195"
+  frente: "Incide contribuição do trabalhador sobre aposentadorias e pensões do regime geral?"
+  verso: "**Não.** O art. 195, II, as exclui."
+  fonte: "Parte 4 · seção 4"
+
+- id: ec132
+  tag: seguridade
+  tema: "Reforma tributária"
+  frente: "O que a EC nº 132/2023 mudou no art. 195?"
+  verso: "Criou a **CBS**, sobre bens e serviços, que substitui **a partir de 2027** as contribuições sobre receita ou faturamento e do importador."
+  extra: "O slide é anterior à reforma. Na prova, a lista do slide continua sendo a resposta esperada."
+  fonte: "Parte 4 · seção 4"
+
+- id: tripe-subsistemas
+  tag: seguridade
+  tema: "Pegadinha"
+  frente: "Na questão “caracterize os três subsistemas que vieram antes do SUS”, por que não responder com o tripé da seguridade?"
+  verso: "Porque o tripé é da **CF88**. Antes do SUS, os subsistemas são **CAPs, IAPs e INPS** (Parte 3)."
+  extra: "<span class=\"div\">⚠ O gabarito dos alunos da Prova 85 usa o tripé. Use-o só se a questão falar em seguridade.</span>"
+  prova: "Prova 85 (Q8)"
+  fonte: "Parte 4 · seção 4 · Na prova"
+
+# ---------------------------------------------------------------- 5 · Arts. 196 e 197
+- id: art196
+  tag: art196
+  tema: "Art. 196"
+  cloze: "Art. 196: a saúde é {{c1::direito de todos}} e {{c2::dever do Estado}}, garantido mediante {{c3::políticas sociais e econômicas}} que visem à redução do risco de doença e de outros agravos e ao acesso {{c4::universal e igualitário}} às ações e serviços para sua {{c5::promoção, proteção e recuperação}}."
+  img: p4-art196.svg
+  fonte: "Parte 4 · seção 5 · slide 20"
+
+- id: art196-principios
+  tag: art196
+  tema: "Art. 196"
+  frente: "Que princípios do SUS aparecem no art. 196?"
+  verso: "**Universalidade** (“direito de todos”, “acesso universal”), **igualdade/equidade** (“igualitário”) e **integralidade** (“promoção, proteção e recuperação”)."
+  prova: "Prova 88 (Q3); Turma 91 (Q4); Turma 86"
+  fonte: "Parte 4 · seção 5 · Na prova"
+
+- id: art196-conceito
+  tag: art196
+  tema: "Art. 196"
+  frente: "A que conceito de saúde o art. 196 se refere? Por quê?"
+  verso: "Ao **conceito ampliado**: a saúde é garantida por **políticas sociais e econômicas**, e não só por serviços médicos."
+  prova: "Prova 88 (Q3); Turma 91 (Q4); Prova 85 (Q3)"
+  fonte: "Parte 4 · seção 5 · Na prova"
+
+- id: palavras-chave
+  tag: art196
+  tema: "Art. 196"
+  cloze: "As cinco palavras-chave do slide 20: {{c1::cidadania}}, {{c2::Estado}}, {{c3::determinação social}}, {{c4::intersetorialidade}} e {{c5::conceito ampliado}}."
+  img: a4-s20.jpg
+  fonte: "Parte 4 · seção 5 · slide 20"
+
+- id: ordem-ppr
+  tag: art196
+  tema: "Promover, proteger, recuperar"
+  frente: "Por que a ordem “promoção, proteção e recuperação” do art. 196 importa?"
+  verso: "Primeiro **promover**, depois **proteger** e, por último, **recuperar**. O modelo assistencialista erra ao começar pela recuperação."
+  fonte: "Parte 4 · seção 5 · slide 20"
+
+- id: art197
+  tag: art196
+  tema: "Art. 197"
+  frente: "O que diz o art. 197?"
+  verso: "As ações e serviços de saúde são de **relevância pública**; cabe ao poder público sua **regulamentação, fiscalização e controle**."
+  fonte: "Parte 4 · seção 5 · slide 21"
+
+- id: relevancia-por-que
+  tag: art196
+  tema: "Art. 197"
+  frente: "Por que as ações e serviços de saúde são de relevância pública?"
+  verso: "Porque a saúde é **direito fundamental**, de interesse de toda a coletividade. Por isso o Estado regula, fiscaliza e controla **até o serviço privado**."
+  prova: "Prova 89 (Q2); Prova 88 (Q4)"
+  fonte: "Parte 4 · seção 5 · Na prova"
+
+- id: art197-execucao
+  tag: art196
+  tema: "Art. 197"
+  frente: "Pelo art. 197, quem pode executar as ações e serviços de saúde?"
+  verso: "O Estado, **diretamente**, ou **terceiros**, inclusive pessoa física ou jurídica de **direito privado**."
+  fonte: "Parte 4 · seção 5 · slide 21"
+
+- id: art197-qual
+  tag: art196
+  tema: "Art. 197"
+  frente: "Qual artigo da CF88 trata da relevância pública das ações e serviços de saúde?"
+  verso: "O **art. 197**."
+  extra: "<span class=\"div\">⚠ Um arquivo do Compilado A responde “arts. 197 e 198”; a expressão está só no art. 197.</span>"
+  prova: "Prova 85 (Q4); Compilado A (Q4)"
+  fonte: "Parte 4 · seção 5 · Na prova"
+
+- id: relevancia-exemplos
+  tag: art196
+  tema: "Art. 197"
+  frente: "Cite dois exemplos que existem por causa da relevância pública (art. 197)."
+  verso: "A **vigilância sanitária** (Anvisa, 1999) e a **regulação dos planos de saúde** pela ANS."
+  extra: "O Ministério Público também zela pelos serviços de relevância pública (art. 129, II)."
+  fonte: "Parte 4 · seção 5"
+
+# ---------------------------------------------------------------- 6 · Arts. 198, 199 e 200
+- id: art198-caput
+  tag: art198
+  tema: "Art. 198"
+  cloze: "Art. 198: as ações e serviços públicos de saúde integram uma rede {{c1::regionalizada e hierarquizada}} e constituem um {{c2::sistema único}}."
+  fonte: "Parte 4 · seção 6 · slide 22"
+
+- id: diretrizes
+  tag: art198
+  tema: "Art. 198"
+  cloze: "Diretrizes do art. 198:\nI. {{c1::descentralização}}, com direção única em cada esfera de governo;\nII. {{c2::atendimento integral}}, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais;\nIII. {{c3::participação da comunidade}}."
+  prova: "Turma 91 (Q7); Turma 90 (Q5); Turma 84"
+  fonte: "Parte 4 · seção 6 · slide 22"
+
+- id: direcao-unica
+  tag: art198
+  tema: "Art. 198"
+  frente: "Quem exerce a direção única do SUS em cada esfera de governo?"
+  verso: "O **Ministério da Saúde**, a **Secretaria Estadual** e a **Secretaria Municipal** de Saúde."
+  img: p4-direcao.svg
+  fonte: "Parte 4 · seção 6 · slide 22"
+
+- id: rede-pegadinha
+  tag: art198
+  tema: "Pegadinha"
+  frente: "O enunciado diz que o SUS é uma “rede regionalizada e hierarquizada” e pede as diretrizes do art. 198. A rede é uma delas?"
+  verso: "**Não.** As diretrizes são os três incisos: **descentralização**, **atendimento integral** e **participação da comunidade**."
+  prova: "Turma 91 (Q7); Turma 90 (Q5)"
+  fonte: "Parte 4 · seção 6"
+
+- id: sem-prejuizo
+  tag: art198
+  tema: "Art. 198"
+  frente: "O que garante a expressão “sem prejuízo dos serviços assistenciais”?"
+  verso: "Que a prioridade para a prevenção **não autoriza abandonar o tratamento**: a saúde coletiva não rejeita a assistência."
+  fonte: "Parte 4 · seção 6 · slide 22"
+
+- id: minimos
+  tag: art198
+  tema: "O dinheiro do SUS"
+  cloze: "Mínimos em saúde (EC nº 29/2000 e LC nº 141/2012): os estados aplicam {{c1::12%}} e os municípios {{c2::15%}} das receitas de impostos e transferências; a União, {{c3::15% da receita corrente líquida}}."
+  fonte: "Parte 4 · seção 6"
+
+- id: art199-caput
+  tag: art198
+  tema: "Art. 199"
+  frente: "O que diz o caput do art. 199?"
+  verso: "A assistência à saúde é **livre à iniciativa privada**."
+  fonte: "Parte 4 · seção 6 · slide 23"
+
+- id: art199-como
+  tag: art198
+  tema: "Art. 199"
+  frente: "Como a iniciativa privada participa do SUS (art. 199, § 1º)?"
+  verso: "De forma **complementar**, segundo as diretrizes do SUS, por **contrato de direito público ou convênio**, com preferência às **filantrópicas e sem fins lucrativos**."
+  img: a4-s23.jpg
+  prova: "Prova 89 (Q7); Prova 88 (Q5); Turma 91 (Q2)"
+  fonte: "Parte 4 · seção 6 · slide 23"
+
+- id: art199-cloze
+  tag: art198
+  tema: "Art. 199"
+  cloze: "No SUS, a iniciativa privada entra por {{c1::contrato de direito público}} ou {{c2::convênio}}, com preferência para as entidades {{c3::filantrópicas e sem fins lucrativos}}."
+  prova: "Prova 89 (Q7); Prova 88 (Q5); Turma 91 (Q2)"
+  fonte: "Parte 4 · seção 6 · slide 23"
+
+- id: subvencao-pegadinha
+  tag: art198
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “o SUS pode destinar recursos públicos para ampliar hospitais privados com fins lucrativos”."
+  verso: "**Errado.** O art. 199, § 2º, veda auxílios ou subvenções a instituições privadas **com fins lucrativos**."
+  fonte: "Parte 4 · seção 6"
+
+- id: complementar-exemplo
+  tag: art198
+  tema: "Art. 199"
+  frente: "O município não tem ressonância magnética suficiente. O que o SUS pode fazer, e o que não pode?"
+  verso: "Pode **contratar** o exame de uma clínica privada, gratuito para o usuário. Não pode **subsidiar** o negócio privado."
+  fonte: "Parte 4 · seção 6 · slide 23"
+
+- id: comercializacao
+  tag: art198
+  tema: "Art. 199"
+  frente: "O que o art. 199, § 4º, proíbe?"
+  verso: "**Todo tipo de comercialização** de órgãos, tecidos, sangue e derivados."
+  fonte: "Parte 4 · seção 6"
+
+- id: art200
+  tag: art198
+  tema: "Art. 200"
+  cloze: "Compete ao SUS (art. 200), entre outras coisas:\n\n- executar a {{c1::vigilância sanitária e epidemiológica}} e a saúde do trabalhador;\n- ordenar a {{c2::formação de recursos humanos}} em saúde;\n- participar das ações de {{c3::saneamento básico}};\n- fiscalizar {{c4::alimentos, bebidas e águas}} para consumo humano."
+  fonte: "Parte 4 · seção 6 · slides 24 a 26"
+
+- id: art200-pegadinha
+  tag: art198
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “compete ao SUS comercializar sangue e hemoderivados para financiar a rede pública”."
+  verso: "**Errado.** O SUS participa da **produção** de hemoderivados (art. 200, I), mas a comercialização é vedada (art. 199, § 4º)."
+  fonte: "Parte 4 · seção 6"
+
+# ---------------------------------------------------------------- 7 · Princípios doutrinários
+- id: doutrinarios-oculta
+  tag: doutrinarios
+  tema: "Princípios do SUS"
+  frente: "Quais são os princípios **doutrinários** do SUS?"
+  oculta: p4-principios-oculta-doutrinarios.svg
+  revelada: p4-principios.svg
+  verso: "**Universalidade, igualdade/equidade e integralidade.**"
+  prova: "Compilado A (Q2); Turma 90 (Q10)"
+  fonte: "Parte 4 · seção 7 · slide 27"
+
+- id: doutrinarios-nomes
+  tag: doutrinarios
+  tema: "Princípios do SUS"
+  frente: "Que outros nomes recebem os princípios doutrinários?"
+  verso: "**Ideológicos** ou **finalísticos**."
+  fonte: "Parte 4 · seção 7"
+
+- id: universalidade
+  tag: doutrinarios
+  tema: "Universalidade"
+  frente: "O que é o princípio da universalidade?"
+  verso: "A saúde é **direito de cidadania**: todos têm direito aos serviços de saúde, **em todos os níveis de assistência**."
+  img: p4-vacinacao-alt.jpg
+  fonte: "Parte 4 · seção 7.1 · slide 28"
+
+- id: maria-jose
+  tag: doutrinarios
+  tema: "Reconheça o princípio"
+  frente: "A Sra. Maria José não foi atendida na USF da sua área porque as senhas do dia tinham acabado. Que princípio foi violado, e como ele se classifica?"
+  verso: "**Universalidade**, princípio **doutrinário**."
+  prova: "Turma 91 (Q1); Turma 90 (Q1); Prova 89 (Q1)"
+  fonte: "Parte 4 · seção 7.1 · Na prova"
+
+- id: universalidade-casos
+  tag: doutrinarios
+  tema: "Reconheça o princípio"
+  frente: "Um turista atendido pelo SAMU e uma pessoa com plano de saúde que faz transplante pelo SUS ilustram qual princípio?"
+  verso: "A **universalidade**: ninguém precisa provar que contribui, que é pobre ou que mora no país."
+  img: p4-samu.jpg
+  fonte: "Parte 4 · seção 7.1"
+
+- id: equidade-formula
+  tag: doutrinarios
+  tema: "Equidade"
+  cloze: "Equidade = {{c1::igualdade}} + {{c2::justiça}}: dar {{c3::mais a quem precisa mais}}."
+  img: p4-equidade.svg
+  fonte: "Parte 4 · seção 7.2 · slide 29"
+
+- id: igualdade
+  tag: doutrinarios
+  tema: "Igualdade"
+  frente: "O que é a igualdade da assistência (Lei nº 8.080/1990, art. 7º, IV)?"
+  verso: "Assistência **sem preconceitos ou privilégios** de qualquer espécie."
+  fonte: "Parte 4 · seção 7.2"
+
+- id: equidade-prioridades
+  tag: doutrinarios
+  tema: "Equidade"
+  cloze: "Pela equidade, têm prioridade:\n\n- as {{c1::regiões com piores condições de saúde}};\n- as {{c2::pessoas com mais vulnerabilidade e risco}};\n- os {{c3::usuários em situações clínicas mais graves}}."
+  extra: "Exemplo do último caso: a classificação de risco nas urgências."
+  fonte: "Parte 4 · seção 7.2 · slide 30"
+
+- id: equidade-politicas
+  tag: doutrinarios
+  tema: "Equidade"
+  frente: "Cite três públicos das políticas de promoção da equidade em saúde (slide 31)."
+  verso: "Por exemplo: **população negra**, **povos indígenas** e **população LGBT**."
+  extra: "Também as populações do campo, da floresta e das águas, a população em situação de rua, o povo cigano, as pessoas privadas de liberdade, imigrantes e refugiados e as pessoas com albinismo."
+  img: a4-s31.jpg
+  fonte: "Parte 4 · seção 7.2 · slide 31"
+
+- id: igualdade-ou-equidade
+  tag: doutrinarios
+  tema: "Igualdade ou equidade?"
+  frente: "Na prova, escreva igualdade ou equidade?"
+  verso: "**Os dois.** A CF88 e a Lei nº 8.080 dizem igualdade; os documentos do Ministério da Saúde consagraram equidade."
+  extra: "Na lista de princípios da PNPS (Parte 2), a palavra certa é equidade."
+  fonte: "Parte 4 · seção 7.2"
+
+- id: integralidade
+  tag: doutrinarios
+  tema: "Integralidade"
+  cloze: "Integralidade (Lei nº 8.080/1990, art. 7º, II): conjunto {{c1::articulado e contínuo}} das ações e serviços {{c2::preventivos e curativos}}, {{c3::individuais e coletivos}}, exigidos para cada caso, em {{c4::todos os níveis de complexidade}} do sistema."
+  img: p4-acs.jpg
+  fonte: "Parte 4 · seção 7.3 · slide 32"
+
+- id: integralidade-leituras
+  tag: doutrinarios
+  tema: "Integralidade"
+  frente: "Quais são as duas leituras da integralidade?"
+  verso: "A da **pessoa inteira** (história, família, condições de vida) e a da **rede** (acesso a todos os níveis, com o cuidado articulado)."
+  fonte: "Parte 4 · seção 7.3"
+
+- id: hiv
+  tag: doutrinarios
+  tema: "Reconheça o princípio"
+  frente: "Uma paciente recebe o diagnóstico de HIV na consulta do plano e é encaminhada ao CTA e depois ao Centro de Referência do SUS. Que princípio assegura esse atendimento na rede?"
+  verso: "**Integralidade.**"
+  extra: "Vale citar também a universalidade: ter plano de saúde não tira o direito ao SUS."
+  prova: "Prova 82 (Q2); Compilado B (Q2); prova do grupo (2020.2)"
+  fonte: "Parte 4 · seção 7.3 · Na prova"
+
+- id: frase-universalidade
+  tag: doutrinarios
+  tema: "Reconheça o princípio"
+  frente: "“A saúde é direito de todos e dever do Estado.” Que princípio do SUS?"
+  verso: "**Universalidade.**"
+  prova: "Prova 82 (Q3); Compilado B (Q3)"
+  fonte: "Parte 4 · seção 7 · Na prova"
+
+- id: frase-igualdade
+  tag: doutrinarios
+  tema: "Reconheça o princípio"
+  frente: "“Todos devem ser atendidos, sem preconceito ou privilégios de qualquer espécie.” Que princípio do SUS?"
+  verso: "**Igualdade/equidade.**"
+  extra: "<span class=\"div\">⚠ O slide 28 usa essa expressão para a universalidade, mas na Lei nº 8.080 (art. 7º, IV) ela define a igualdade, como em todos os gabaritos.</span>"
+  prova: "Prova 82 (Q3); Compilado B (Q3)"
+  fonte: "Parte 4 · seção 7 · Na prova"
+
+- id: frase-integralidade
+  tag: doutrinarios
+  tema: "Reconheça o princípio"
+  frente: "“Ações e serviços oferecidos ao indivíduo e aos grupos, contemplando prevenção e tratamento, com respeito à dignidade humana.” Que princípio do SUS?"
+  verso: "**Integralidade.**"
+  prova: "Prova 82 (Q3); Compilado B (Q3)"
+  fonte: "Parte 4 · seção 7 · Na prova"
+
+- id: horizontal-vertical
+  tag: doutrinarios
+  tema: "Integralidade"
+  frente: "No roteiro da disciplina, o que são as dimensões horizontal e vertical da integralidade?"
+  verso: "**Horizontal**: entre os níveis de atenção (referência e contrarreferência). **Vertical**: a pessoa inteira (visão holística)."
+  extra: "<span class=\"div\">⚠ Alguns autores usam os termos ao contrário. Na discursiva, diga a dimensão e explique o sentido.</span>"
+  fonte: "Parte 4 · seção 7.3"
+
+# ---------------------------------------------------------------- 8 · Princípios organizativos
+- id: organizativos-oculta
+  tag: organizativos
+  tema: "Princípios do SUS"
+  frente: "Quais são os princípios **organizativos** do SUS?"
+  oculta: p4-principios-oculta-organizativos.svg
+  revelada: p4-principios.svg
+  verso: "**Descentralização**, **regionalização e hierarquização** e **participação e controle social**."
+  prova: "Compilado A (Q2); Turma 90 (Q10)"
+  fonte: "Parte 4 · seção 8 · slide 33"
+
+- id: cabecalho-pegadinha
+  tag: organizativos
+  tema: "Pegadinha"
+  frente: "Os slides 34 a 37 trazem no topo “Princípios Doutrinários”. Descentralização, regionalização, hierarquização e participação são doutrinários?"
+  verso: "**Não.** São **organizativos**, como mostra o slide 33."
+  fonte: "Parte 4 · seção 8"
+
+- id: descentralizacao
+  tag: organizativos
+  tema: "Descentralização"
+  frente: "O que é descentralização no SUS?"
+  verso: "**Redistribuir responsabilidades**, poder e recursos entre União, estados e municípios, com **direção única** em cada esfera e ênfase na **municipalização**."
+  fonte: "Parte 4 · seção 8.1 · slide 34"
+
+- id: direcao-unica-prova
+  tag: organizativos
+  tema: "Reconheça o princípio"
+  frente: "“União, estados e municípios exercem sua autoridade pelo Ministério da Saúde e pelas Secretarias, de forma autônoma e com direção única em cada esfera.” Que princípio?"
+  verso: "**Descentralização.**"
+  prova: "Prova 82 (Q10); Compilado B (Q11)"
+  fonte: "Parte 4 · seção 8.1 · Na prova"
+
+- id: regionalizacao
+  tag: organizativos
+  tema: "Regionalização"
+  frente: "O que é regionalização?"
+  verso: "Organizar o sistema com **base territorial e populacional**, para distribuir bem os serviços, com **equidade de acesso**, **otimização dos recursos** e **racionalidade dos gastos**."
+  img: a4-s35.jpg
+  fonte: "Parte 4 · seção 8.2 · slide 35"
+
+- id: regionalizacao-exemplo
+  tag: organizativos
+  tema: "Regionalização"
+  frente: "Por que nem todo município precisa ter um serviço de cirurgia cardíaca?"
+  verso: "Pela **regionalização**: os municípios de uma região **compartilham** os serviços mais complexos."
+  fonte: "Parte 4 · seção 8.2"
+
+- id: hierarquizacao
+  tag: organizativos
+  tema: "Hierarquização"
+  frente: "O que é hierarquização?"
+  verso: "Organizar os serviços por **níveis de complexidade crescente**, com **fluxos assistenciais** definidos entre eles."
+  img: p4-hierarquia.svg
+  fonte: "Parte 4 · seção 8.3 · slide 36"
+
+- id: porta-entrada
+  tag: organizativos
+  tema: "Hierarquização"
+  frente: "Qual é a porta de entrada do SUS, que acompanha o usuário ao longo do tempo?"
+  verso: "A **atenção primária** (UBS ou USF)."
+  img: p4-ubs.jpg
+  fonte: "Parte 4 · seção 8.3"
+
+- id: referencia
+  tag: organizativos
+  tema: "Hierarquização"
+  cloze: "Quando a UBS não resolve, o usuário é {{c1::referenciado}} à média ou à alta complexidade e, depois, {{c2::contrarreferenciado}} de volta à atenção primária."
+  fonte: "Parte 4 · seção 8.3"
+
+- id: referencia-prova
+  tag: organizativos
+  tema: "Referência e contrarreferência"
+  frente: "Que princípios a referência e a contrarreferência operacionalizam? Em que dimensão?"
+  verso: "**Hierarquização e regionalização** e **integralidade**. Dimensão **horizontal**: os encaminhamentos entre os níveis."
+  extra: "<span class=\"div\">⚠ “Horizontal” segue o roteiro de estudo; há autores que chamam esse eixo de vertical. Explique o sentido.</span>"
+  prova: "Prova do grupo (2020.2, Q10)"
+  fonte: "Parte 4 · seção 8.3 · Na prova"
+
+- id: ras
+  tag: organizativos
+  tema: "Redes de Atenção à Saúde"
+  frente: "O que são as Redes de Atenção à Saúde (RAS)?"
+  verso: "Arranjos de serviços de diferentes densidades tecnológicas, **integrados** para garantir a **integralidade**. A atenção primária fica no **centro**, como coordenadora do cuidado."
+  extra: "Portaria GM/MS nº 4.279/2010."
+  prova: "Turma 84 (2ª prova)"
+  fonte: "Parte 4 · seção 8.3"
+
+- id: participacao
+  tag: organizativos
+  tema: "Participação e controle social"
+  frente: "O que é participação e controle social?"
+  verso: "A população, por suas **entidades representativas**, participa da **formulação, do controle e da execução** das políticas de saúde, em todos os níveis."
+  img: p4-conselho.jpg
+  fonte: "Parte 4 · seção 8.4 · slide 37"
+
+- id: conferencias-conselhos
+  tag: organizativos
+  tema: "Participação e controle social"
+  cloze: "Lei nº 8.142/1990: as {{c1::conferências}} de saúde reúnem-se a cada {{c2::quatro anos}}; os {{c3::conselhos}} de saúde são {{c4::permanentes e deliberativos}}."
+  fonte: "Parte 4 · seção 8.4"
+
+- id: paridade
+  tag: organizativos
+  tema: "Participação e controle social"
+  frente: "Qual é a representação dos usuários nos conselhos e conferências de saúde?"
+  verso: "**Paritária**: metade das vagas, em relação ao conjunto dos demais segmentos."
+  fonte: "Parte 4 · seção 8.4"
+
+- id: abc-sus
+  tag: organizativos
+  tema: "Mais dois princípios"
+  cloze: "O ABC do SUS (1990) acrescenta dois princípios organizativos: a {{c1::resolubilidade}} e a {{c2::complementaridade do setor privado}}."
+  extra: "Resolubilidade: cada serviço resolve os problemas até o nível da sua competência."
+  fonte: "Parte 4 · seção 8.4"
+
+# ---------------------------------------------------------------- 9 · Definição do SUS e Leis Orgânicas
+- id: sus-definicao
+  tag: leis
+  tema: "O que é o SUS"
+  frente: "Onde está a definição legal do SUS?"
+  verso: "No **art. 4º da Lei nº 8.080/1990**: o conjunto de ações e serviços de saúde prestados por órgãos e instituições **públicas** das três esferas de governo."
+  extra: "Inclui a administração direta e indireta e as fundações mantidas pelo Poder Público. O privado entra em caráter complementar (art. 4º, § 2º)."
+  fonte: "Parte 4 · seção 9 · slide 38"
+
+- id: lei8080
+  tag: leis
+  tema: "Leis Orgânicas da Saúde"
+  frente: "O que regula a Lei nº 8.080/1990?"
+  verso: "As **ações e serviços de saúde** em todo o país: os **determinantes e condicionantes** (art. 3º), a definição do SUS (art. 4º) e seus **princípios e diretrizes** (art. 7º)."
+  fonte: "Parte 4 · seção 9"
+
+- id: lei8142
+  tag: leis
+  tema: "Leis Orgânicas da Saúde"
+  frente: "De que trata a Lei nº 8.142/1990?"
+  verso: "Da **participação da comunidade** (conferências e conselhos) e das **transferências de recursos** entre as esferas."
+  fonte: "Parte 4 · seção 9"
+
+- id: lei8142-por-que
+  tag: leis
+  tema: "Leis Orgânicas da Saúde"
+  frente: "Por que foi preciso uma segunda lei, a 8.142, três meses depois da 8.080?"
+  verso: "Porque **Collor vetou** na Lei nº 8.080 a participação da comunidade e os repasses; a pressão do movimento sanitário trouxe a nova lei."
+  fonte: "Parte 4 · seção 9"
+
+- id: atividade-fisica
+  tag: leis
+  tema: "A Lei nº 8.080 atualizada"
+  frente: "Que lei incluiu a atividade física entre os determinantes e condicionantes da saúde?"
+  verso: "A **Lei nº 12.864/2013** (art. 3º da Lei nº 8.080)."
+  prova: "Turma 84 (2ª prova)"
+  fonte: "Parte 4 · seção 9"
+
+- id: principios-novos
+  tag: leis
+  tema: "A Lei nº 8.080 atualizada"
+  cloze: "Princípios novos do art. 7º da Lei nº 8.080:\n\n- 2017: atendimento especializado a {{c1::mulheres e vítimas de violência doméstica}};\n- 2023: proteção dos {{c2::direitos humanos}} dos usuários, em especial crianças e adolescentes;\n- 2025: {{c3::atenção humanizada}}."
+  prova: "Turma 84 (2ª prova)"
+  fonte: "Parte 4 · seção 9"

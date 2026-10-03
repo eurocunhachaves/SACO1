@@ -19,7 +19,8 @@ FONTE = Path(__file__).resolve().parent
 OUT = FONTE / "svg"
 ICONES = FONTE / "estilo" / "icons"
 LUCIDE = Path("/root/build/npm/package/icons")
-TTF = Path("/root/build/ttf/inter-latin-standard-normal.ttf")
+WOFF2 = FONTE / "estilo" / "fonts" / "inter-latin-standard-normal.woff2"
+TTF = FONTE / ".build" / "inter-latin-standard-normal.ttf"  # gerado a partir do woff2
 
 _fonts = {}
 
@@ -27,6 +28,12 @@ _fonts = {}
 def font(size, weight):
     key = (round(size * 4), weight)
     if key not in _fonts:
+        if not TTF.exists():  # o Pillow mede melhor com TTF; converte o woff2 do repo (fonttools + brotli)
+            from fontTools.ttLib import TTFont
+            ttf = TTFont(str(WOFF2))
+            ttf.flavor = None
+            TTF.parent.mkdir(exist_ok=True)
+            ttf.save(str(TTF))
         f = ImageFont.truetype(str(TTF), 200)
         f.set_variation_by_axes([14, weight])
         _fonts[key] = f

@@ -1,0 +1,496 @@
+# Aula 1 · Conceito de Saúde
+# Cada card: id (fixo, nunca reutilizar), tag (seção do PDF), tema, e um dos formatos:
+#   frente/verso (básico) · cloze (lacunas) · oculta/revelada + frente/verso (oclusão).
+# Opcionais: img (verso), img_frente, extra, prova, fonte.
+aula: 1
+cards:
+
+# ---------------------------------------------------------------- 1 · O que é saúde?
+- id: conceitos-tres
+  tag: conceito
+  tema: "Três formas de definir saúde"
+  cloze: "Conceito **negativo**: saúde é {{c1::ausência de doença}}.\nConceito **positivo**: saúde é {{c2::um estado de bem-estar}}.\nConceito **ampliado**: saúde é {{c3::resultado das condições de vida}}."
+  extra: "O negativo é a base do modelo biomédico; o positivo é a virada da OMS (1948); o ampliado foi consagrado na 8ª CNS (1986) e na CF88."
+  fonte: "Parte 1 · seção 1.1"
+
+- id: oms-definicao
+  tag: conceito
+  tema: "Definição da OMS"
+  cloze: "Para a OMS, saúde é um estado de {{c1::completo bem-estar}} {{c2::físico, mental e social}}, e {{c3::não apenas}} a ausência de doença ou enfermidade."
+  extra: "Constituição da OMS, em vigor desde 7 de abril de 1948 (Dia Mundial da Saúde)."
+  fonte: "Parte 1 · seção 1.2 · slide 4"
+
+- id: oms-ano
+  tag: conceito
+  tema: "Definição da OMS"
+  frente: "Em que ano entrou em vigor a Constituição da OMS, com a sua definição de saúde?"
+  verso: "**1948** (7 de abril)."
+  extra: "A criação da organização foi proposta em 1945, em São Francisco, pelas delegações do Brasil e da China. Por isso o slide mostra “1945 → 1948”."
+  fonte: "Parte 1 · seção 1.2 · slide 4"
+
+- id: oms-inovacao
+  tag: conceito
+  tema: "Definição da OMS"
+  frente: "O que a definição da OMS trouxe de novo em relação ao conceito negativo?"
+  verso: "Definiu saúde **pelo que existe (bem-estar)**, e não pelo que falta, e incluiu a dimensão **social**."
+  fonte: "Parte 1 · seção 1.2"
+
+- id: oms-pegadinha
+  tag: conceito
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “para a OMS, saúde é a ausência de doença”."
+  verso: "**Errado.** A OMS diz que saúde **não é apenas** a ausência de doença."
+  extra: "Trocar “não apenas” por “é a ausência” descreve o conceito negativo, não o da OMS."
+  fonte: "Parte 1 · seção 1.2"
+
+- id: oms-criticas
+  tag: conceito
+  tema: "Críticas à definição da OMS"
+  cloze: "A definição da OMS é criticada por ser {{c1::utópica}} (completo bem-estar é inalcançável), {{c2::estática}} (fala em “estado”, não em processo) e {{c3::subjetiva}} (bem-estar depende de quem sente). Também pode justificar a {{c4::medicalização}} da vida."
+  fonte: "Parte 1 · seção 1.3"
+
+- id: segre-ferraz
+  tag: conceito
+  tema: "Alternativas à OMS"
+  frente: "Como Segre e Ferraz (1997) propõem entender a saúde?"
+  verso: "Como um estado de **razoável harmonia** entre o sujeito e a sua própria realidade."
+  fonte: "Parte 1 · seção 1.3"
+
+- id: canguilhem
+  tag: conceito
+  tema: "Alternativas à OMS"
+  frente: "Para Canguilhem (*O normal e o patológico*), o que é ter saúde?"
+  verso: "Ter capacidade de **criar novas normas** diante das mudanças do meio."
+  extra: "Na expressão dele, a saúde é “uma margem de tolerância às infidelidades do meio”: estar saudável é poder adoecer e se recuperar."
+  fonte: "Parte 1 · seção 1.3"
+
+- id: ampliado-8cns
+  tag: conceito
+  tema: "Conceito ampliado"
+  frente: "Em que evento o conceito ampliado de saúde foi consagrado no Brasil?"
+  verso: "Na **8ª Conferência Nacional de Saúde (1986)**."
+  extra: "Depois entrou na CF88 (art. 196) e na Lei 8.080/1990 (art. 3º, determinantes e condicionantes)."
+  fonte: "Parte 1 · seção 1.4"
+
+- id: ampliado-definicao
+  tag: conceito
+  tema: "Conceito ampliado"
+  cloze: "8ª CNS (1986): em sentido abrangente, a saúde é a {{c1::resultante das condições}} de alimentação, habitação, educação, renda, meio ambiente, trabalho, transporte, emprego, lazer, liberdade, acesso e posse da terra e acesso a serviços de saúde."
+  fonte: "Parte 1 · seção 1.4"
+
+- id: ampliado-art196
+  tag: conceito
+  tema: "Conceito ampliado"
+  frente: "Que artigo da CF88 traduz o conceito ampliado ao garantir a saúde “mediante políticas sociais e econômicas”?"
+  verso: "O **art. 196**."
+  extra: "A prova pede para relacionar o art. 196 ao conceito ampliado (Parte 4)."
+  prova: "Prova 88 (Q3); Compilado A (Q3)"
+  fonte: "Parte 1 · seção 1.4"
+
+# ---------------------------------------------------------------- 2 · Os três planos
+- id: planos-autor
+  tag: planos
+  tema: "Planos da condição de saúde"
+  frente: "Quem propôs analisar a condição de saúde em três planos (subindividual, individual e coletivo)?"
+  verso: "**Narvai** e colaboradores (Narvai e São Pedro, 2008)."
+  img: p1-planos.svg
+  fonte: "Parte 1 · seção 2 · slides 5 a 7"
+
+- id: planos-subindividual
+  tag: planos
+  tema: "Plano subindividual"
+  frente: "No plano **subindividual**, como aparece o processo saúde-doença?"
+  verso: "Como **equilíbrio ou desequilíbrio** biológico (normalidade × disfunção, doença)."
+  extra: "É o nível dos órgãos, células, fisiologia e fisiopatologia."
+  fonte: "Parte 1 · seção 2 · slide 5"
+
+- id: planos-individual
+  tag: planos
+  tema: "Plano individual"
+  frente: "No plano **individual**, o que se observa?"
+  verso: "A **pessoa**, ser biológico e social, cujas alterações combinam o biológico com as **condições gerais de existência**."
+  fonte: "Parte 1 · seção 2 · slide 6"
+
+- id: planos-coletivo
+  tag: planos
+  tema: "Plano coletivo"
+  frente: "No plano **coletivo**, como se entende a condição de saúde?"
+  verso: "Como **expressão de um processo social mais amplo**, com determinantes em vários níveis de análise."
+  fonte: "Parte 1 · seção 2 · slide 7"
+
+- id: planos-glicemia
+  tag: planos
+  tema: "Planos: reconheça"
+  frente: "Uma glicemia de jejum de 160 mg/dL é analisada em qual plano da condição de saúde?"
+  verso: "**Subindividual.**"
+  fonte: "Parte 1 · seção 2"
+
+- id: planos-bairro
+  tag: planos
+  tema: "Planos: reconheça"
+  frente: "“Por que o diabetes cresce mais nos bairros pobres da cidade?” Essa pergunta pertence a qual plano?"
+  verso: "**Coletivo.**"
+  fonte: "Parte 1 · seção 2"
+
+- id: planos-praticas
+  tag: planos
+  tema: "Clínica e saúde pública"
+  frente: "A clínica trabalha sobretudo em quais planos? E as práticas de saúde pública?"
+  verso: "Clínica: **subindividual e individual**. Saúde pública: **coletivo**."
+  fonte: "Parte 1 · seção 2.1"
+
+# ---------------------------------------------------------------- 3 · Modelos explicativos
+- id: explicativo-atencao
+  tag: modelos
+  tema: "Explicar × atender"
+  frente: "Qual a diferença entre **modelo explicativo** e **modelo de atenção**?"
+  verso: "Explicativo: diz **por que** se adoece. De atenção: diz **como se organizam** as ações e os serviços."
+  extra: "A prova às vezes chama os dois de “modelo de intervenção do processo saúde-doença-cuidado”."
+  fonte: "Parte 1 · seção 3"
+
+- id: linha-modelos
+  tag: modelos
+  tema: "Linha do tempo"
+  cloze: "Ordem dos modelos explicativos: mágico-religioso → {{c1::miasmático}} → {{c2::microbiano (unicausal)}} → {{c3::biomédico}} → processual (HND) → {{c4::sistêmico}}."
+  img: p1-linha-modelos.svg
+  fonte: "Parte 1 · seção 3"
+
+- id: magico-doenca
+  tag: modelos
+  tema: "Mágico-religioso"
+  frente: "No modelo mágico-religioso, o que são a saúde e a doença?"
+  verso: "Saúde é **dádiva** dos deuses; doença é **castigo** (pecado, forças sobrenaturais)."
+  fonte: "Parte 1 · seção 3.1 · slide 8"
+
+- id: magico-hoje
+  tag: modelos
+  tema: "Mágico-religioso"
+  frente: "Benzedeiras, cirurgias espirituais, patuás e pagamento de promessas são exemplos atuais de qual modelo explicativo?"
+  verso: "**Mágico-religioso.**"
+  img: a1-s10.jpg
+  extra: "Conhecer essas crenças não é concordar com elas: ajuda a entender a cultura do paciente e a criar vínculo."
+  fonte: "Parte 1 · seção 3.1 · slide 10"
+
+- id: higeia
+  tag: modelos
+  tema: "As filhas de Asclépio"
+  frente: "Higeia (Hígia), filha de Asclépio, representa o quê?"
+  verso: "A **prevenção**: a saúde coletiva e a higiene."
+  img_frente: p1-higia.jpg
+  extra: "**Hi**geia → **hi**giene → prevenção → coletivo."
+  fonte: "Parte 1 · seção 3.1 · slide 9"
+
+- id: panaceia
+  tag: modelos
+  tema: "As filhas de Asclépio"
+  frente: "Panaceia, filha de Asclépio, representa o quê?"
+  verso: "A **cura**: o cuidado individual, a medicina clínica."
+  img_frente: p1-panaceia.jpg
+  extra: "Seu nome virou sinônimo de remédio para todos os males."
+  fonte: "Parte 1 · seção 3.1 · slide 9"
+
+- id: hipocrates
+  tag: modelos
+  tema: "Hipócrates"
+  frente: "Que ruptura Hipócrates (século V a.C.) fez com o pensamento mágico-religioso?"
+  verso: "Procurou causas **naturais** para as doenças: clima, água, modo de vida e equilíbrio dos humores."
+  img: p1-hipocrates.jpg
+  fonte: "Parte 1 · seção 3.1"
+
+- id: miasma-definicao
+  tag: modelos
+  tema: "Teoria miasmática"
+  frente: "Para a teoria miasmática (séculos XVIII e XIX), o que causava as doenças?"
+  verso: "Os **miasmas**: emanações invisíveis que corrompiam o ar, geradas pela sujeira e pela putrefação."
+  fonte: "Parte 1 · seção 3.2 · slide 11"
+
+- id: miasma-medico-peste
+  tag: modelos
+  tema: "Teoria miasmática"
+  frente: "O bico do “médico da peste” era recheado de ervas aromáticas para filtrar o quê?"
+  verso: "Os **miasmas** (o ar corrompido)."
+  img_frente: p1-medico-peste.jpg
+  fonte: "Parte 1 · seção 3.2"
+
+- id: miasma-acerto
+  tag: modelos
+  tema: "Teoria miasmática"
+  frente: "A teoria miasmática errou o mecanismo. Em que ela acertou?"
+  verso: "Ao ligar a doença à **sujeira, à pobreza e às condições urbanas**, o que gerou saneamento, drenagem e quarentenas."
+  fonte: "Parte 1 · seção 3.2"
+
+- id: snow
+  tag: modelos
+  tema: "John Snow"
+  frente: "O mapa de John Snow (Londres, 1854) ligou as mortes por cólera a quê?"
+  verso: "À **água contaminada** da bomba da Broad Street, antes de se conhecer o vibrião."
+  img_frente: p1-mapa-snow.png
+  fonte: "Parte 1 · seção 3.2"
+
+- id: microbiana-logica
+  tag: modelos
+  tema: "Teoria microbiana"
+  frente: "Qual é a lógica da teoria microbiana (fim do século XIX)?"
+  verso: "**Unicausal**: um micro-organismo específico causa uma doença específica."
+  extra: "Pasteur e Koch. Os postulados de Koch (1890) explicam o destaque do slide para essa data."
+  img: p1-koch.jpg
+  fonte: "Parte 1 · seção 3.3 · slide 12"
+
+- id: microbiana-efeito
+  tag: modelos
+  tema: "Teoria microbiana"
+  frente: "Qual foi o efeito colateral do “paradigma bacteriológico” sobre a saúde pública?"
+  verso: "Estreitou o olhar para doenças específicas no laboratório e a **afastou das reformas sociais**."
+  fonte: "Parte 1 · seção 3.3"
+
+# ---------------------------------------------------------------- 4 · Biomédico
+- id: biomedico-logica
+  tag: modelos
+  tema: "Modelo biomédico"
+  cloze: "O modelo biomédico adota uma lógica {{c1::unicausal, ou linear}}: uma causa que, de forma {{c2::mecânica, unidirecional e progressiva}}, explicaria o adoecer."
+  fonte: "Parte 1 · seção 4 · slide 13"
+
+- id: biomedico-seis
+  tag: modelos
+  tema: "Modelo biomédico"
+  cloze: "As seis marcas do modelo biomédico: {{c1::individual}}, {{c2::curativo}}, {{c3::centrado no médico}}, {{c4::fragmentado}}, {{c5::especialista}} e {{c6::hospitalocêntrico}}."
+  img: p1-biomedico.svg
+  fonte: "Parte 1 · seção 4 · slide 14"
+
+- id: biomedico-linear
+  tag: modelos
+  tema: "Modelo biomédico"
+  frente: "Que modelo de saúde a prova chama de **linear**?"
+  verso: "O **biomédico**."
+  extra: "Na discursiva, caracterize: unicausal e mecânico; individual, curativo, centrado no médico, fragmentado, especializado e hospitalocêntrico."
+  prova: "Turma 90"
+  fonte: "Parte 1 · seção 4"
+
+- id: biomedico-reconheca
+  tag: modelos
+  tema: "Reconheça o modelo"
+  frente: "“Compreende o processo saúde-doença a partir das Ciências Biológicas e aceita a lógica linear do adoecimento, com a doença causada por um agente patológico específico.” Que modelo?"
+  verso: "**Biomédico.**"
+  prova: "Prova 88 (Q1b)"
+  fonte: "Parte 1 · seção 4"
+
+- id: flexner
+  tag: modelos
+  tema: "Modelo biomédico"
+  frente: "Que relatório de 1910 fixou o ensino médico no laboratório, no hospital e na especialização?"
+  verso: "O **Relatório Flexner**."
+  img: p1-flexner.jpg
+  fonte: "Parte 1 · seção 4"
+
+- id: biomedico-critica
+  tag: modelos
+  tema: "Modelo biomédico"
+  frente: "A saúde coletiva critica o quê, exatamente, no modelo biomédico?"
+  verso: "O **reducionismo**: explicar o adoecer só pela lesão ou pelo agente e ignorar as condições de vida."
+  extra: "Não é uma crítica à ciência biológica, que trouxe antibióticos, cirurgias seguras, UTIs e transplantes."
+  fonte: "Parte 1 · seção 4"
+
+# ---------------------------------------------------------------- 5 · HND
+- id: hnd-triade
+  tag: hnd
+  tema: "Modelo processual (HND)"
+  frente: "Na História Natural da Doença, que tríade ecológica explica o adoecer?"
+  verso: "**Agente, hospedeiro e meio ambiente.**"
+  img: p1-hnd.svg
+  fonte: "Parte 1 · seção 5.1 · slide 16"
+
+- id: hnd-autores
+  tag: hnd
+  tema: "Modelo processual (HND)"
+  frente: "Quem propôs a História Natural da Doença e os níveis de prevenção?"
+  verso: "**Leavell e Clark.**"
+  fonte: "Parte 1 · seção 5.1"
+
+- id: hnd-periodos
+  tag: hnd
+  tema: "Modelo processual (HND)"
+  cloze: "A HND tem dois períodos: o {{c1::pré-patogênico}} (ou epidemiológico), antes de a doença começar no organismo, e o {{c2::patogênico}} (ou patológico), com a doença em curso."
+  fonte: "Parte 1 · seção 5.1"
+
+- id: hnd-horizonte
+  tag: hnd
+  tema: "Modelo processual (HND)"
+  frente: "O que marca o **horizonte clínico** na HND?"
+  verso: "O aparecimento de **sinais e sintomas**."
+  fonte: "Parte 1 · seção 5.1"
+
+- id: processual-avanco
+  tag: hnd
+  tema: "Modelo processual (HND)"
+  frente: "Por que o modelo processual é um avanço em relação ao biomédico (slide 15)?"
+  verso: "Reconhece que características **sociais** dos indivíduos interferem na **chance** de adoecer, na **forma** de adoecer e na **repercussão** da doença."
+  fonte: "Parte 1 · seção 5 · slide 15"
+
+- id: processual-reconheca
+  tag: hnd
+  tema: "Reconheça o modelo"
+  frente: "“Interação da tríade agente, hospedeiro e meio ambiente, com dois períodos sequenciados: o epidemiológico e o patológico.” Que modelo?"
+  verso: "**Processual** (História Natural da Doença)."
+  prova: "Prova 88 (Q1c)"
+  fonte: "Parte 1 · seção 5"
+
+- id: prevencao-primaria-medidas
+  tag: hnd
+  tema: "Níveis de prevenção"
+  frente: "Quais são as duas medidas da prevenção **primária** de Leavell e Clark?"
+  verso: "**Promoção da saúde** (medidas gerais) e **proteção específica**."
+  fonte: "Parte 1 · seção 5.2"
+
+- id: prevencao-vacina
+  tag: hnd
+  tema: "Níveis de prevenção"
+  frente: "Vacinação: que nível de prevenção?"
+  verso: "**Primária** (proteção específica)."
+  fonte: "Parte 1 · seção 5.2"
+
+- id: prevencao-rastreamento
+  tag: hnd
+  tema: "Níveis de prevenção"
+  frente: "Rastreamento do câncer do colo do útero: que nível de prevenção?"
+  verso: "**Secundária** (diagnóstico precoce e tratamento imediato)."
+  fonte: "Parte 1 · seção 5.2"
+
+- id: prevencao-reabilitacao
+  tag: hnd
+  tema: "Níveis de prevenção"
+  frente: "Fisioterapia após um AVC: que nível de prevenção?"
+  verso: "**Terciária** (reabilitação)."
+  fonte: "Parte 1 · seção 5.2"
+
+- id: promocao-hnd-ottawa
+  tag: hnd
+  tema: "Pegadinha"
+  frente: "A “promoção da saúde” da HND é a mesma da Carta de Ottawa?"
+  verso: "**Não.** Na HND, é um nível da prevenção primária; em Ottawa, é um **campo próprio**, voltado aos determinantes sociais."
+  fonte: "Parte 1 · seção 5.2"
+
+- id: prevencao-quaternaria
+  tag: hnd
+  tema: "Níveis de prevenção"
+  frente: "O que é prevenção **quaternária**?"
+  verso: "Proteger quem está em risco de **sobremedicalização** contra intervenções desnecessárias."
+  extra: "Proposta de Marc Jamoulle, adotada pela WONCA."
+  fonte: "Parte 1 · seção 5.2"
+
+- id: hnd-critica-estende
+  tag: hnd
+  tema: "Crítica à HND"
+  frente: "A crítica à HND (as doenças não se restringem ao processo agente-hospedeiro) se estende também a qual modelo?"
+  verso: "Ao **biomédico**."
+  extra: "Os dois centram a explicação no agente e no hospedeiro e deixam de lado os determinantes sociais. <span class=\"div\">⚠ Um gabarito da Prova 89 traz “processual”, mas a HND já é o modelo processual.</span>"
+  prova: "Turmas 91 e 90; Prova 89"
+  fonte: "Parte 1 · seção 5.3"
+
+- id: arouca-dilema
+  tag: hnd
+  tema: "Crítica à HND"
+  frente: "Que tese de Sergio Arouca (1975) criticou a medicina preventiva?"
+  verso: "*O dilema preventivista*."
+  extra: "Mudar o discurso para a prevenção, sem mudar a estrutura social e o modelo de atenção, não muda a saúde da população."
+  fonte: "Parte 1 · seção 5.3"
+
+# ---------------------------------------------------------------- 6 · Sistêmico
+- id: sistemico-niveis
+  tag: modelos
+  tema: "Modelo sistêmico"
+  cloze: "Modelo sistêmico: fatores {{c1::políticos e socioeconômicos}}, {{c2::culturais}}, {{c3::ambientais}} e {{c4::agentes patogênicos}} se relacionam **em níveis**, e mudar um nível afeta os outros."
+  img: p1-sistemico-dengue.svg
+  fonte: "Parte 1 · seção 6 · slides 17 e 18"
+
+- id: sistemico-palavra
+  tag: modelos
+  tema: "Modelo sistêmico"
+  frente: "Qual é a palavra-chave do modelo sistêmico?"
+  verso: "**Interdependência** entre níveis: não há causa única nem sequência simples."
+  fonte: "Parte 1 · seção 6"
+
+- id: sistemico-reconheca
+  tag: modelos
+  tema: "Reconheça o modelo"
+  frente: "“Considera comportamentos culturais que possam relacionar-se à saúde de uma população e o perfil epidemiológico como fator importante.” Que modelo?"
+  verso: "**Sistêmico.**"
+  extra: "Os fatores culturais são um dos níveis do modelo (slides 17 e 18). <span class=\"div\">⚠ Um gabarito traz “determinação social”; os slides sustentam “sistêmico”.</span>"
+  prova: "Prova 88 (Q1a)"
+  fonte: "Parte 1 · seção 6"
+
+- id: dss-determinacao
+  tag: modelos
+  tema: "Determinantes × determinação"
+  frente: "Qual a diferença entre **determinantes sociais da saúde** e **determinação social**?"
+  verso: "Determinantes: **fatores** (renda, escolaridade, moradia). Determinação social: o adoecer resulta da **organização da sociedade** como um todo."
+  extra: "Nas provas, “camadas” e “níveis de intervenção” costumam apontar para os determinantes (Dahlgren e Whitehead, Parte 2)."
+  fonte: "Parte 1 · seção 6.1"
+
+# ---------------------------------------------------------------- 7 · Modelos de atenção
+- id: atencao-paim
+  tag: atencao
+  tema: "Modelos de atenção"
+  frente: "Segundo Paim, o que é um modelo de atenção?"
+  verso: "Uma combinação de **tecnologias** para intervir sobre problemas e necessidades de saúde: a **lógica** que orienta a ação."
+  fonte: "Parte 1 · seção 7"
+
+- id: atencao-hegemonicos
+  tag: atencao
+  tema: "Modelos de atenção"
+  frente: "Quais são os dois modelos de atenção **hegemônicos** no Brasil?"
+  verso: "**Médico-assistencial privatista** e **sanitarista** (campanhista)."
+  fonte: "Parte 1 · seção 7"
+
+- id: privatista-demanda
+  tag: atencao
+  tema: "Médico-assistencial privatista"
+  frente: "O modelo médico-assistencial privatista responde a que tipo de demanda?"
+  verso: "À **demanda espontânea** (quem procura o serviço), com foco no hospital e na cura."
+  fonte: "Parte 1 · seção 7"
+
+- id: sanitarista-organizacao
+  tag: atencao
+  tema: "Modelo sanitarista"
+  frente: "Como se organiza o modelo sanitarista (campanhista)?"
+  verso: "Por **campanhas** e programas especiais, **temporários** e de **direção centralizada**."
+  extra: "Exemplo histórico: as campanhas de Oswaldo Cruz, no início do século XX (Parte 3)."
+  fonte: "Parte 1 · seção 7"
+
+- id: sanitarista-reconheca
+  tag: atencao
+  tema: "Reconheça o modelo"
+  frente: "“Combinação de tecnologias para o controle de danos e riscos; não contempla a integralidade nem a descentralização; caráter temporário e direção centralizada.” Que modelo de atenção?"
+  verso: "**Sanitarista** (campanhista)."
+  prova: "Turma 91"
+  fonte: "Parte 1 · seção 7"
+
+- id: privatista-covid
+  tag: atencao
+  tema: "Reconheça o modelo"
+  frente: "Na COVID-19, governos priorizaram hospitais de campanha em vez da Atenção Primária e da vigilância. Que modelo de atenção é esse?"
+  verso: "**Médico-assistencial privatista** (hospitalocêntrico)."
+  prova: "Prova 82; prova do grupo (2020.2)"
+  fonte: "Parte 1 · seção 7"
+
+- id: tecnologia-dica
+  tag: atencao
+  tema: "Reconheça o modelo"
+  frente: "Questão sobre tecnologia: controle de danos e riscos **na população** (vacinação em massa, combate a vetores), por campanhas. Que modelo?"
+  verso: "**Sanitarista.**"
+  extra: "Tecnologia de diagnóstico e tratamento **individual** (exames, especialistas, hospital) aponta para o biomédico / médico-assistencial."
+  prova: "Prova 89 (Q6)"
+  fonte: "Parte 1 · Como cai na prova"
+
+- id: vigilancia-saude
+  tag: atencao
+  tema: "Modelos alternativos"
+  frente: "Qual é a ideia central da **vigilância da saúde** como modelo de atenção?"
+  verso: "Atuar sobre os problemas do **território**, combinando promoção, prevenção e assistência."
+  fonte: "Parte 1 · seção 7"
+
+- id: esf-modelo
+  tag: atencao
+  tema: "Modelos alternativos"
+  frente: "Na Estratégia Saúde da Família, por quem cada equipe é responsável?"
+  verso: "Por uma **população adscrita** (um território definido), com equipe multiprofissional."
+  fonte: "Parte 1 · seção 7"

@@ -1,0 +1,755 @@
+# Aula 2 · Promoção da Saúde (formato descrito em aula1.yaml)
+aula: 2
+cards:
+
+# ---------------------------------------------------------------- 1 · Origens
+- id: sigerist-tarefas
+  tag: origens
+  tema: "Sigerist"
+  cloze: "Para Sigerist, as quatro tarefas da medicina são {{c1::promover a saúde}}, {{c2::prevenir doenças}}, {{c3::recuperar os enfermos}} e {{c4::reabilitar}}."
+  img: p2-sigerist.jpg
+  extra: "Ele é apontado como o primeiro a usar a expressão “promoção da saúde”, nos anos 1940."
+  fonte: "Parte 2 · seção 1.1 · slide 2"
+
+- id: sigerist-como
+  tag: origens
+  tema: "Sigerist"
+  frente: "Para Sigerist, de onde vem a saúde que se promove?"
+  verso: "De **condições de vida decentes**: bom trabalho, educação, cultura, lazer e descanso."
+  extra: "O conceito já nasce ligado às condições de vida, e não a um procedimento médico."
+  fonte: "Parte 2 · seção 1.1 · slide 2"
+
+- id: definicao-buss-carvalho
+  tag: origens
+  tema: "Definição de promoção"
+  cloze: "Promoção da saúde é um conjunto de {{c1::estratégias e formas de produzir saúde}}, no âmbito {{c2::individual e coletivo}}, visando atender às necessidades sociais de saúde e à melhoria da {{c3::qualidade de vida}}."
+  extra: "Buss e Carvalho (2009), slide 3. A PNPS usa quase a mesma frase no art. 2º."
+  prova: "Prova 82 (Q1, item I: correto)"
+  fonte: "Parte 2 · seção 1.2 · slide 3"
+
+- id: lalonde-o-que
+  tag: origens
+  tema: "Informe Lalonde"
+  frente: "O que foi o Informe Lalonde?"
+  verso: "Documento do governo do **Canadá (1974)** que organizou os determinantes da saúde no conceito de **campo da saúde**."
+  fonte: "Parte 2 · seção 1.3 · slide 4"
+
+- id: lalonde-campo
+  tag: origens
+  tema: "Informe Lalonde"
+  cloze: "Os quatro componentes do campo da saúde (Lalonde): {{c1::biologia humana}}, {{c2::ambiente}}, {{c3::estilo de vida}} e {{c4::organização da assistência à saúde}}."
+  img: p2-lalonde.svg
+  fonte: "Parte 2 · seção 1.3 · slide 4"
+
+- id: lalonde-diagnostico
+  tag: origens
+  tema: "Informe Lalonde"
+  frente: "Qual foi o diagnóstico incômodo do Informe Lalonde?"
+  verso: "Quase todo o gasto ia para a **assistência médica**, mas as principais causas de doença estavam na biologia, no ambiente e no **estilo de vida**."
+  fonte: "Parte 2 · seção 1.3"
+
+- id: lalonde-marco
+  tag: origens
+  tema: "Informe Lalonde"
+  frente: "Por que o Informe Lalonde é o marco inaugural da promoção da saúde moderna?"
+  verso: "Foi o **primeiro documento oficial de um governo** a questionar o custo e o impacto da assistência médica sobre a saúde."
+  prova: "Turmas 91 e 90; Prova 89 (Q10)"
+  fonte: "Parte 2 · seção 1.3"
+
+- id: lalonde-critica
+  tag: origens
+  tema: "Informe Lalonde"
+  frente: "Qual é a principal crítica às ações inspiradas no Informe Lalonde?"
+  verso: "Miraram sobretudo a **mudança de hábitos individuais**, com risco de **culpabilizar o indivíduo**."
+  extra: "O diagnóstico era amplo (quatro componentes); as ações que ele inspirou é que foram comportamentais. Numa discursiva, use as duas ideias."
+  fonte: "Parte 2 · seção 1.3"
+
+- id: lalonde-pegadinha
+  tag: origens
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “segundo o Informe Lalonde, promoção da saúde é o processo de capacitação da comunidade para atuar na melhoria de sua qualidade de vida e saúde”."
+  verso: "**Errado.** Essa definição é da **Carta de Ottawa (1986)**."
+  prova: "Prova 82 (Q1, item IV)"
+  fonte: "Parte 2 · seção 1.3"
+
+# ---------------------------------------------------------------- 2 · Os dois enfoques
+- id: enfoques-nomes
+  tag: enfoques
+  tema: "Os dois grandes grupos"
+  frente: "Quais são os dois grandes grupos (enfoques) na operacionalização da promoção da saúde?"
+  verso: "**Comportamental** e **socioambiental**."
+  prova: "Prova 88 (Q7); Prova 82 (Q9); Compilado B (Q10)"
+  fonte: "Parte 2 · seção 2.1 · slide 5"
+
+- id: enfoques-modelos
+  tag: enfoques
+  tema: "Os dois grandes grupos"
+  cloze: "O enfoque comportamental é o {{c1::modelo regulador}} (conservador, “velha” promoção); o socioambiental é o {{c2::modelo emancipador}} (estruturalista, “nova promoção da saúde”)."
+  img: a2-s05.jpg
+  extra: "O regulador quer **regular a conduta**; o emancipador quer **dar poder** e mudar as condições de vida."
+  fonte: "Parte 2 · seção 2.1 · slide 5"
+
+- id: comportamental-intervencao
+  tag: enfoques
+  tema: "Enfoque comportamental"
+  frente: "Como o enfoque **comportamental** intervém?"
+  verso: "Com **programas educativos** para mudar **hábitos individuais** (fumo, dieta, sedentarismo, direção perigosa)."
+  prova: "Prova 88 (Q7); Prova 82 (Q9)"
+  fonte: "Parte 2 · seção 2.1"
+
+- id: socioambiental-intervencao
+  tag: enfoques
+  tema: "Enfoque socioambiental"
+  frente: "Como o enfoque **socioambiental** intervém?"
+  verso: "Sobre os **determinantes sociais**, com **políticas públicas**, ambientes favoráveis, **intersetorialidade** e participação social."
+  prova: "Prova 88 (Q7); Prova 82 (Q9)"
+  fonte: "Parte 2 · seção 2.1"
+
+- id: iceberg
+  tag: enfoques
+  tema: "O iceberg do slide 6"
+  frente: "Na metáfora do iceberg (slide 6), o que fica abaixo da linha d'água?"
+  verso: "Os **determinantes sociais**. O comportamento é só a ponta visível."
+  img: p2-iceberg.svg
+  fonte: "Parte 2 · seção 2.1 · slide 6"
+
+- id: estilo-condicionado
+  tag: enfoques
+  tema: "Enfoque socioambiental"
+  frente: "No enfoque socioambiental, o estilo de vida sai da lista de determinantes?"
+  verso: "**Não.** Continua, mas visto como algo **condicionado** pelo ambiente, pela renda, pela informação e pela propaganda."
+  fonte: "Parte 2 · seção 2.1"
+
+- id: culpabilizacao
+  tag: enfoques
+  tema: "Críticas ao comportamental"
+  frente: "Por que o enfoque comportamental leva à “culpabilização da vítima”?"
+  verso: "Se cada um responde sozinho pela própria saúde, as **causas políticas e econômicas somem** e o governo se desresponsabiliza."
+  fonte: "Parte 2 · seção 2.2"
+
+- id: labonte-paradigmas
+  tag: enfoques
+  tema: "Paradigmas de Labonte"
+  cloze: "Os três paradigmas de Labonte: {{c1::médico}} (o problema é a doença instalada), {{c2::comportamental}} (a conduta de risco) e {{c3::socioambiental}} (ambientes físicos e sociais desfavoráveis)."
+  fonte: "Parte 2 · seção 2.3"
+
+# ---------------------------------------------------------------- 3 · Alma-Ata
+- id: almaata-quem
+  tag: almaata
+  tema: "Alma-Ata (1978)"
+  frente: "Quem convocou a conferência de Alma-Ata (1978) e qual era o seu tema?"
+  verso: "**OMS e UNICEF**; o tema eram os **cuidados primários de saúde**."
+  img: p2-almaty-palacio.jpg
+  extra: "Alma-Ata, hoje Almaty (Cazaquistão), então parte da URSS. Declaração final de 12 de setembro de 1978."
+  fonte: "Parte 2 · seção 3 · slide 7"
+
+- id: almaata-meta
+  tag: almaata
+  tema: "Alma-Ata (1978)"
+  frente: "Que meta a Declaração de Alma-Ata lançou?"
+  verso: "**Saúde para Todos no Ano 2000**, tendo os cuidados primários como caminho."
+  fonte: "Parte 2 · seção 3 · slide 7"
+
+- id: almaata-cuidados-primarios
+  tag: almaata
+  tema: "Cuidados primários"
+  cloze: "Cuidados primários de saúde: cuidados {{c1::essenciais}}, ao alcance {{c2::universal}}, com a {{c3::plena participação}} das pessoas e a um custo que a comunidade possa manter. São o {{c4::primeiro nível de contato}} com o sistema de saúde."
+  fonte: "Parte 2 · seção 3 · Declaração, item VI"
+
+- id: almaata-oito
+  tag: almaata
+  tema: "Os oito elementos"
+  cloze: "Oito elementos dos cuidados primários. **Condições de vida:** {{c1::educação em saúde}}, {{c2::alimentação e nutrição}}, {{c3::água e saneamento}}. **Proteção:** {{c4::saúde materno-infantil e planejamento familiar}}, {{c5::imunização}}, {{c6::controle de doenças endêmicas}}. **Assistência:** {{c7::tratamento de doenças e lesões comuns}}, {{c8::medicamentos essenciais}}."
+  img: p2-almaata.svg
+  extra: "Recurso de memória: 3 + 3 + 2."
+  fonte: "Parte 2 · seção 3.2 · slide 8"
+
+- id: almaata-desigualdade
+  tag: almaata
+  tema: "Alma-Ata (1978)"
+  frente: "Como Alma-Ata qualificou a desigualdade no estado de saúde entre os países e dentro deles?"
+  verso: "**Inaceitável**, do ponto de vista político, social e econômico."
+  fonte: "Parte 2 · seção 3.1"
+
+- id: almaata-importancia
+  tag: almaata
+  tema: "Alma-Ata e a promoção"
+  frente: "Por que Alma-Ata importa para a promoção da saúde?"
+  verso: "Pôs na agenda **direito, equidade, intersetorialidade e participação**, recolocou os **determinantes sociais** em destaque e inspirou a Carta de Ottawa."
+  prova: "Turmas 91 e 90; Prova 89 (Q10)"
+  fonte: "Parte 2 · seção 3.3"
+
+- id: almaata-pegadinha
+  tag: almaata
+  tema: "Pegadinha"
+  frente: "Alma-Ata foi a primeira conferência internacional sobre promoção da saúde?"
+  verso: "**Não.** Foi sobre **cuidados primários**. A primeira de promoção da saúde é **Ottawa (1986)**."
+  fonte: "Parte 2 · seção 3.3"
+
+- id: almaata-brasil
+  tag: almaata
+  tema: "Alma-Ata no Brasil"
+  frente: "Cite duas iniciativas brasileiras em consonância com Alma-Ata para ampliar a cobertura dos serviços."
+  verso: "**PIASS** e **AIS** (Ações Integradas de Saúde, 1983)."
+  extra: "O PREV-SAÚDE (1980) também vale, mas não foi implantado. O PIASS é de 1976, anterior à conferência, e foi ampliado em 1979. <span class=\"div\">⚠ Um arquivo traz “AIS e SUDS”; o SUDS (1987) já é transição para o SUS.</span>"
+  prova: "Prova 82 (Q7); Prova 85 (Q10); Compilado A (Q7)"
+  fonte: "Parte 2 · seção 3.3"
+
+# ---------------------------------------------------------------- 4 · Carta de Ottawa
+- id: ottawa-definicao
+  tag: ottawa
+  tema: "Carta de Ottawa (1986)"
+  cloze: "Carta de Ottawa: promoção da saúde é o processo de {{c1::capacitação da comunidade}} para atuar na melhoria da sua {{c2::qualidade de vida e saúde}}, incluindo uma maior {{c3::participação no controle}} deste processo."
+  prova: "Prova 82 (Q5B); Compilado B (Q6); Turma 84"
+  fonte: "Parte 2 · seção 4 · slide 9"
+
+- id: ottawa-nomeie
+  tag: ottawa
+  tema: "Reconheça o modelo"
+  frente: "“Processo de capacitação da comunidade para atuar na melhoria de sua qualidade de vida e saúde, incluindo maior participação no controle desse processo.” A que modelo o texto se refere?"
+  verso: "**Promoção da saúde**, na definição da Carta de Ottawa."
+  extra: "Respostas como “sistêmico” ou “vigilância da saúde” não correspondem à definição."
+  prova: "Prova 82 (Q5B); Compilado B (Q6)"
+  fonte: "Parte 2 · seção 4"
+
+- id: ottawa-quando
+  tag: ottawa
+  tema: "Carta de Ottawa (1986)"
+  frente: "Quando e onde aconteceu a I Conferência Internacional sobre Promoção da Saúde?"
+  verso: "Em **Ottawa (Canadá)**, em **novembro de 1986**."
+  img: p2-ottawa.jpg
+  fonte: "Parte 2 · seção 4"
+
+- id: ottawa-recurso
+  tag: ottawa
+  tema: "Carta de Ottawa (1986)"
+  frente: "Para a Carta de Ottawa, a saúde é o objetivo de viver?"
+  verso: "**Não.** É um **recurso para a vida** cotidiana."
+  fonte: "Parte 2 · seção 4.1"
+
+- id: ottawa-tres-ideias
+  tag: ottawa
+  tema: "Carta de Ottawa (1986)"
+  frente: "Que três ideias sustentam a Carta de Ottawa, segundo o slide 10?"
+  verso: "**Equidade**, **determinantes múltiplos** da saúde e **intersetorialidade**."
+  fonte: "Parte 2 · seção 4.1 · slide 10"
+
+- id: ottawa-prerequisitos
+  tag: ottawa
+  tema: "Pré-requisitos para a saúde"
+  cloze: "Pré-requisitos para a saúde (Ottawa): {{c1::paz}} e {{c1::habitação}}; {{c2::educação}}, {{c2::alimentação}} e {{c2::renda}}; {{c3::ecossistema estável}} e {{c3::recursos sustentáveis}}; {{c4::justiça social e equidade}}."
+  extra: "Quase nenhum deles depende do setor saúde."
+  fonte: "Parte 2 · seção 4.1 · slide 11"
+
+- id: ottawa-estrategias
+  tag: ottawa
+  tema: "Estratégias de Ottawa"
+  cloze: "As três estratégias da Carta de Ottawa: {{c1::defesa de causa (advocacy)}}, {{c2::capacitação}} e {{c3::mediação}}."
+  fonte: "Parte 2 · seção 4.2"
+
+- id: ottawa-mediacao
+  tag: ottawa
+  tema: "Estratégias de Ottawa"
+  frente: "Qual é a ideia da estratégia de **mediação** na Carta de Ottawa?"
+  verso: "O setor saúde sozinho não garante os pré-requisitos; profissionais e grupos fazem a **ponte entre interesses diferentes** em favor da saúde."
+  fonte: "Parte 2 · seção 4.2"
+
+- id: ottawa-campos
+  tag: ottawa
+  tema: "Campos de ação de Ottawa"
+  cloze: "Os cinco campos de ação da Carta de Ottawa: {{c1::políticas públicas saudáveis}}, {{c2::ambientes favoráveis}}, {{c3::reforço da ação comunitária}}, {{c4::desenvolvimento de habilidades pessoais}} e {{c5::reorientação dos serviços de saúde}}."
+  img: p2-ottawa.svg
+  extra: "A ordem é um *zoom*: Estado → lugar → comunidade → pessoa → serviço."
+  fonte: "Parte 2 · seção 4.2 · slide 13"
+
+- id: campo-politicas
+  tag: ottawa
+  tema: "Campos de ação: reconheça"
+  frente: "Lei Antifumo, tributação do cigarro e rotulagem nutricional: que campo de ação de Ottawa?"
+  verso: "**Políticas públicas saudáveis.**"
+  fonte: "Parte 2 · seção 4.2"
+
+- id: campo-ambientes
+  tag: ottawa
+  tema: "Campos de ação: reconheça"
+  frente: "Saneamento, praças e ciclovias: que campo de ação de Ottawa?"
+  verso: "**Ambientes favoráveis.**"
+  img_frente: p2-ciclovia.jpg
+  fonte: "Parte 2 · seção 4.2"
+
+- id: campo-comunitaria
+  tag: ottawa
+  tema: "Campos de ação: reconheça"
+  frente: "Conselhos de saúde e hortas comunitárias: que campo de ação de Ottawa?"
+  verso: "**Reforço da ação comunitária.**"
+  img_frente: p2-horta.jpg
+  fonte: "Parte 2 · seção 4.2"
+
+- id: campo-reorientacao
+  tag: ottawa
+  tema: "Campos de ação: reconheça"
+  frente: "Estratégia Saúde da Família e Academia da Saúde: que campo de ação de Ottawa?"
+  verso: "**Reorientação dos serviços de saúde.**"
+  extra: "Reorientar não é construir mais hospitais: é ir além da função curativa e incorporar a promoção."
+  fonte: "Parte 2 · seção 4.2"
+
+# ---------------------------------------------------------------- 5 · Conferências
+- id: conf-adelaide
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Conferência de **Adelaide** (Austrália, 1988): tema central?"
+  verso: "**Políticas públicas saudáveis.**"
+  img: p2-conferencias.svg
+  fonte: "Parte 2 · seção 5.1 · slides 14 e 15"
+
+- id: conf-adelaide-areas
+  tag: conferencias
+  tema: "Conferências"
+  cloze: "As quatro áreas prioritárias de Adelaide: saúde da {{c1::mulher}}, {{c2::alimentação e nutrição}}, {{c3::tabaco e álcool}} e {{c4::ambientes favoráveis}}."
+  extra: "Adelaide cuida da mulher, põe comida na mesa, tira o cigarro e o copo e arruma o ambiente."
+  fonte: "Parte 2 · seção 5.1 · slide 15"
+
+- id: conf-sundsvall
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Conferência de **Sundsvall** (1991): tema central?"
+  verso: "**Ambientes favoráveis à saúde** (físicos, sociais, econômicos, políticos e culturais)."
+  extra: "Sundsvall fica na **Suécia**. O artigo de Sícoli e Nascimento diz “Suíça” por engano."
+  fonte: "Parte 2 · seção 5.2 · slide 16"
+
+- id: conf-jacarta
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Conferência de **Jacarta** (Indonésia, 1997): tema central?"
+  verso: "**Reforço da ação comunitária**: participação popular e empoderamento, para a promoção da saúde no século XXI."
+  extra: "Foi a primeira realizada num país em desenvolvimento."
+  fonte: "Parte 2 · seção 5.3 · slide 17"
+
+- id: conf-mexico
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Conferência do **México** (2000): foco?"
+  verso: "**Equidade**: reduzir as desigualdades em saúde, com planos nacionais de ação."
+  fonte: "Parte 2 · seção 5.4"
+
+- id: conf-bangkok
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Carta de **Bangkok** (2005): tema?"
+  verso: "Os determinantes da saúde num mundo **globalizado**."
+  fonte: "Parte 2 · seção 5.4"
+
+- id: conf-nairobi
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Chamado à Ação de **Nairóbi** (2009): o que reconheceu?"
+  verso: "Que já se sabia o que fazer e faltava **implementar** (fechar a lacuna de implementação)."
+  fonte: "Parte 2 · seção 5.4"
+
+- id: conf-helsinque
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Qual conferência consagrou a abordagem **Saúde em Todas as Políticas**?"
+  verso: "**Helsinque** (Finlândia, 2013)."
+  extra: "Cada setor considera, de forma sistemática, as consequências das suas decisões para a saúde e a equidade."
+  fonte: "Parte 2 · seção 5.4"
+
+- id: conf-xangai
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Conferência de **Xangai** (2016): tema?"
+  verso: "Promoção da saúde no **desenvolvimento sustentável** (Agenda 2030)."
+  extra: "Três pilares: boa governança, cidades saudáveis e letramento em saúde."
+  fonte: "Parte 2 · seção 5.4"
+
+- id: conf-genebra
+  tag: conferencias
+  tema: "Conferências"
+  frente: "Carta de **Genebra** (2021, virtual): tema?"
+  verso: "**Bem-estar**, equidade e desenvolvimento sustentável (“sociedades do bem-estar”)."
+  fonte: "Parte 2 · seção 5.4"
+
+# ---------------------------------------------------------------- 6 · Determinantes sociais
+- id: dss-cndss
+  tag: dss
+  tema: "Determinantes sociais"
+  cloze: "DSS, segundo a CNDSS: fatores {{c1::sociais, econômicos, culturais, étnicos/raciais, psicológicos e comportamentais}} que influenciam a ocorrência de problemas de saúde e seus fatores de risco na população."
+  prova: "Prova 88 (Q9, item I: correto)"
+  fonte: "Parte 2 · seção 6.1"
+
+- id: iniquidade
+  tag: dss
+  tema: "Iniquidades"
+  frente: "O que torna uma desigualdade em saúde uma **iniquidade**?"
+  verso: "Ser **evitável, injusta e desnecessária** (além de sistemática e relevante)."
+  extra: "Idosos adoecem mais que jovens: desigualdade. Crianças pobres morrem mais que as ricas: iniquidade."
+  fonte: "Parte 2 · seção 6.1"
+
+- id: dss-almaata-item
+  tag: dss
+  tema: "Determinantes sociais"
+  frente: "Certo ou errado: “a Conferência de Alma-Ata ressalta os DSS ao destacar a Saúde para Todos no Ano 2000”."
+  verso: "**Certo.** Alma-Ata e o lema recolocaram os determinantes sociais em destaque."
+  prova: "Prova 88 (Q9, item II)"
+  fonte: "Parte 2 · seção 6.2"
+
+- id: dss-individual-grupo
+  tag: dss
+  tema: "Fatores individuais não bastam"
+  frente: "Fatores como fumo e dieta explicam o quê? E o que não explicam?"
+  verso: "Explicam **quem, dentro de um grupo**, adoece mais. Não explicam as diferenças de saúde **entre grupos e países**."
+  extra: "Para isso pesa, sobretudo, a equidade na distribuição de renda."
+  fonte: "Parte 2 · seção 6.3"
+
+- id: dss-japao
+  tag: dss
+  tema: "Fatores individuais não bastam"
+  frente: "Segundo Buss e Pellegrini Filho, por que o Japão tem a maior expectativa de vida do mundo?"
+  verso: "Por ser **um dos países mais igualitários** do mundo, e não por hábitos individuais."
+  fonte: "Parte 2 · seção 6.3"
+
+- id: dss-rose-marmot
+  tag: dss
+  tema: "Fatores individuais não bastam"
+  frente: "No estudo de Rose e Marmot com servidores ingleses, quanto da diferença de mortalidade coronariana o colesterol, o fumo e a pressão alta explicaram?"
+  verso: "Só **35 a 40%**. O resto (60 a 65%) estava ligado aos determinantes sociais."
+  fonte: "Parte 2 · seção 6.3"
+
+- id: dw-oculta-core
+  tag: dss
+  tema: "Dahlgren e Whitehead"
+  frente: "Modelo de Dahlgren e Whitehead: o que está no centro?"
+  oculta: p2-dahlgren-oculta-core.svg
+  revelada: p2-dahlgren.svg
+  verso: "**Idade, sexo e fatores hereditários.**"
+  extra: "Não é nível de intervenção, porque não se modifica por política."
+  fonte: "Parte 2 · seção 6.4 · slide 12"
+
+- id: dw-oculta-estilo
+  tag: dss
+  tema: "Dahlgren e Whitehead"
+  frente: "Modelo de Dahlgren e Whitehead: qual camada está oculta?"
+  oculta: p2-dahlgren-oculta-estilo.svg
+  revelada: p2-dahlgren.svg
+  verso: "**Estilo de vida dos indivíduos.**"
+  extra: "Fica no limiar entre o individual e o social: as escolhas são condicionadas por informação, propaganda e acesso."
+  fonte: "Parte 2 · seção 6.4 · slide 12"
+
+- id: dw-oculta-redes
+  tag: dss
+  tema: "Dahlgren e Whitehead"
+  frente: "Modelo de Dahlgren e Whitehead: qual camada está oculta?"
+  oculta: p2-dahlgren-oculta-redes.svg
+  revelada: p2-dahlgren.svg
+  verso: "**Redes sociais e comunitárias.**"
+  extra: "A riqueza dessas redes expressa o nível de coesão social."
+  fonte: "Parte 2 · seção 6.4 · slide 12"
+
+- id: dw-oculta-cond
+  tag: dss
+  tema: "Dahlgren e Whitehead"
+  frente: "Modelo de Dahlgren e Whitehead: qual camada está oculta?"
+  oculta: p2-dahlgren-oculta-cond.svg
+  revelada: p2-dahlgren.svg
+  verso: "**Condições de vida e de trabalho.**"
+  extra: "Produção de alimentos, educação, ambiente de trabalho, desemprego, água e esgoto, serviços de saúde e habitação."
+  fonte: "Parte 2 · seção 6.4 · slide 12"
+
+- id: dw-oculta-macro
+  tag: dss
+  tema: "Dahlgren e Whitehead"
+  frente: "Modelo de Dahlgren e Whitehead: qual camada está oculta?"
+  oculta: p2-dahlgren-oculta-macro.svg
+  revelada: p2-dahlgren.svg
+  verso: "**Condições socioeconômicas, culturais e ambientais gerais** (os macrodeterminantes)."
+  fonte: "Parte 2 · seção 6.4 · slide 12"
+
+- id: dw-mais-abrangente
+  tag: dss
+  tema: "Dahlgren e Whitehead"
+  frente: "Qual é o setor (camada) mais abrangente do modelo de Dahlgren e Whitehead?"
+  verso: "**Condições socioeconômicas, culturais e ambientais gerais**, os macrodeterminantes, que influenciam todas as outras camadas."
+  prova: "Prova 85 (Q9); Turma 86"
+  fonte: "Parte 2 · seção 6.4"
+
+- id: dw-niveis
+  tag: dss
+  tema: "Níveis de intervenção"
+  cloze: "Níveis de intervenção de Dahlgren e Whitehead: 1º {{c1::comportamentos e estilos de vida}}; 2º {{c2::comunidades e redes de relações}}; 3º {{c3::condições de vida e de trabalho}}; 4º {{c4::macrodeterminantes}}."
+  extra: "Os quatro começam com C: Comportamento, Comunidade, Condições, Contexto."
+  fonte: "Parte 2 · seção 6.5"
+
+- id: dw-coesao
+  tag: dss
+  tema: "Níveis de intervenção"
+  frente: "Fortalecer a coesão social, a solidariedade e a confiança é intervenção de qual nível?"
+  verso: "**2º nível** (comunidades e redes de relações), e não do 1º."
+  prova: "Prova 88 (Q9, item IV)"
+  fonte: "Parte 2 · seção 6.5"
+
+- id: dw-intersetorial
+  tag: dss
+  tema: "Níveis de intervenção"
+  frente: "Água limpa, esgoto, habitação, emprego e serviços dependem de setores diferentes. Que nível de intervenção exige essa ação integrada (intersetorial)?"
+  verso: "O **3º nível** (condições materiais e psicossociais de vida e de trabalho)."
+  img: p2-saneamento.jpg
+  extra: "A intersetorialidade vale também para os macrodeterminantes; o 1º nível é o dos comportamentos."
+  prova: "Prova 88 (Q9, item V)"
+  fonte: "Parte 2 · seção 6.5"
+
+- id: dw-alimentacao
+  tag: dss
+  tema: "Relacione às camadas"
+  frente: "“Alimentação” fica em qual camada de Dahlgren e Whitehead?"
+  verso: "Depende: o **hábito alimentar** é estilo de vida; a **produção e o acesso** a alimentos são condições de vida."
+  prova: "Prova 89 (Q3)"
+  fonte: "Parte 2 · seção 6 · Na prova"
+
+- id: diderichsen-enfase
+  tag: dss
+  tema: "Diderichsen e Hallqvist"
+  frente: "O que o modelo de Diderichsen e Hallqvist enfatiza?"
+  verso: "A **estratificação social**: o contexto distribui as pessoas em **posições sociais**, e cada posição gera diferenciais de saúde."
+  img: p2-diderichsen.svg
+  fonte: "Parte 2 · seção 6.6"
+
+- id: diderichsen-mecanismos
+  tag: dss
+  tema: "Diderichsen e Hallqvist"
+  cloze: "Os mecanismos de Diderichsen: I {{c1::estratificação social}}; II {{c2::exposição diferencial}}; III {{c3::vulnerabilidade diferencial}}; IV {{c4::consequências diferenciais}}."
+  fonte: "Parte 2 · seção 6.6"
+
+- id: diderichsen-pegadinha
+  tag: dss
+  tema: "Pegadinha"
+  frente: "“Posição social, exposição específica, doença ou acidente e consequências sociais” são elementos de qual modelo?"
+  verso: "Do modelo de **Diderichsen e Hallqvist**, e não do de Dahlgren e Whitehead."
+  prova: "Prova 88 (Q9, item VI)"
+  fonte: "Parte 2 · seção 6.6"
+
+- id: dw-mediacoes
+  tag: dss
+  tema: "Os dois modelos"
+  frente: "Dahlgren e Whitehead explicam as mediações entre as camadas e a gênese das iniquidades?"
+  verso: "**Não.** O modelo organiza os determinantes e mostra **onde** intervir; Diderichsen explica **como** a desigualdade vira doença."
+  fonte: "Parte 2 · seções 6.4 e 6.6"
+
+# ---------------------------------------------------------------- 7 · Promoção × prevenção
+- id: pp-marco
+  tag: prevencao
+  tema: "Promoção × prevenção"
+  frente: "Qual é o marco conceitual da prevenção? E o da promoção?"
+  verso: "Prevenção: **História Natural da Doença**. Promoção: **Determinantes Sociais da Saúde**."
+  fonte: "Parte 2 · seção 7.2 · slides 25 a 30"
+
+- id: pp-palavras
+  tag: prevencao
+  tema: "Promoção × prevenção"
+  cloze: "Prevenir (*praevenire*): {{c1::preparar, chegar antes, impedir}}. Promover (*promovere*): {{c2::impulsionar, fomentar, gerar, mudar}}."
+  fonte: "Parte 2 · seção 7.1 · slide 26"
+
+- id: pp-foco
+  tag: prevencao
+  tema: "Promoção × prevenção"
+  frente: "Qual é o foco da prevenção? E o da promoção?"
+  verso: "Prevenção: **a doença**. Promoção: os **determinantes estruturais** que produzem iniquidades."
+  extra: "A prevenção olha para a doença; a promoção olha para a vida."
+  fonte: "Parte 2 · seção 7.2"
+
+- id: pp-sujeito
+  tag: prevencao
+  tema: "Promoção × prevenção"
+  frente: "Qual é o lugar do sujeito na prevenção? E na promoção?"
+  verso: "Prevenção: **receptivo**, responsável pela mudança. Promoção: **participativo, corresponsável**."
+  fonte: "Parte 2 · seção 7.2"
+
+- id: pp-operacionalizacao
+  tag: prevencao
+  tema: "Promoção × prevenção"
+  frente: "Como se operacionaliza a prevenção? E a promoção?"
+  verso: "Prevenção: ação **pontual, unilateral, intrassetorial**. Promoção: ações **multiestratégicas e intersetoriais**."
+  fonte: "Parte 2 · seção 7.2"
+
+- id: pp-slogans-prevencao
+  tag: prevencao
+  tema: "Expressões típicas"
+  frente: "“Evite!”, “Use!”, “Mexa-se!”, “Faça sua parte!”: expressões de prevenção ou de promoção?"
+  verso: "**Prevenção**: falam com o indivíduo e cobram dele a mudança."
+  img: a2-s30.jpg
+  fonte: "Parte 2 · seção 7.2 · slide 30"
+
+- id: pp-slogans-promocao
+  tag: prevencao
+  tema: "Expressões típicas"
+  frente: "“Participe!”, “cidades saudáveis”, “qualidade de vida”, “equidade”: expressões de prevenção ou de promoção?"
+  verso: "**Promoção**: falam de coletivo, ambiente e participação."
+  fonte: "Parte 2 · seção 7.2 · slide 30"
+
+- id: pp-destinacao
+  tag: prevencao
+  tema: "Promoção × prevenção"
+  frente: "A quem se destinam as medidas de promoção? E as de prevenção?"
+  verso: "Promoção: **toda a população e o ambiente**. Prevenção: **grupos de risco e patologias específicas**."
+  extra: "A promoção parte de um conceito positivo e ampliado de saúde; a prevenção, da ausência de doença."
+  prova: "Prova 85 (Q7); Compilado A (Q5); Turma 86"
+  fonte: "Parte 2 · seção 7 · Na prova"
+
+- id: ppr-art196
+  tag: prevencao
+  tema: "Promoção, proteção, recuperação"
+  cloze: "Ações de {{c1::promoção}}: alimentação saudável na escola, ciclovias, saneamento. Ações de {{c2::proteção}}: vacinação, vigilância sanitária e epidemiológica. Ações de {{c3::recuperação}}: consultas, exames, cirurgias, fisioterapia."
+  prova: "Prova 88 (Q6)"
+  fonte: "Parte 2 · seção 7.3"
+
+- id: sasaki
+  tag: prevencao
+  tema: "Estudo na Saúde da Família"
+  frente: "Qual foi a principal confusão revelada pelo estudo de Sasaki e Ribeiro (2013) com a equipe de Saúde da Família?"
+  verso: "**Promoção confundida com prevenção** (“promoção é tudo aquilo que você pode prevenir”)."
+  fonte: "Parte 2 · seção 7.4 · slides 31 a 38"
+
+# ---------------------------------------------------------------- 8 · Princípios
+- id: principios-oms
+  tag: principios
+  tema: "Princípios da OMS"
+  cloze: "Os sete princípios da promoção da saúde (OMS): {{c1::concepção holística}}, {{c2::intersetorialidade}}, {{c3::participação social}}, {{c4::empoderamento}}, {{c5::equidade}}, {{c6::ações multiestratégicas}} e {{c7::sustentabilidade}}."
+  extra: "Uma visão holística exige intersetorialidade; as pessoas participam e se empoderam; o objetivo é a equidade; o método são ações multiestratégicas; e tudo precisa ser sustentável (H-I-P-E-E-M-S). O slide 24 soma **autonomia** e **integralidade**, que vêm da PNPS."
+  prova: "Prova 89 (Q5); Turma 91 (Q5); Turma 90 (Q4); Turma 86"
+  fonte: "Parte 2 · seção 8.1 · slide 24"
+
+- id: principio-holistica
+  tag: principios
+  tema: "Princípios da OMS"
+  frente: "O que significa o princípio da **concepção holística**?"
+  verso: "Fomentar a saúde **física, mental, social e espiritual**, agindo sobre a população no seu dia a dia, e não só sobre grupos de risco."
+  fonte: "Parte 2 · seção 8.1"
+
+- id: principio-empoderamento
+  tag: principios
+  tema: "Princípios da OMS"
+  frente: "O que significa o princípio do **empoderamento**?"
+  verso: "Capacitar pessoas e comunidades a assumir **maior controle** sobre os fatores que afetam a sua saúde."
+  fonte: "Parte 2 · seção 8.1"
+
+- id: principio-equidade
+  tag: principios
+  tema: "Princípios da OMS"
+  frente: "O que significa o princípio da **equidade** na promoção da saúde?"
+  verso: "Eliminar as diferenças **desnecessárias, evitáveis e injustas**. Não é igualar todo mundo."
+  fonte: "Parte 2 · seção 8.1"
+
+- id: principio-sustentabilidade
+  tag: principios
+  tema: "Princípios da OMS"
+  frente: "Quais são os dois sentidos do princípio da **sustentabilidade**?"
+  verso: "Coerência com o **desenvolvimento sustentável** e processos **duradouros** (os efeitos vêm a médio e longo prazo)."
+  fonte: "Parte 2 · seção 8.1"
+
+- id: principios-exceto
+  tag: principios
+  tema: "Princípios: exceto"
+  frente: "Holística, equidade com intersetorialidade, participação social, sustentabilidade, práticas curativas como base do cuidado. Qual **não** é princípio da promoção da saúde?"
+  verso: "**Práticas curativas como base do cuidado**, que pertencem ao modelo biomédico."
+  prova: "Prova 88 (Q10)"
+  fonte: "Parte 2 · seção 8 · Na prova"
+
+- id: igualdade-pegadinha
+  tag: principios
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “igualdade” está entre os princípios da PNPS."
+  verso: "**Errado.** O princípio é **equidade**: tratar de forma diferente quem tem necessidades diferentes."
+  prova: "Prova 82 (Q1, item II)"
+  fonte: "Parte 2 · seção 8 · Na prova"
+
+- id: principios-pnps
+  tag: principios
+  tema: "Princípios da PNPS"
+  cloze: "Os nove princípios da PNPS (art. 4º): {{c1::equidade}}, {{c1::participação social}}, {{c1::autonomia}}; {{c2::empoderamento}}, {{c2::intersetorialidade}}, {{c2::intrassetorialidade}}; {{c3::sustentabilidade}}, {{c3::integralidade}}, {{c3::territorialidade}}."
+  extra: "Recurso de memória: “Epa! Ei! Sit!”, com as iniciais na ordem do artigo."
+  fonte: "Parte 2 · seção 8.2"
+
+- id: so-pnps
+  tag: principios
+  tema: "OMS × PNPS"
+  frente: "Que princípios aparecem na PNPS, mas não na lista da OMS?"
+  verso: "**Autonomia, intrassetorialidade, integralidade e territorialidade.**"
+  extra: "Só a OMS tem concepção holística e ações multiestratégicas. As outras cinco aparecem nas duas listas."
+  fonte: "Parte 2 · seção 8.2"
+
+- id: valores-pnps
+  tag: principios
+  tema: "OMS × PNPS"
+  frente: "Solidariedade, felicidade, ética e justiça social são princípios ou valores da PNPS?"
+  verso: "**Valores** (art. 3º)."
+  fonte: "Parte 2 · seção 8.2"
+
+# ---------------------------------------------------------------- 9 · PNPS
+- id: pnps-portarias
+  tag: pnps
+  tema: "PNPS"
+  cloze: "A PNPS foi instituída em {{c1::2006}} (Portaria nº 687), revisada em {{c2::2014}} (Portaria nº 2.446) e incorporada em {{c3::2017}} à Portaria de Consolidação nº 2 (Anexo I)."
+  fonte: "Parte 2 · seção 9.1"
+
+- id: pnps-objetivo
+  tag: pnps
+  tema: "PNPS"
+  cloze: "Objetivo geral da PNPS: promover a {{c1::equidade}} e a melhoria das condições e modos de viver, reduzindo vulnerabilidades e riscos decorrentes dos {{c2::determinantes sociais, econômicos, políticos, culturais e ambientais}}."
+  prova: "Prova 82 (Q1, item III: correto)"
+  fonte: "Parte 2 · seção 9.2 · art. 6º"
+
+- id: pnps-temas
+  tag: pnps
+  tema: "Temas prioritários da PNPS"
+  cloze: "Os oito temas prioritários da PNPS: {{c1::formação e educação permanente}}; {{c2::alimentação adequada e saudável}} e {{c2::práticas corporais e atividades físicas}}; enfrentamento do {{c3::uso do tabaco}} e do {{c3::uso abusivo de álcool e outras drogas}}; promoção da {{c4::mobilidade segura}}, da {{c4::cultura da paz e dos direitos humanos}} e do {{c4::desenvolvimento sustentável}}."
+  img: p2-pnps-temas.svg
+  extra: "Recurso de memória: 1 + 2 + 2 + 3 = 8. Na prova, basta citar cinco."
+  prova: "Prova 88 (Q8); Turma 84; Prova 82 (Q1, item V)"
+  fonte: "Parte 2 · seção 9.4 · slides 41 a 46"
+
+- id: pnps-tema-feira
+  tag: pnps
+  tema: "Temas prioritários da PNPS"
+  frente: "Qual tema prioritário da PNPS esta foto de feira livre ilustra?"
+  verso: "**Alimentação adequada e saudável.**"
+  img_frente: p2-feira.jpg
+  fonte: "Parte 2 · seção 9.4"
+
+- id: pnps-tema-academia
+  tag: pnps
+  tema: "Temas prioritários da PNPS"
+  frente: "Um polo da Academia da Saúde corresponde a qual tema prioritário da PNPS?"
+  verso: "**Práticas corporais e atividades físicas.**"
+  img_frente: p2-atividade-fisica.jpg
+  fonte: "Parte 2 · seção 9.4"
+
+- id: pnps-tema-tabaco
+  tag: pnps
+  tema: "Temas prioritários da PNPS"
+  frente: "As advertências obrigatórias nos maços de cigarro ilustram qual tema prioritário da PNPS?"
+  verso: "**Enfrentamento do uso do tabaco e seus derivados.**"
+  img_frente: p2-tabaco.jpg
+  fonte: "Parte 2 · seção 9.4"
+
+# ---------------------------------------------------------------- 10 · Qualidade de vida
+- id: buss2020-mensagem
+  tag: qualidade
+  tema: "Buss et al. (2020)"
+  frente: "Qual é a mensagem central de Buss et al. (2020) sobre quarenta anos de promoção da saúde?"
+  verso: "Mais do que acesso a bons serviços, é preciso enfrentar os **determinantes da saúde** em toda a sua amplitude."
+  extra: "Para isso: políticas públicas saudáveis, articulação intersetorial e mobilização da população."
+  fonte: "Parte 2 · seção 10"
+
+- id: cidades-saudaveis
+  tag: qualidade
+  tema: "Estratégias promissoras"
+  frente: "Qual é a ideia da estratégia de **municípios e cidades saudáveis**?"
+  verso: "O governo local, junto com a sociedade, põe a **saúde e a qualidade de vida no centro do planejamento** da cidade."
+  fonte: "Parte 2 · seção 10.1"
+
+- id: oitava-ottawa
+  tag: qualidade
+  tema: "Promoção no Brasil"
+  frente: "Em que ano a 8ª Conferência Nacional de Saúde afirmou princípios da promoção da saúde, o mesmo da Carta de Ottawa?"
+  verso: "**1986.**"
+  extra: "A promoção da saúde e a Reforma Sanitária brasileira nasceram na mesma época, com a mesma ideia: saúde é produzida pelas condições de vida."
+  fonte: "Parte 2 · seção 10.2"
