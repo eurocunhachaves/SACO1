@@ -1,0 +1,7 @@
+# arquivos intermediários da geração dos PDFs e dos cards
+fonte/_parte*.html
+fonte/_raster.html
+fonte/.build/
+fonte/cards/_build/
+__pycache__/
+*.pyc

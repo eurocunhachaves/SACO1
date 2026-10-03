@@ -1,0 +1,50 @@
+<svg class="dg" viewBox="0 0 680 345" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif"><rect x="20.0" y="18.0" width="420.0" height="58.0" rx="10" class="ct" /><rect x="20.0" y="18.0" width="62.0" height="58.0" rx="10" class="cd" /><rect x="70.0" y="18.0" width="14.0" height="58.0" rx="0" class="cd" /><g transform="translate(37.0,33.0) scale(1.1667)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10 18v-7" />
+  <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" />
+  <path d="M14 18v-7" />
+  <path d="M18 18v-7" />
+  <path d="M3 22h18" />
+  <path d="M6 18v-7" />
+</g><text x="98.0" y="41.0" font-size="12.4" font-weight="800" class="ink" text-anchor="start"><tspan x="98.0" dy="0.0">Fatores políticos e socioeconômicos</tspan></text><text x="98.0" y="58.0" font-size="10.3" font-weight="400" class="ink2" text-anchor="start"><tspan x="98.0" dy="0.0">planejamento urbano e condições de moradia</tspan></text><line x1="230.0" y1="83.2" x2="230.0" y2="90.8" class="sc nf" stroke-width="2" stroke-linecap="round" /><polygon points="230.0,96.0 233.6,89.5 226.4,89.5" class="c"/><polygon points="230.0,78.0 226.4,84.5 233.6,84.5" class="c"/><rect x="20.0" y="98.0" width="420.0" height="58.0" rx="10" class="ct" /><rect x="20.0" y="98.0" width="62.0" height="58.0" rx="10" class="c" /><rect x="70.0" y="98.0" width="14.0" height="58.0" rx="0" class="c" /><g transform="translate(37.0,113.0) scale(1.1667)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+</g><text x="98.0" y="121.0" font-size="12.4" font-weight="800" class="ink" text-anchor="start"><tspan x="98.0" dy="0.0">Fatores culturais</tspan></text><text x="98.0" y="138.0" font-size="10.3" font-weight="400" class="ink2" text-anchor="start"><tspan x="98.0" dy="0.0">armazenamento de água em local impróprio ou sem manutenção;</tspan><tspan x="98.0" dy="13.2">descarte indevido do lixo</tspan></text><line x1="230.0" y1="163.2" x2="230.0" y2="170.8" class="sc nf" stroke-width="2" stroke-linecap="round" /><polygon points="230.0,176.0 233.6,169.5 226.4,169.5" class="c"/><polygon points="230.0,158.0 226.4,164.5 233.6,164.5" class="c"/><rect x="20.0" y="178.0" width="420.0" height="58.0" rx="10" class="ct" /><rect x="20.0" y="178.0" width="62.0" height="58.0" rx="10" class="cm" /><rect x="70.0" y="178.0" width="14.0" height="58.0" rx="0" class="cm" /><g transform="translate(37.0,193.0) scale(1.1667)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" />
+  <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" />
+</g><text x="98.0" y="201.0" font-size="12.4" font-weight="800" class="ink" text-anchor="start"><tspan x="98.0" dy="0.0">Fatores ambientais</tspan></text><text x="98.0" y="218.0" font-size="10.3" font-weight="400" class="ink2" text-anchor="start"><tspan x="98.0" dy="0.0">proliferação de mosquitos do gênero Aedes aegypti</tspan></text><line x1="230.0" y1="243.2" x2="230.0" y2="250.8" class="sc nf" stroke-width="2" stroke-linecap="round" /><polygon points="230.0,256.0 233.6,249.5 226.4,249.5" class="c"/><polygon points="230.0,238.0 226.4,244.5 233.6,244.5" class="c"/><rect x="20.0" y="258.0" width="420.0" height="58.0" rx="10" class="ct" /><rect x="20.0" y="258.0" width="62.0" height="58.0" rx="10" class="c2" /><rect x="70.0" y="258.0" width="14.0" height="58.0" rx="0" class="c2" /><g transform="translate(37.0,273.0) scale(1.1667)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 14.991h.01" />
+  <path d="M12 22v-3" />
+  <path d="M12 2v3" />
+  <path d="M13 22h-2" />
+  <path d="M13 2h-2" />
+  <path d="M13.99 10H14" />
+  <path d="m16.5 19.794-1-1.733" />
+  <path d="m16.5 4.205-1 1.732" />
+  <path d="m19.794 16.5-1.732-1" />
+  <path d="m19.794 7.5-1.732 1" />
+  <path d="M2 12h3" />
+  <path d="M2 13v-2" />
+  <path d="M22 12h-3" />
+  <path d="M22 13v-2" />
+  <path d="m4.206 16.5 1.732-1" />
+  <path d="m4.206 7.5 1.732 1" />
+  <path d="m7.5 19.794 1-1.733" />
+  <path d="m7.5 4.205 1 1.732" />
+  <path d="M9 12h.01" />
+  <circle cx="12" cy="12" r="7" />
+</g><text x="98.0" y="281.0" font-size="12.4" font-weight="800" class="ink" text-anchor="start"><tspan x="98.0" dy="0.0">Agentes patogênicos</tspan></text><text x="98.0" y="298.0" font-size="10.3" font-weight="400" class="ink2" text-anchor="start"><tspan x="98.0" dy="0.0">vírus da dengue (DENV-1, DENV-2, DENV-3 ou DENV-4)</tspan></text><circle cx="560.0" cy="88.0" r="38.0" class="cl" /><g transform="translate(544.0,70.0) scale(1.3333)" class="scd nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+  <circle cx="12" cy="7" r="4" />
+</g><text x="560.0" y="142.0" font-size="10.6" font-weight="700" class="cd" text-anchor="middle"><tspan x="560.0" dy="0.0">pessoa infectada</tspan></text><circle cx="560.0" cy="232.0" r="38.0" class="cl" /><g transform="translate(544.0,214.0) scale(1.3333)" class="scd nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20v-9" />
+  <path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z" />
+  <path d="M14.12 3.88 16 2" />
+  <path d="M21 21a4 4 0 0 0-3.81-4" />
+  <path d="M21 5a4 4 0 0 1-3.55 3.97" />
+  <path d="M22 13h-4" />
+  <path d="M3 21a4 4 0 0 1 3.81-4" />
+  <path d="M3 5a4 4 0 0 0 3.55 3.97" />
+  <path d="M6 13H2" />
+  <path d="m8 2 1.88 1.88" />
+  <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13" />
+</g><text x="560.0" y="286.0" font-size="10.6" font-weight="700" class="cd" text-anchor="middle"><tspan x="560.0" dy="0.0">novos mosquitos</tspan></text><path d="M604,106 C646,140 646,180 606,212" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><polygon points="606.0,212.0 614.5,208.7 607.8,203.0" class="c"/><path d="M516,214 C474,180 474,140 514,108" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><polygon points="514.0,108.0 505.5,111.3 512.2,117.0" class="c"/><text x="560.0" y="164.0" font-size="10" font-weight="600" font-style="italic" class="mut" text-anchor="middle"><tspan x="560.0" dy="0.0">picada</tspan></text><line x1="448.0" y1="150.0" x2="506.0" y2="150.0" class="scl nf" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4"/><text x="20.0" y="338.0" font-size="10" font-weight="500" class="mut" text-anchor="start"><tspan x="20.0" dy="0.0">Setas duplas: cada nível influencia e é influenciado pelos demais (interdependência).</tspan></text></svg>

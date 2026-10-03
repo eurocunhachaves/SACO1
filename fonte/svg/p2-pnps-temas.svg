@@ -1,0 +1,38 @@
+<svg class="dg" viewBox="0 0 680 252" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif"><rect x="14.0" y="10.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="44.0" cy="42.0" r="20.0" class="cd" /><g transform="translate(31.0,29.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+  <path d="M22 10v6" />
+  <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+</g><text x="158.0" y="40.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="158.0" dy="0.0">1</tspan></text><text x="28.0" y="86.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="28.0" dy="0.0">Formação e educação</tspan><tspan x="28.0" dy="14.1">permanente</tspan></text><rect x="180.0" y="10.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="210.0" cy="42.0" r="20.0" class="c" /><g transform="translate(197.0,29.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 6.528V3a1 1 0 0 1 1-1h0" />
+  <path d="M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21" />
+</g><text x="324.0" y="40.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="324.0" dy="0.0">2</tspan></text><text x="194.0" y="86.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="194.0" dy="0.0">Alimentação adequada e</tspan><tspan x="194.0" dy="14.1">saudável</tspan></text><rect x="346.0" y="10.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="376.0" cy="42.0" r="20.0" class="c" /><g transform="translate(363.0,29.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="18.5" cy="17.5" r="3.5" />
+  <circle cx="5.5" cy="17.5" r="3.5" />
+  <circle cx="15" cy="5" r="1" />
+  <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
+</g><text x="490.0" y="40.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="490.0" dy="0.0">3</tspan></text><text x="360.0" y="86.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="360.0" dy="0.0">Práticas corporais e</tspan><tspan x="360.0" dy="14.1">atividades físicas</tspan></text><rect x="512.0" y="10.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="542.0" cy="42.0" r="20.0" class="c2" /><g transform="translate(529.0,29.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M17 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14" />
+  <path d="M18 8c0-2.5-2-2.5-2-5" />
+  <path d="M21 16a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
+  <path d="M22 8c0-2.5-2-2.5-2-5" />
+  <path d="M7 12v4" />
+</g><text x="656.0" y="40.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="656.0" dy="0.0">4</tspan></text><text x="526.0" y="86.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="526.0" dy="0.0">Enfrentamento do uso</tspan><tspan x="526.0" dy="14.1">do tabaco e derivados</tspan></text><rect x="14.0" y="134.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="44.0" cy="166.0" r="20.0" class="c2" /><g transform="translate(31.0,153.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 22h8" />
+  <path d="M7 10h10" />
+  <path d="M12 15v7" />
+  <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z" />
+</g><text x="158.0" y="164.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="158.0" dy="0.0">5</tspan></text><text x="28.0" y="210.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="28.0" dy="0.0">Enfrentamento do uso</tspan><tspan x="28.0" dy="14.1">abusivo de álcool e</tspan><tspan x="28.0" dy="14.1">outras drogas</tspan></text><rect x="180.0" y="134.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="210.0" cy="166.0" r="20.0" class="cm" /><g transform="translate(197.0,153.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+  <circle cx="7" cy="17" r="2" />
+  <path d="M9 17h6" />
+  <circle cx="17" cy="17" r="2" />
+</g><text x="324.0" y="164.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="324.0" dy="0.0">6</tspan></text><text x="194.0" y="210.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="194.0" dy="0.0">Promoção da mobilidade</tspan><tspan x="194.0" dy="14.1">segura</tspan></text><rect x="346.0" y="134.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="376.0" cy="166.0" r="20.0" class="cm" /><g transform="translate(363.0,153.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" />
+  <path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" />
+  <path d="m2 15 6 6" />
+  <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" />
+</g><text x="490.0" y="164.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="490.0" dy="0.0">7</tspan></text><text x="360.0" y="210.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="360.0" dy="0.0">Promoção da cultura da</tspan><tspan x="360.0" dy="14.1">paz e dos direitos</tspan><tspan x="360.0" dy="14.1">humanos</tspan></text><rect x="512.0" y="134.0" width="158.0" height="112.0" rx="12" class="ct" /><circle cx="542.0" cy="166.0" r="20.0" class="cm" /><g transform="translate(529.0,153.0) scale(1.0833)" class="sw nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" />
+  <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" />
+  <path d="M5 21h14" />
+</g><text x="656.0" y="164.0" font-size="20" font-weight="300" class="c" text-anchor="end"><tspan x="656.0" dy="0.0">8</tspan></text><text x="526.0" y="210.0" font-size="11" font-weight="750" class="ink" text-anchor="start"><tspan x="526.0" dy="0.0">Promoção do</tspan><tspan x="526.0" dy="14.1">desenvolvimento</tspan><tspan x="526.0" dy="14.1">sustentável</tspan></text></svg>
