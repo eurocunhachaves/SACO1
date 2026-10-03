@@ -1005,6 +1005,407 @@ def build_p3():
         p3_previdencia(hide=k, name=f"p3-previdencia-oculta-{k}.svg")
 
 
+
+# =========================================================================== P4
+
+def ellipse(s, cx, cy, rx, ry, cls, extra=""):
+    return s.add(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" class="{cls}" {extra}/>')
+
+
+def p4_sistemas():
+    s = SVG(680, 300)
+    cx = 340
+    ellipse(s, cx, 150, 330, 142, "ct")
+    ellipse(s, cx, 150, 330, 142, "scl nf", 'stroke-width="2"')
+    ctext(s, cx, 36, "SISTEMA SOCIAL", 10.8, 850, "cd", ls=1.2)
+    ctext(s, cx, 53, "educação · trabalho · renda · moradia · transporte · lazer", 10, 500, "ink2")
+    ellipse(s, cx, 172, 240, 110, "cl")
+    ctext(s, cx, 90, "SISTEMA DE SAÚDE", 10.8, 850, "cd", ls=1.2)
+    ctext(s, cx, 107, "vigilância · saneamento · promoção da saúde · ações intersetoriais", 9.8, 500, "ink2")
+    ellipse(s, cx, 202, 150, 68, "c")
+    ctext(s, cx, 188, "SISTEMA DE SERVIÇOS DE SAÚDE", 10.6, 850, "w", ls=0.9)
+    ctext(s, cx, 206, "UBS · ambulatórios · hospitais · SAMU", 10, 600, "w")
+    ctext(s, cx, 224, "respondem às necessidades da população", 9.2, 500, "w", italic=True)
+    s.save("p4-sistemas.svg")
+
+
+def p4_componentes():
+    s = SVG(680, 214)
+
+    def box(x, y, w, h, ic, title, sub, cls, tcls, scls):
+        s.rect(x, y, w, h, 12, cls)
+        s.icon(ic, x + 12, y + (h - 24) / 2, 24, "sw" if tcls == "w" else "sc", 2)
+        n = len(wrap(sub, w - 56, 9.4, 500))
+        top = y + h / 2 - (14 + n * 12) / 2 + 11
+        s.text(x + 46, top, title, 12, 800, tcls)
+        s.text(x + 46, top + 16, sub, 9.4, 500, scls, width=w - 56, lh=1.2)
+    box(14, 72, 150, 66, "users", "População", "usuários do sistema", "ct", "cd", "ink2")
+    box(500, 72, 166, 66, "hospital", "Prestadores", "hospitais, clínicas, profissionais", "ct", "cd", "ink2")
+    box(234, 8, 212, 56, "landmark", "Estado", "financiamento público", "c", "w", "w")
+    box(234, 150, 212, 56, "wallet", "Seguradoras e planos", "financiamento privado", "cl", "cd", "ink2")
+    s.arrow(164, 84, 232, 46, "scm", "cm", 2, 7)
+    s.arrow(448, 46, 498, 84, "scm", "cm", 2, 7)
+    s.arrow(164, 126, 232, 166, "sm", "mut", 2, 7)
+    s.arrow(448, 166, 498, 126, "sm", "mut", 2, 7)
+    s.arrow(498, 105, 166, 105, "scd", "cd", 2, 7)
+    s.text(150, 52, "impostos e contribuições", 9.2, 600, "ink2", "end")
+    s.text(500, 52, "financia e contrata", 9.2, 600, "ink2")
+    s.text(150, 166, "mensalidades", 9.2, 600, "ink2", "end")
+    s.text(500, 166, "paga os serviços", 9.2, 600, "ink2")
+    ctext(s, 332, 99, "atendimento", 9.4, 700, "cd")
+    s.save("p4-componentes.svg")
+
+
+P4_MODELOS = [
+    ("seguridade", "Seguridade social", "base: cidadania", "users", "cd",
+     ["todos, como cidadãos", "toda a sociedade, por impostos e contribuições", "direito de cidadania",
+      "Reino Unido (NHS) e Canadá", "universal"]),
+    ("seguro", "Seguro social", "base: trabalho", "briefcase", "c",
+     ["quem trabalha e contribui, e seus dependentes", "trabalhadores e empregadores, sobre a folha de salários",
+      "benefício do trabalho", "Alemanha e França", "regulada"]),
+    ("assistencia", "Assistência", "base: mercado", "shopping-cart", "cm",
+     ["quem paga; o Estado cobre só pobres comprovados e idosos", "cada pessoa, do próprio bolso ou por seguro privado",
+      "bem de consumo", "Estados Unidos", "invertida"]),
+]
+P4_LINHAS = ["Quem tem direito", "Quem paga", "A saúde é", "Exemplos", "Cidadania (Fleury)"]
+
+
+def p4_protecao(hide=None, name="p4-protecao.svg"):
+    gap, x0 = 12, 14
+    w = (652 - 2 * gap) / 3
+    sizes = [(10.4, 550), (10.4, 550), (12, 750), (10.4, 550), (12, 750)]
+    steps = []
+    for k in range(len(P4_LINHAS)):
+        sz, wt = sizes[k]
+        nl = max(len(wrap(m[5][k], w - 26, sz, wt)) for m in P4_MODELOS)
+        steps.append(18 + nl * sz * 1.22 + 14)
+    H = 88 + sum(steps) - 8
+    s = SVG(680, int(H + 8))
+    for i, (key, nome, base, ic, cls, vals) in enumerate(P4_MODELOS):
+        x = x0 + i * (w + gap)
+        s.rect(x, 8, w, H - 8, 14, "ct")
+        s.rect(x, 8, w, 58, 14, cls)
+        s.rect(x, 50, w, 16, 0, cls)
+        s.icon(ic, x + 14, 22, 28, "sw", 2)
+        if hide == key:
+            s.rect(x + 52, 20, w - 66, 26, 7, "c2")
+            ctext(s, x + 52 + (w - 66) / 2, 38, "?", 14, 850, "ink")
+        else:
+            s.text(x + 52, 36, nome, 14.4, 850, "w")
+        s.text(x + 52, 54, base.upper(), 8.6, 700, "w", ls=0.9)
+        y = 88
+        for k, (lab, v) in enumerate(zip(P4_LINHAS, vals)):
+            sz, wt = sizes[k]
+            s.text(x + 14, y, lab.upper(), 8.2, 800, "c" if cls != "c" else "cd", ls=0.8)
+            s.text(x + 14, y + 16, v, sz, wt, "cd" if wt > 600 else "ink", width=w - 26, lh=1.22)
+            y += steps[k]
+    s.save(name)
+
+
+def p4_trajetoria():
+    s = SVG(680, 186)
+    base = 178
+    steps = [
+        (14, 190, 92, "cl", "cd", "ink2", "ATÉ 1923", "Caridade e campanhas",
+         "Santas Casas para os pobres; saúde pública só nas epidemias"),
+        (228, 206, 118, "c", "w", "w", "1923 A 1988", "Seguro social",
+         "CAPs (1923), IAPs (1933), INPS (1966) e INAMPS (1977): direito só de quem contribuía"),
+        (458, 208, 158, "cd", "w", "w", "DESDE 1988", "Seguridade social",
+         "SUS: saúde é direito de todos e dever do Estado, sem exigir contribuição"),
+    ]
+    for (x, w, h, cls, tcls, dcls, yr, t, d) in steps:
+        y = base - h
+        s.rect(x, y, w, h, 12, cls)
+        s.text(x + 14, y + 22, yr, 9.4, 800, tcls, ls=1)
+        s.text(x + 14, y + 42, t, 14, 850, tcls)
+        s.text(x + 14, y + 60, d, 9.6, 500, dcls, width=w - 26, lh=1.25)
+    s.rect(472, base - 44, 180, 28, 14, "c2")
+    ctext(s, 562, base - 25, "CF88, arts. 194 a 200", 10.4, 800, "ink")
+    s.arrow(206, base - 46, 226, base - 46, "scd", "cd", 2.2, 7)
+    s.arrow(436, base - 46, 456, base - 46, "scd", "cd", 2.2, 7)
+    s.save("p4-trajetoria.svg")
+
+
+P4_TRIPE = [
+    ("previdencia", "Previdência social", "piggy-bank", "cm", "o trabalhador e seus dependentes", "contributiva e obrigatória"),
+    ("saude", "Saúde", "heart-pulse", "c", "todos: direito de todos e dever do Estado", "independe de contribuição"),
+    ("assistencia", "Assistência social", "hand-heart", "cm", "quem dela necessitar", "independe de contribuição"),
+]
+
+
+def p4_tripe(hide=None, name="p4-tripe.svg"):
+    s = SVG(680, 300)
+    s.add('<polygon points="30,78 340,10 650,78" class="cd"/>')
+    ctext(s, 340, 50, "SEGURIDADE SOCIAL", 13.6, 850, "w", ls=1.4)
+    ctext(s, 340, 67, "art. 194: ações integradas dos Poderes Públicos e da sociedade", 9.4, 500, "w")
+    w, gap = 186, 22
+    x0 = (680 - 3 * w - 2 * gap) / 2
+    for i, (key, nome, ic, cls, quem, contrib) in enumerate(P4_TRIPE):
+        x = x0 + i * (w + gap)
+        s.rect(x, 88, w, 150, 10, "ct")
+        s.rect(x, 88, w, 44, 10, cls)
+        s.rect(x, 120, w, 12, 0, cls)
+        s.icon(ic, x + 12, 98, 24, "sw", 2)
+        if hide == key:
+            s.rect(x + 44, 98, w - 58, 24, 7, "c2")
+            ctext(s, x + 44 + (w - 58) / 2, 115, "?", 13, 850, "ink")
+        else:
+            s.text(x + 44, 115, nome, 12.4, 800, "w")
+        s.text(x + 14, 152, "PARA QUEM", 8.2, 800, "c" if cls != "c" else "cd", ls=0.9)
+        s.text(x + 14, 168, quem, 10.6, 650, "ink", width=w - 24, lh=1.22)
+        s.text(x + 14, 204, "CONTRIBUIÇÃO", 8.2, 800, "c" if cls != "c" else "cd", ls=0.9)
+        s.text(x + 14, 220, contrib, 10.6, 650, "ink", width=w - 24)
+    s.rect(24, 248, 632, 44, 10, "cl")
+    ctext(s, 340, 266, "BASE · ART. 195: financiada por toda a sociedade", 10.6, 800, "cd")
+    ctext(s, 340, 283, "orçamentos da União, dos Estados, do DF e dos Municípios + contribuições sociais", 9.6, 500, "ink2")
+    s.save(name)
+
+
+def p4_financiamento():
+    s = SVG(680, 304)
+    # orçamentos
+    s.rect(14, 8, 196, 218, 12, "ct")
+    s.rect(14, 8, 196, 34, 12, "cm")
+    s.rect(14, 30, 196, 12, 0, "cm")
+    ctext(s, 112, 30, "ORÇAMENTOS PÚBLICOS", 10.4, 850, "w", ls=0.8)
+    s.icon("landmark", 88, 70, 48, "sc", 1.6)
+    ctext(s, 112, 148, "União, Estados,", 11.4, 700, "cd")
+    ctext(s, 112, 164, "Distrito Federal", 11.4, 700, "cd")
+    ctext(s, 112, 180, "e Municípios", 11.4, 700, "cd")
+    ctext(s, 112, 200, "(impostos)", 9.4, 500, "ink2")
+    ctext(s, 223, 124, "+", 22, 800, "cd")
+    # contribuições
+    x, w = 236, 430
+    s.rect(x, 8, w, 218, 12, "ct")
+    s.rect(x, 8, w, 34, 12, "c")
+    s.rect(x, 30, w, 12, 0, "c")
+    s.text(x + 14, 30, "CONTRIBUIÇÕES SOCIAIS (INCISOS DO ART. 195)", 10.4, 850, "w", ls=0.8)
+    rows = [("I", "do **empregador e da empresa**: folha de salários, receita ou faturamento*, lucro"),
+            ("II", "do **trabalhador** e demais segurados, exceto sobre aposentadoria e pensão do regime geral (INSS)"),
+            ("III", "sobre **concursos de prognósticos** (loterias e apostas)"),
+            ("IV", "do **importador** de bens ou serviços*"),
+            ("V", "sobre **bens e serviços** (CBS), incluída pela EC 132/2023")]
+    y = 50
+    for (n, t) in rows:
+        nl = len(wrap(t.replace("**", ""), w - 64, 9.8, 500))
+        hh = 26 if nl == 1 else 38
+        s.rect(x + 12, y + (hh - 22) / 2, 30, 22, 6, "cl")
+        ctext(s, x + 27, y + hh / 2 + 4, n, 10, 850, "cd")
+        s.text(x + 52, y + hh / 2 + 3.5 - (nl - 1) * 6, t, 9.8, 500, "ink", width=w - 64, lh=1.2)
+        y += hh + 3
+    s.text(666, 240, "* revogados a partir de 2027 pela EC 132/2023 (reforma tributária), que os troca pela CBS", 8.8, 500, "mut", "end", italic=True)
+    # destino
+    s.arrow(112, 228, 112, 264, "scd", "cd", 2.2, 8)
+    s.arrow(451, 246, 451, 264, "scd", "cd", 2.2, 8)
+    s.rect(14, 266, 652, 32, 10, "cd")
+    ctext(s, 340, 287, "SEGURIDADE SOCIAL: saúde · previdência · assistência social", 11.4, 800, "w")
+    s.save("p4-financiamento.svg")
+
+
+P4_196 = [
+    ("A saúde é direito de todos", "universalidade · cidadania", True),
+    ("e dever do Estado,", "responsabilidade do Estado", False),
+    ("garantido mediante políticas sociais e econômicas", "conceito ampliado · determinação social · intersetorialidade", False),
+    ("que visem à redução do risco de doença e de outros agravos", "prevenção dos riscos", False),
+    ("e ao acesso universal e igualitário às ações e serviços", "universalidade · igualdade (equidade)", True),
+    ("para sua promoção, proteção e recuperação.", "integralidade", True),
+]
+
+
+def p4_art196():
+    s = SVG(680, 290)
+    s.text(14, 16, "O TEXTO DO ART. 196", 8.8, 800, "mut", ls=1.3)
+    s.text(436, 16, "O QUE O TRECHO REVELA", 8.8, 800, "mut", ls=1.3)
+    y, h, gap = 26, 38, 5
+    for (txt, conc, princ) in P4_196:
+        s.rect(14, y, 382, h, 10, "ct")
+        s.rect(14, y, 5, h, 2.5, "c")
+        nl = len(wrap(txt, 350, 11.4, 600))
+        s.text(30, y + h / 2 + 4 - (nl - 1) * 7, txt, 11.4, 600, "ink", width=350, lh=1.15, italic=True)
+        s.arrow(398, y + h / 2, 432, y + h / 2, "scm", "cm", 1.8, 6)
+        cls, tcls = ("c", "w") if princ else ("cl", "cd")
+        s.rect(436, y + 3, 230, h - 6, 16, cls)
+        nl2 = len(wrap(conc, 206, 10.4, 750))
+        ctext(s, 551, y + h / 2 + 4 - (nl2 - 1) * 6.5, conc, 10.4, 750, tcls, width=206, lh=1.2)
+        y += h + gap
+    s.text(666, 286, "Em azul forte, os três princípios doutrinários que a prova pede.", 8.8, 500, "mut", "end", italic=True)
+    s.save("p4-art196.svg")
+
+
+def p4_direcao():
+    s = SVG(680, 214)
+    cols = [(14, 120, "ESFERA"), (148, 254, "DIREÇÃO ÚNICA (GESTOR)"), (416, 250, "PARTICIPAÇÃO DA COMUNIDADE")]
+    for (x, w, t) in cols:
+        s.text(x, 16, t, 8.6, 800, "mut", ls=1.2)
+    rows = [("Nacional", "União", "Ministério da Saúde", "Conselho Nacional de Saúde"),
+            ("Estadual", "Estados e DF", "Secretaria Estadual de Saúde", "Conselho Estadual de Saúde"),
+            ("Municipal", "Municípios", "Secretaria Municipal de Saúde", "Conselho Municipal de Saúde")]
+    y = 26
+    for i, (esf, ente, gestor, cons) in enumerate(rows):
+        cls = ["cd", "c", "cm"][i]
+        s.rect(14, y, 120, 44, 10, cls)
+        s.text(26, y + 20, esf, 12, 800, "w")
+        s.text(26, y + 35, ente, 9.4, 500, "w")
+        s.arrow(136, y + 22, 146, y + 22, "scm", "cm", 1.8, 6)
+        s.rect(148, y, 254, 44, 10, "cl")
+        s.icon("landmark", 160, y + 11, 22, "sc", 2)
+        s.text(192, y + 27, gestor, 11.4, 750, "cd")
+        s.rect(416, y, 250, 44, 10, "ct")
+        s.icon("users", 428, y + 11, 22, "sc", 2)
+        s.text(460, y + 27, cons, 11, 650, "ink")
+        y += 52
+    s.rect(14, 184, 652, 26, 8, "c2")
+    ctext(s, 340, 201, "Conferências de saúde a cada 4 anos, em cada esfera, avaliam a situação e propõem diretrizes (Lei 8.142/1990)", 9.6, 650, "ink")
+    s.save("p4-direcao.svg")
+
+
+P4_PRINC = {
+    "doutrinarios": ("DOUTRINÁRIOS", "o que o SUS garante: a finalidade", "c", [
+        ("Universalidade", "acesso para todos, em todos os níveis de atenção"),
+        ("Igualdade / equidade", "sem privilégios; mais a quem precisa mais"),
+        ("Integralidade", "prevenção e cura, do individual ao coletivo"),
+    ]),
+    "organizativos": ("ORGANIZATIVOS", "como o SUS se organiza para cumprir os doutrinários", "cd", [
+        ("Descentralização", "direção única em cada esfera; ênfase nos municípios"),
+        ("Regionalização e hierarquização", "territórios e níveis de complexidade crescente"),
+        ("Participação e controle social", "conselhos e conferências de saúde"),
+    ]),
+}
+
+
+def p4_principios(hide=None, name="p4-principios.svg"):
+    s = SVG(680, 300)
+    s.rect(230, 8, 220, 38, 19, "cd")
+    ctext(s, 340, 32, "PRINCÍPIOS DO SUS", 12.4, 850, "w", ls=1.2)
+    s.path("M340,46 L340,58 M172,58 L508,58 M172,58 L172,72 M508,58 L508,72", "scm nf", 2)
+    for gi, key in enumerate(("doutrinarios", "organizativos")):
+        titulo, sub, cls, itens = P4_PRINC[key]
+        x, w = (14, 316) if gi == 0 else (350, 316)
+        s.rect(x, 72, w, 196, 14, "ct")
+        s.rect(x, 72, w, 46, 14, cls)
+        s.rect(x, 104, w, 14, 0, cls)
+        ctext(s, x + w / 2, 92, titulo, 12.4, 850, "w", ls=1.4)
+        ctext(s, x + w / 2, 109, sub, 9.2, 500, "w")
+        y = 128
+        for (nome, desc) in itens:
+            s.rect(x + 10, y, w - 20, 42, 10, "w")
+            if hide == key:
+                s.rect(x + 20, y + 7, 150, 16, 5, "c2")
+                ctext(s, x + 95, y + 19, "?", 11, 850, "ink")
+            else:
+                s.text(x + 22, y + 19, nome, 11.6, 800, "cd")
+            s.text(x + 22, y + 34, desc, 9.4, 500, "ink2")
+            y += 46
+    ctext(s, 340, 290, "O ABC do SUS (1990) lista ainda resolubilidade e complementaridade do setor privado entre os organizativos.", 9, 500, "mut", italic=True)
+    s.save(name)
+
+
+def p4_equidade():
+    s = SVG(680, 276)
+    ground, fence_top = 196, 116
+    panels = [(14, "IGUALDADE", "todos recebem o mesmo apoio", (1, 1, 1)),
+              (346, "EQUIDADE", "cada um recebe o apoio de que precisa", (0, 1, 2))]
+    people = [(104, "cd"), (84, "c"), (56, "cm")]  # (altura, cor)
+    for (px, titulo, sub, boxes) in panels:
+        s.rect(px, 8, 320, 206, 14, "ct")
+        s.icon("heart-pulse", px + 140, 24, 40, "s2", 2.2)
+        s.text(px + 160, 82, "SAÚDE", 9.6, 850, "c2", "middle", ls=2)
+        # cerca
+        s.rect(px + 18, fence_top, 284, ground - fence_top, 3, "cl")
+        for k in range(1, 12):
+            xx = px + 18 + k * 284 / 12
+            s.line(xx, fence_top + 3, xx, ground - 2, "sw", 2)
+        s.line(px + 18, fence_top, px + 302, fence_top, "scm", 2.4)
+        s.line(px + 10, ground, px + 310, ground, "scd", 2.4)
+        for j, ((hgt, cls), nb) in enumerate(zip(people, boxes)):
+            cx = px + 78 + j * 82
+            yb = ground
+            for b in range(nb):
+                s.rect(cx - 21, yb - 22, 42, 22, 3, "c2")
+                s.line(cx - 19, yb - 22, cx + 19, yb - 22, "scd", 1)
+                yb -= 22
+            body_top = yb - hgt + 24
+            s.rect(cx - 13, body_top, 26, hgt - 24, 11, cls)
+            s.circle(cx, body_top - 12, 11, cls)
+        ctext(s, px + 160, 236, titulo, 13, 850, "cd", ls=1.6)
+        ctext(s, px + 160, 252, sub, 10, 500, "ink2")
+    ctext(s, 340, 272, "equidade = igualdade + justiça", 11, 750, "c")
+    s.save("p4-equidade.svg")
+
+
+def p4_hierarquia():
+    s = SVG(680, 262)
+    ax, ay, by, hb = 214, 12, 250, 196
+
+    def hw(y):
+        return hb * (y - ay) / (by - ay)
+    levels = [(ay, 92, "cd", "ALTA", "complexidade", "Hospitais de referência: cirurgia cardíaca, oncologia, transplantes, hemodiálise"),
+              (92, 172, "c", "MÉDIA COMPLEXIDADE", "especialistas e apoio diagnóstico", "Ambulatórios de especialidades, exames de imagem e de laboratório, UPA"),
+              (172, by, "cm", "ATENÇÃO PRIMÁRIA À SAÚDE", "porta de entrada · ordena o cuidado", "UBS e Saúde da Família: acolhe, acompanha e resolve a maior parte dos problemas")]
+    for (y0, y1, cls, t, sub, desc) in levels:
+        pts = f"{ax - hw(y0):.1f},{y0} {ax + hw(y0):.1f},{y0} {ax + hw(y1):.1f},{y1} {ax - hw(y1):.1f},{y1}"
+        s.add(f'<polygon points="{pts}" class="{cls}"/>')
+        s.add(f'<polygon points="{pts}" class="sw nf" stroke-width="2.5" stroke-linejoin="round"/>')
+        ym = (y0 + y1) / 2 + (14 if y0 == ay else 0)
+        ctext(s, ax, ym - 2, t, 11.2 if y0 != ay else 10.4, 850, "w", ls=0.8)
+        ctext(s, ax, ym + 13, sub, 8.8, 500, "w")
+        # descrição à direita
+        yd = (y0 + y1) / 2 + (10 if y0 == ay else 0)
+        s.line(ax + hw(yd) + 6, yd, 436, yd, "scl", 1.6, 'stroke-dasharray="3 3"')
+        s.rect(436, yd - 26, 230, 52, 10, "ct")
+        s.text(448, yd - 5 - (len(wrap(desc, 208, 9.6, 500)) - 2) * 6, desc, 9.6, 500, "ink", width=208, lh=1.25)
+    # legenda de referência e contrarreferência
+    s.arrow(22, 72, 22, 20, "scd", "cd", 2.2, 7)
+    s.text(32, 30, "referência:", 9.4, 800, "cd")
+    s.text(32, 43, ["encaminha a um", "nível mais complexo"], 8.8, 500, "ink2", lh=1.2)
+    s.arrow(22, 92, 22, 144, "scm", "cm", 2.2, 7)
+    s.text(32, 104, "contrarreferência:", 9.4, 800, "c")
+    s.text(32, 117, ["devolve à APS, que", "segue o cuidado"], 8.8, 500, "ink2", lh=1.2)
+    s.save("p4-hierarquia.svg")
+
+
+def p4_mapa():
+    s = SVG(680, 346)
+    cx, cy = 340, 173
+    bw, bh = 238, 96
+    branches = [
+        ("Proteção social", ["• seguridade, seguro e assistência", "• antes: seguro social (CAPs, IAPs)", "• CF88: seguridade social"], "L", 50, "cd"),
+        ("Seguridade (arts. 194 e 195)", ["• saúde, previdência e assistência", "• só a previdência é contributiva", "• financiada por toda a sociedade"], "L", 173, "c"),
+        ("Saúde (arts. 196 e 197)", ["• direito de todos, dever do Estado", "• conceito ampliado de saúde", "• ações de relevância pública"], "L", 296, "cm"),
+        ("Arts. 198 a 200", ["• 198: diretrizes do sistema único", "• 199: privado só complementar", "• 200: competências do SUS"], "R", 50, "cd"),
+        ("Princípios doutrinários", ["• universalidade", "• igualdade e equidade", "• integralidade"], "R", 173, "c"),
+        ("Princípios organizativos", ["• descentralização (direção única)", "• regionalização e hierarquização", "• participação e controle social"], "R", 296, "cm"),
+    ]
+    for (t, items, side, y, c) in branches:
+        x = 14 + bw if side == "L" else 680 - 14 - bw
+        s.path(f"M{cx},{cy} C{(cx+x)/2},{cy} {(cx+x)/2},{y} {x},{y}", "scl nf", 3)
+    s.circle(cx, cy, 64, "cd")
+    ctext(s, cx, cy - 8, "O SUS", 12.4, 800, "w", ls=1.4)
+    ctext(s, cx, cy + 10, "NA CF88", 12.4, 800, "w", ls=1.4)
+    ctext(s, cx, cy + 30, "5/10/1988", 10.4, 700, "cl")
+    for (t, items, side, y, c) in branches:
+        bx = 14 if side == "L" else 680 - 14 - bw
+        s.rect(bx, y - bh / 2, bw, bh, 12, "ct")
+        s.rect(bx, y - bh / 2, bw, 28, 12, c)
+        s.rect(bx, y - bh / 2 + 16, bw, 12, 0, c)
+        ctext(s, bx + bw / 2, y - bh / 2 + 19, t, 12.4, 800, "w")
+        for k, it in enumerate(items):
+            if tw(it, 10.8, 500) > bw - 24:
+                print("  aviso: linha longa no mapa:", it)
+            s.text(bx + 14, y - 4 + k * 18, it, 10.8, 500, "ink")
+    s.save("p4-mapa.svg")
+
+
+def build_p4():
+    p4_sistemas(); p4_componentes(); p4_protecao(); p4_trajetoria(); p4_tripe(); p4_financiamento()
+    p4_art196(); p4_direcao(); p4_principios(); p4_equidade(); p4_hierarquia(); p4_mapa()
+    for k in ("seguridade", "seguro", "assistencia"):
+        p4_protecao(hide=k, name=f"p4-protecao-oculta-{k}.svg")
+    for k in ("previdencia", "saude", "assistencia"):
+        p4_tripe(hide=k, name=f"p4-tripe-oculta-{k}.svg")
+    for k in ("doutrinarios", "organizativos"):
+        p4_principios(hide=k, name=f"p4-principios-oculta-{k}.svg")
+
 if __name__ == "__main__":
     alvo = sys.argv[1:] or ["p1", "p2", "p3", "p4"]
     for a in alvo:

@@ -324,6 +324,7 @@ figcaption .cred { display: block; margin-top: .8mm; color: var(--muted); font-s
 .gallery figure { margin: 0; }
 .gallery figure .art img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: 1.8mm; }
 .gallery.wide figure .art img { aspect-ratio: 4 / 3; }
+.gallery.top figure .art img { object-position: center 18%; }
 .gallery figcaption { font-size: 7.4pt; margin-top: 1.6mm; counter-increment: none; }
 .gallery figcaption::before { content: none; }
 .gallery figcaption b { display: block; color: var(--ink); font-size: 8pt; }
@@ -441,10 +442,13 @@ figcaption .cred { display: block; margin-top: .8mm; color: var(--muted); font-s
 .k { color: var(--c); font-weight: 700; }
 .k2 { color: var(--c-dark); font-weight: 700; }
 .ico { display: inline-block; width: 1em; height: 1em; vertical-align: -.14em; }
+.w90 { width: 90%; margin-left: auto; margin-right: auto; }
 .w80 { width: 80%; margin-left: auto; margin-right: auto; }
 .w70 { width: 70%; margin-left: auto; margin-right: auto; }
 .w60 { width: 60%; margin-left: auto; margin-right: auto; }
 .w50 { width: 50%; margin-left: auto; margin-right: auto; }
+.w40 { width: 40%; margin-left: auto; margin-right: auto; }
+.w30 { width: 30%; margin-left: auto; margin-right: auto; }
 
 /* ---------- Diagramas SVG inline (classes usadas por fonte/diagramas.py) ---------- */
 svg.dg { font-family: var(--sans); overflow: visible; }

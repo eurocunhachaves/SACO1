@@ -25,7 +25,7 @@ SLIDES = {
     1: [4, 9, 10, 16, 18],
     2: [4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 29, 30, 35],
     3: [3, 4, 7, 8, 9, 10, 13, 14, 16, 17, 22, 23, 28, 29],
-    4: [3, 4, 9, 10, 13, 14, 16, 17, 20, 22, 23, 28, 30, 33, 35, 36],
+    4: [3, 4, 9, 10, 13, 14, 15, 16, 17, 20, 22, 23, 28, 30, 31, 33, 35, 36],
 }
 
 # recortes quadrados para as capas: arquivo, caixa relativa (x0, y0, x1, y1)
@@ -47,6 +47,26 @@ def slide_box(page_img, pos):
     return (bb[0], bb[1] + int(h * y0), bb[2], bb[3] + int(h * y0))
 
 
+def dark_count(img, box):
+    """número de pixels escuros (< 110) dentro da caixa"""
+    return sum(img.crop(box).histogram()[:110])
+
+
+def slide_frame(page_img, pos):
+    """caixa da moldura preta do slide (Aula 4, versão com anotações nas margens)"""
+    im = page_img.convert("L")
+    w, h = im.size
+    y0, y1 = ((0.04, 0.5), (0.5, 0.96))[pos]
+    rows = [y for y in range(int(h * y0), int(h * y1)) if dark_count(im, (0, y, w, y + 1)) > 0.45 * w]
+    if not rows:
+        return None
+    top, bot = rows[0], rows[-1]
+    cols = [x for x in range(w) if dark_count(im, (x, top, x + 1, bot)) > 0.8 * (bot - top)]
+    if not cols:
+        return None
+    return (cols[0] + 2, top + 2, cols[-1] - 2, bot - 2)
+
+
 def slides():
     OUT_S.mkdir(parents=True, exist_ok=True)
     for aula, nums in SLIDES.items():
@@ -58,7 +78,7 @@ def slides():
                 print("sem página", aula, n)
                 continue
             img = Image.open(cands[0])
-            box = slide_box(img, pos)
+            box = (slide_frame(img, pos) if aula == 4 else None) or slide_box(img, pos)
             crop = img.crop((box[0] + 3, box[1] + 3, box[2] - 3, box[3] - 3)).convert("L")
             crop = ImageOps.autocontrast(crop, cutoff=0.5)
             crop = ImageEnhance.Sharpness(crop).enhance(1.3)

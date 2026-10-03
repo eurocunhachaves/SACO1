@@ -1,0 +1,37 @@
+<svg class="dg" viewBox="0 0 680 214" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif"><text x="14.0" y="16.0" font-size="8.6" font-weight="800" letter-spacing="1.2" class="mut" text-anchor="start"><tspan x="14.0" dy="0.0">ESFERA</tspan></text><text x="148.0" y="16.0" font-size="8.6" font-weight="800" letter-spacing="1.2" class="mut" text-anchor="start"><tspan x="148.0" dy="0.0">DIREÇÃO ÚNICA (GESTOR)</tspan></text><text x="416.0" y="16.0" font-size="8.6" font-weight="800" letter-spacing="1.2" class="mut" text-anchor="start"><tspan x="416.0" dy="0.0">PARTICIPAÇÃO DA COMUNIDADE</tspan></text><rect x="14.0" y="26.0" width="120.0" height="44.0" rx="10" class="cd" /><text x="26.0" y="46.0" font-size="12" font-weight="800" class="w" text-anchor="start"><tspan x="26.0" dy="0.0">Nacional</tspan></text><text x="26.0" y="61.0" font-size="9.4" font-weight="500" class="w" text-anchor="start"><tspan x="26.0" dy="0.0">União</tspan></text><line x1="136.0" y1="48.0" x2="141.2" y2="48.0" class="scm nf" stroke-width="1.8" stroke-linecap="round" /><polygon points="146.0,48.0 140.0,44.7 140.0,51.3" class="cm"/><rect x="148.0" y="26.0" width="254.0" height="44.0" rx="10" class="cl" /><g transform="translate(160.0,37.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10 18v-7" />
+  <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" />
+  <path d="M14 18v-7" />
+  <path d="M18 18v-7" />
+  <path d="M3 22h18" />
+  <path d="M6 18v-7" />
+</g><text x="192.0" y="53.0" font-size="11.4" font-weight="750" class="cd" text-anchor="start"><tspan x="192.0" dy="0.0">Ministério da Saúde</tspan></text><rect x="416.0" y="26.0" width="250.0" height="44.0" rx="10" class="ct" /><g transform="translate(428.0,37.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</g><text x="460.0" y="53.0" font-size="11" font-weight="650" class="ink" text-anchor="start"><tspan x="460.0" dy="0.0">Conselho Nacional de Saúde</tspan></text><rect x="14.0" y="78.0" width="120.0" height="44.0" rx="10" class="c" /><text x="26.0" y="98.0" font-size="12" font-weight="800" class="w" text-anchor="start"><tspan x="26.0" dy="0.0">Estadual</tspan></text><text x="26.0" y="113.0" font-size="9.4" font-weight="500" class="w" text-anchor="start"><tspan x="26.0" dy="0.0">Estados e DF</tspan></text><line x1="136.0" y1="100.0" x2="141.2" y2="100.0" class="scm nf" stroke-width="1.8" stroke-linecap="round" /><polygon points="146.0,100.0 140.0,96.7 140.0,103.3" class="cm"/><rect x="148.0" y="78.0" width="254.0" height="44.0" rx="10" class="cl" /><g transform="translate(160.0,89.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10 18v-7" />
+  <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" />
+  <path d="M14 18v-7" />
+  <path d="M18 18v-7" />
+  <path d="M3 22h18" />
+  <path d="M6 18v-7" />
+</g><text x="192.0" y="105.0" font-size="11.4" font-weight="750" class="cd" text-anchor="start"><tspan x="192.0" dy="0.0">Secretaria Estadual de Saúde</tspan></text><rect x="416.0" y="78.0" width="250.0" height="44.0" rx="10" class="ct" /><g transform="translate(428.0,89.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</g><text x="460.0" y="105.0" font-size="11" font-weight="650" class="ink" text-anchor="start"><tspan x="460.0" dy="0.0">Conselho Estadual de Saúde</tspan></text><rect x="14.0" y="130.0" width="120.0" height="44.0" rx="10" class="cm" /><text x="26.0" y="150.0" font-size="12" font-weight="800" class="w" text-anchor="start"><tspan x="26.0" dy="0.0">Municipal</tspan></text><text x="26.0" y="165.0" font-size="9.4" font-weight="500" class="w" text-anchor="start"><tspan x="26.0" dy="0.0">Municípios</tspan></text><line x1="136.0" y1="152.0" x2="141.2" y2="152.0" class="scm nf" stroke-width="1.8" stroke-linecap="round" /><polygon points="146.0,152.0 140.0,148.7 140.0,155.3" class="cm"/><rect x="148.0" y="130.0" width="254.0" height="44.0" rx="10" class="cl" /><g transform="translate(160.0,141.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10 18v-7" />
+  <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" />
+  <path d="M14 18v-7" />
+  <path d="M18 18v-7" />
+  <path d="M3 22h18" />
+  <path d="M6 18v-7" />
+</g><text x="192.0" y="157.0" font-size="11.4" font-weight="750" class="cd" text-anchor="start"><tspan x="192.0" dy="0.0">Secretaria Municipal de Saúde</tspan></text><rect x="416.0" y="130.0" width="250.0" height="44.0" rx="10" class="ct" /><g transform="translate(428.0,141.0) scale(0.9167)" class="sc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</g><text x="460.0" y="157.0" font-size="11" font-weight="650" class="ink" text-anchor="start"><tspan x="460.0" dy="0.0">Conselho Municipal de Saúde</tspan></text><rect x="14.0" y="184.0" width="652.0" height="26.0" rx="8" class="c2" /><text x="340.0" y="201.0" font-size="9.6" font-weight="650" class="ink" text-anchor="middle"><tspan x="340.0" dy="0.0">Conferências de saúde a cada 4 anos, em cada esfera, avaliam a situação e propõem diretrizes (Lei 8.142/1990)</tspan></text></svg>
