@@ -412,8 +412,8 @@ figcaption .cred { display: block; margin-top: .8mm; color: var(--muted); font-s
 .q > .qa { background: var(--ok-bg); padding: 3mm 4.2mm 1.6mm; border-top: 1px dashed #bfe3c9; }
 .q > .qa p, .q > .qa li { font: 400 8.9pt/1.5 var(--sans); }
 .q > .qa .lbl { font: 800 7.2pt/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--ok); margin-bottom: 1.6mm; display: block; }
-.q .div { color: var(--alerta); }
-.q .div::before { content: "⚠ "; }
+.div { color: var(--alerta); }
+.div::before { content: "⚠ "; }
 
 /* ---------- Resumo e encerramento ---------- */
 .recap { background: var(--c-dark); color: #fff; border-radius: 3mm; padding: 5mm 6mm 3.6mm; margin: 4mm 0 6mm; break-inside: avoid; }

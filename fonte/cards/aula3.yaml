@@ -2,238 +2,128 @@
 aula: 3
 cards:
 
-# ---------------------------------------------------------------- 1 · Como ler esta história
+# ---------------------------------------------------------------- 1 · Da Colônia à República Velha
 - id: chaves-leitura
-  tag: intro
+  tag: colonia-republica
   tema: "Duas chaves de leitura"
   cloze: "Chave 1: a política de saúde acompanha a {{c1::política econômica e social}} do país.\nChave 2: até 1988, a saúde da população {{c2::nunca foi prioridade}}; o Estado agia em crises e só dava assistência médica a quem {{c3::contribuía para a previdência}}."
   fonte: "Parte 3 · seção 1.1 · slide 2"
 
 - id: dicotomia
-  tag: intro
+  tag: colonia-republica
   tema: "A dicotomia"
   frente: "Qual era a dicotomia do sistema de saúde brasileiro antes do SUS?"
   verso: "**Ações preventivas e coletivas** (saúde pública) × **ações curativas e individuais** (previdência, só para quem contribuía)."
   img: p3-dicotomia.svg
-  fonte: "Parte 3 · seção 1.3 · slide 3"
-
-- id: dicotomia-modelos
-  tag: intro
-  tema: "A dicotomia"
-  frente: "Que modelo de atenção nasceu de cada lado da dicotomia?"
-  verso: "Da saúde pública, o **sanitarismo campanhista**. Da previdência, o **médico-assistencial privatista**."
-  fonte: "Parte 3 · seção 1.3"
-
-- id: dicotomia-integralidade
-  tag: intro
-  tema: "A dicotomia"
-  frente: "Que princípio do SUS responde diretamente à divisão entre prevenção e cura?"
-  verso: "A **integralidade**: prevenção e cura no mesmo sistema."
-  fonte: "Parte 3 · seção 1.3"
-
-# ---------------------------------------------------------------- 2 · Colônia e Império
-- id: endemia-epidemia
-  tag: colonia
-  tema: "Endemia × epidemia"
-  frente: "Qual é a diferença entre endemia e epidemia?"
-  verso: "Endemia: casos **constantes**, dentro do esperado. Epidemia: casos **acima do esperado** para o lugar e o período."
-  img: p3-endemia.svg
-  fonte: "Parte 3 · seção 2.2 · slide 4"
-
-- id: quarentena-lazareto
-  tag: colonia
-  tema: "Colônia e Império"
-  frente: "Qual era a principal medida sanitária da Colônia e do Império? Onde ela acontecia?"
-  verso: "A **quarentena**, feita nos **lazaretos**."
-  img: p3-lazareto.jpg
-  extra: "A explicação dominante para as epidemias era a teoria miasmática."
-  fonte: "Parte 3 · seção 2.3 · slide 5"
-
-- id: alvara-1810
-  tag: colonia
-  tema: "Colônia e Império"
-  frente: "Que documento de 1810 regulou a quarentena no porto do Rio de Janeiro?"
-  verso: "O **alvará de 22 de janeiro de 1810**, do governo de D. João."
-  extra: "A preocupação era proteger o **porto e o comércio**, e não organizar cuidados para a população."
-  fonte: "Parte 3 · seção 2.3 · slide 5"
-
-- id: tres-maneiras
-  tag: colonia
-  tema: "Três maneiras de ser atendido"
-  cloze: "Na Colônia e no Império:\n\n- a elite tinha a {{c1::medicina liberal}} (médicos particulares);\n- índios, negros e pobres, a {{c2::medicina popular}} (pajés, curandeiros, sangradores);\n- os indigentes, as {{c3::Santas Casas de Misericórdia}} (caridade)."
-  fonte: "Parte 3 · seção 2.4 · slide 6"
-
-- id: santa-casa-santos
-  tag: colonia
-  tema: "Santas Casas"
-  frente: "Qual é considerada a primeira Santa Casa do Brasil?"
-  verso: "A de **Santos (1543)**."
-  img: p3-santa-casa.jpg
-  extra: "Na foto, a Santa Casa do Rio de Janeiro, por volta de 1890. O atendimento era **caridade**, e não direito."
-  fonte: "Parte 3 · seção 2.4 · slide 6"
-
-- id: escolas-medicas
-  tag: colonia
-  tema: "Colônia e Império"
-  frente: "Quando e onde surgiram as primeiras escolas médicas do Brasil?"
-  verso: "Em **1808**, depois da chegada da Corte, na **Bahia** e no **Rio de Janeiro**."
-  fonte: "Parte 3 · seção 2.4"
+  extra: "De um lado nasceu o **sanitarismo campanhista**; do outro, o **médico-assistencial privatista**. A **integralidade** do SUS junta os dois."
+  fonte: "Parte 3 · seção 1.1 · slide 3"
 
 - id: item-economia-dicotomia
-  tag: colonia
+  tag: colonia-republica
   tema: "Certo ou errado"
   frente: "Certo ou errado: “na Colônia, no Império e na República Velha, a saúde se caracterizou pela estreita relação com o modelo econômico e pela dicotomia entre saúde pública e assistência médica”."
   verso: "**Certo.**"
   prova: "Prova 82 (Q4, item III); Compilado B (Q4)"
-  fonte: "Parte 3 · seção 2 · Na prova"
+  fonte: "Parte 3 · seção 1.1"
 
-# ---------------------------------------------------------------- 3 · República Velha
-- id: saneamento-mercadorias
-  tag: republica
-  tema: "República Velha"
-  frente: "Na República Velha, para onde miravam as ações de saneamento? Por quê?"
-  verso: "Para os **espaços de circulação de mercadorias** (portos, ferrovias, centro das cidades): sanear era proteger a **exportação do café**."
-  fonte: "Parte 3 · seção 3.1 · slide 7"
+- id: quarentena-lazareto
+  tag: colonia-republica
+  tema: "Colônia e Império"
+  frente: "Qual era a principal medida sanitária da Colônia e do Império? Onde ela acontecia?"
+  verso: "A **quarentena**, feita nos **lazaretos**."
+  img: p3-lazareto.jpg
+  extra: "A explicação das epidemias era a teoria miasmática. O **alvará de 1810** regulou a quarentena no porto do Rio: o alvo era o **porto e o comércio**."
+  fonte: "Parte 3 · seção 1.2 · slide 5"
 
-- id: oswaldo-nomeacao
-  tag: republica
-  tema: "Oswaldo Cruz"
-  frente: "Quem nomeou Oswaldo Cruz para a Diretoria Geral de Saúde Pública, e em que ano?"
-  verso: "O presidente **Rodrigues Alves**, em **1903**."
-  img: p3-oswaldo-cruz.jpg
-  fonte: "Parte 3 · seção 3.2"
+- id: tres-maneiras
+  tag: colonia-republica
+  tema: "Três maneiras de ser atendido"
+  cloze: "Na Colônia e no Império:\n\n- a elite tinha a {{c1::medicina liberal}} (médicos particulares);\n- índios, negros e pobres, a {{c2::medicina popular}} (pajés, curandeiros, sangradores);\n- os indigentes, as {{c3::Santas Casas de Misericórdia}} (caridade, e não direito)."
+  img: p3-santa-casa.jpg
+  fonte: "Parte 3 · seção 1.2 · slide 6"
 
 - id: oswaldo-campanhas
-  tag: republica
+  tag: colonia-republica
   tema: "Oswaldo Cruz"
-  cloze: "Campanhas de Oswaldo Cruz:\n\n- febre amarela: {{c1::combate ao mosquito (brigadas de mata-mosquitos)}};\n- peste bubônica: {{c2::combate aos ratos}};\n- varíola: {{c3::vacinação obrigatória}}."
+  cloze: "Campanhas de Oswaldo Cruz (a partir de 1903):\n\n- febre amarela: {{c1::combate ao mosquito (brigadas de mata-mosquitos)}};\n- peste bubônica: {{c2::combate aos ratos}};\n- varíola: {{c3::vacinação obrigatória}}."
   img: p3-aedes.jpg
-  fonte: "Parte 3 · seção 3.2"
+  fonte: "Parte 3 · seção 1.3 · slide 7"
+
+- id: campanhismo-pecas
+  tag: colonia-republica
+  tema: "Sanitarismo campanhista"
+  cloze: "O sanitarismo campanhista combinava {{c1::campanhas sanitárias}}, {{c2::polícia sanitária}} e {{c3::medidas jurídicas}} (notificação e vacinação obrigatórias, vigilância sanitária)."
+  extra: "A polícia sanitária entrava nas casas, desinfetava, removia doentes e mandava demolir imóveis insalubres."
+  fonte: "Parte 3 · seção 1.3 · slide 7"
 
 - id: oswaldo-vacina
-  tag: republica
+  tag: colonia-republica
   tema: "Oswaldo Cruz"
   frente: "Qual campanha de **vacinação** Oswaldo Cruz conduziu?"
   verso: "A vacinação obrigatória **contra a varíola** (Lei nº 1.261, de 1904)."
   extra: "A febre amarela foi combatida com o controle do mosquito, e a peste, com o combate aos ratos."
   prova: "Turma 84 (2ª prova, Q1)"
-  fonte: "Parte 3 · seção 3.4"
+  fonte: "Parte 3 · seção 1.4"
 
 - id: revolta-vacina
-  tag: republica
+  tag: colonia-republica
   tema: "Revolta da Vacina (1904)"
-  frente: "Esta charge de 1904 critica qual medida, estopim da Revolta da Vacina?"
-  verso: "A **vacinação obrigatória contra a varíola** (Lei nº 1.261, de 31 de outubro de 1904)."
+  frente: "Esta charge de 1904 critica a vacinação obrigatória contra a varíola. Por que a reação, na Revolta da Vacina, foi tão forte?"
+  verso: "O **autoritarismo** das campanhas, a **invasão das casas**, o medo da vacina e as **demolições** que expulsavam os pobres do centro do Rio."
   img_frente: p3-revolta-vacina-alt.jpg
-  extra: "Pesaram também o autoritarismo das campanhas, a invasão das casas e as demolições que expulsavam os pobres do centro do Rio."
-  fonte: "Parte 3 · seção 3.4"
-
-- id: campanhismo-pecas
-  tag: republica
-  tema: "Sanitarismo campanhista"
-  cloze: "O sanitarismo campanhista combinava {{c1::campanhas sanitárias}}, {{c2::polícia sanitária}} e {{c3::medidas jurídicas}} (notificação e vacinação obrigatórias, vigilância sanitária)."
-  fonte: "Parte 3 · seção 3.3 · slide 7"
-
-- id: policia-sanitaria
-  tag: republica
-  tema: "Sanitarismo campanhista"
-  frente: "O que a **polícia sanitária** podia fazer?"
-  verso: "Entrar nas casas, **desinfetar, interditar, remover doentes** e mandar **demolir** imóveis considerados insalubres."
-  fonte: "Parte 3 · seção 3.3"
+  extra: "A obrigatoriedade foi suspensa."
+  fonte: "Parte 3 · seção 1.4"
 
 - id: dnsp
-  tag: republica
+  tag: colonia-republica
   tema: "Carlos Chagas e o DNSP"
   frente: "Que órgão foi criado em 1920, e quem o dirigiu?"
   verso: "O **Departamento Nacional de Saúde Pública (DNSP)**, dirigido por **Carlos Chagas**."
   img: p3-carlos-chagas.jpg
-  fonte: "Parte 3 · seção 3.5 · slide 8"
-
-- id: dnsp-novidade
-  tag: republica
-  tema: "Carlos Chagas e o DNSP"
-  frente: "Que novidade a reforma de Carlos Chagas trouxe às ações de saúde pública?"
-  verso: "A **propaganda e a educação sanitária** como rotina, ao lado da fiscalização."
-  extra: "Também criou órgãos para tuberculose, hanseníase e doenças venéreas e levou o saneamento ao interior."
-  fonte: "Parte 3 · seção 3.5 · slide 8"
-
-- id: bacteriologia-miasma
-  tag: republica
-  tema: "Carlos Chagas e o DNSP"
-  frente: "Que virada científica o slide 8 marca (o “×”)?"
-  verso: "A **bacteriologia e a microbiologia** substituem a **teoria miasmática**."
-  fonte: "Parte 3 · seção 3.5 · slide 8"
+  extra: "Trouxe a **propaganda e a educação sanitária** como rotina. Na ciência, a bacteriologia substitui a teoria miasmática (o “×” do slide)."
+  fonte: "Parte 3 · seção 1.5 · slide 8"
 
 - id: eloy-chaves
-  tag: republica
+  tag: colonia-republica
   tema: "Lei Eloy Chaves (1923)"
   frente: "O que a Lei Eloy Chaves (Decreto nº 4.682, de 24 de janeiro de 1923) criou?"
   verso: "As **Caixas de Aposentadoria e Pensões (CAPs)**, uma por **empresa ferroviária**."
   img: p3-eloy-chaves.jpg
-  extra: "É o **marco inicial da previdência social** no Brasil."
-  fonte: "Parte 3 · seção 3.6 · slide 9"
-
-- id: ferroviarios
-  tag: republica
-  tema: "Lei Eloy Chaves (1923)"
-  frente: "Por que os ferroviários foram os primeiros a ter uma CAP?"
-  verso: "Eram uma categoria **estratégica para a economia do café** e muito mobilizada em greves."
-  img: p3-ferrovia.jpg
-  fonte: "Parte 3 · seção 3.6"
-
-- id: caps-beneficios
-  tag: republica
-  tema: "As CAPs"
-  frente: "Que benefícios as CAPs ofereciam?"
-  verso: "**Previdenciários** (aposentadoria e pensão) e **assistência médica**, com medicamentos a preço reduzido."
-  fonte: "Parte 3 · seção 3.6 · slide 9"
+  extra: "É o **marco inicial da previdência social** no Brasil. Ofereciam benefícios previdenciários e assistência médica."
+  fonte: "Parte 3 · seção 1.6 · slide 9"
 
 - id: caps-tripartite-pegadinha
-  tag: republica
+  tag: colonia-republica
   tema: "Pegadinha"
   frente: "Certo ou errado: “o financiamento das CAPs era tripartite: empregadores, trabalhadores e Governo”."
   verso: "**Errado.** Era **bipartite** (empregados e empregadores). Tripartite, com o Estado, é a marca dos **IAPs**."
   prova: "Prova 82 (Q4, item II); Compilado B (Q4)"
-  fonte: "Parte 3 · seção 3.6"
+  fonte: "Parte 3 · seção 1.6 · slide 9"
 
 - id: campanha-assistencialismo
-  tag: republica
+  tag: colonia-republica
   tema: "Campanha × assistencialismo"
   frente: "Qual a diferença entre a política sanitarista de **campanha** e o modelo **assistencialista**?"
   verso: "Campanha: ações **pontuais, intensivas e coletivas** contra uma doença. Assistencialismo: atendimento **contínuo, individual e curativo**, para quem tinha direito pela previdência."
   prova: "Prova 85 (Q6); Turma 86"
-  fonte: "Parte 3 · seção 3.7 · slide 10"
+  fonte: "Parte 3 · seção 1.7 · slide 10"
 
-# ---------------------------------------------------------------- 4 · Era Vargas
+# ---------------------------------------------------------------- 2 · Era Vargas e período democrático
 - id: mesp
   tag: vargas
   tema: "Era Vargas"
   frente: "Que ministério cuidou da saúde pública a partir de 1930?"
   verso: "O **Ministério da Educação e Saúde Pública (MESP)**."
   img: p3-vargas.jpg
-  extra: "A previdência, e com ela a assistência médica de quem tinha emprego formal, ficou no Ministério do Trabalho, Indústria e Comércio, também de 1930."
-  fonte: "Parte 3 · seções 4.1 e 4.2 · slide 11"
-
-- id: cidadania-regulada
-  tag: vargas
-  tema: "Cidadania regulada"
-  frente: "O que é a **cidadania regulada** (Wanderley Guilherme dos Santos)?"
-  verso: "Direitos sociais só para quem tinha **profissão reconhecida por lei** e carteira assinada."
-  extra: "Rurais, domésticas e informais ficavam de fora. Por isso o SUS insistiria na universalidade."
-  fonte: "Parte 3 · seção 4.2"
-
-- id: iaps-organizacao
-  tag: vargas
-  tema: "Os IAPs (1933)"
-  frente: "Como se organizavam os IAPs, criados a partir de 1933?"
-  verso: "Por **categoria profissional**, com alcance nacional (marítimos, comerciários, bancários, industriários…)."
-  fonte: "Parte 3 · seção 4.3 · slide 11"
+  extra: "A previdência, e com ela a assistência médica de quem tinha carteira, ficou no Ministério do Trabalho."
+  fonte: "Parte 3 · seção 2.1 · slide 11"
 
 - id: cap-iap-mnemo
   tag: vargas
   tema: "CAPs × IAPs"
   cloze: "Na {{c1::CAP}}, uma caixa por **companhia**, e pagam **2** (empregado e empresa). No {{c2::IAP}}, um instituto por **profissão**, e pagam **3** (entra o Estado)."
-  fonte: "Parte 3 · seção 4.3"
+  extra: "Os IAPs começam em 1933 e têm gestão semipública."
+  fonte: "Parte 3 · seção 2.2 · slide 11"
 
 - id: iaps-pegadinha
   tag: vargas
@@ -242,89 +132,38 @@ cards:
   verso: "**Errado.** O que define o IAP é a **categoria profissional**, e não a empresa."
   extra: "Na versão do Compilado B, o item diz “categorias profissionais, ao contrário das CAPs”, e aí é verdadeiro."
   prova: "Prova 82 (Q4, item IV); Compilado B (Q4)"
-  fonte: "Parte 3 · seção 4.3"
+  fonte: "Parte 3 · seção 2.2"
 
 - id: sesp
   tag: vargas
   tema: "SESP (1942)"
   frente: "O que foi o SESP (1942) e qual era o seu objetivo?"
   verso: "Serviço Especial de Saúde Pública, criado com os **Estados Unidos** para sanear regiões de **matérias-primas** estratégicas na guerra."
-  extra: "Borracha da Amazônia; ferro e mica do Vale do Rio Doce. Combateu malária e febre amarela."
-  fonte: "Parte 3 · seção 4.4 · slide 12"
-
-- id: sesp-nordeste
-  tag: vargas
-  tema: "SESP (1942)"
-  frente: "O que o SESP fez de diferente no Nordeste, depois da guerra?"
-  verso: "Montou unidades de saúde locais que juntavam **medicina preventiva e curativa**."
   img: a3-s13.jpg
-  fonte: "Parte 3 · seção 4.4 · slide 13"
+  extra: "Borracha da Amazônia; ferro e mica do Vale do Rio Doce. Depois da guerra, montou no Nordeste unidades que juntavam **medicina preventiva e curativa**."
+  fonte: "Parte 3 · seção 2.3 · slides 12 e 13"
 
-- id: conferencias-criacao
-  tag: vargas
-  tema: "Era Vargas"
-  frente: "Em que ano foram criadas as Conferências Nacionais de Saúde?"
-  verso: "Em **1937**. A primeira aconteceu em 1941."
-  fonte: "Parte 3 · seção 4.2"
-
-# ---------------------------------------------------------------- 5 · Período democrático
 - id: ministerio-saude
-  tag: democratico
+  tag: vargas
   tema: "Período democrático"
   frente: "Em que ano foi criado o Ministério da Saúde?"
-  verso: "Em **1953** (Lei nº 1.920), separado da Educação."
-  fonte: "Parte 3 · seção 5 · slide 14"
+  verso: "Em **1953**, separado da Educação."
+  fonte: "Parte 3 · seção 2.4 · slide 14"
 
 - id: rede-propria
-  tag: democratico
+  tag: vargas
   tema: "Período democrático"
   frente: "Até 1964, como a previdência prestava a assistência médica?"
   verso: "Em **rede própria** dos institutos: hospitais, ambulatórios e consultórios dos IAPs."
   extra: "A compra de serviços privados como regra é do Regime Militar."
-  fonte: "Parte 3 · seção 5.1"
+  fonte: "Parte 3 · seção 2.4 · slide 14"
 
-- id: lops
-  tag: democratico
-  tema: "Período democrático"
-  frente: "O que fez a LOPS (Lei Orgânica da Previdência Social, 1960)?"
-  verso: "**Igualou as regras e os benefícios** dos IAPs, mas manteve os institutos separados."
-  fonte: "Parte 3 · seção 5.2"
-
-- id: terceira-cns
-  tag: democratico
-  tema: "Período democrático"
-  frente: "Que conferência propôs, em 1963, a municipalização dos serviços de saúde?"
-  verso: "A **3ª Conferência Nacional de Saúde**."
-  extra: "O golpe de 1964 engavetou a ideia. A descentralização voltaria como diretriz do SUS."
-  fonte: "Parte 3 · seção 5.2"
-
-# ---------------------------------------------------------------- 6 · Regime Militar
-- id: inps
-  tag: militar
-  tema: "INPS (1966)"
-  frente: "O que foi o INPS, criado em 1966?"
-  verso: "A **unificação dos IAPs** num instituto único, com gestão **centralizada** no governo federal."
-  fonte: "Parte 3 · seção 6.2 · slides 15 e 16"
-
+# ---------------------------------------------------------------- 3 · Regime Militar e os três subsistemas
 - id: inps-consequencias
   tag: militar
   tema: "INPS (1966)"
-  cloze: "O INPS:\n\n- {{c1::uniformizou os benefícios}};\n- acabou com a {{c2::gestão tripartite}};\n- privilegiou as ações {{c3::curativas e individuais}};\n- ampliou a cobertura a rurais (1971), domésticas (1972) e autônomos (1973)."
-  fonte: "Parte 3 · seção 6.2 · slide 16"
-
-- id: inps-destaque
-  tag: militar
-  tema: "INPS (1966)"
-  frente: "Que destaque fecha o slide 16, sobre o INPS?"
-  verso: "A **contratação prioritária de serviços privados** e a expansão do modelo **médico-assistencial privatista**."
-  fonte: "Parte 3 · seção 6.2 · slide 16"
-
-- id: funrural
-  tag: militar
-  tema: "INPS (1966)"
-  frente: "Em que ano, e por qual fundo, os trabalhadores rurais ganharam cobertura?"
-  verso: "Em **1971**, pelo **FUNRURAL**, um fundo à parte e com benefícios menores."
-  fonte: "Parte 3 · seção 6.2"
+  cloze: "O INPS (1966), que unificou os IAPs:\n\n- {{c1::uniformizou os benefícios}};\n- acabou com a {{c2::gestão tripartite}};\n- centralizou a gestão no governo federal;\n- privilegiou as ações {{c3::curativas e individuais}};\n- ampliou a cobertura a rurais (1971), domésticas (1972) e autônomos (1973)."
+  fonte: "Parte 3 · seção 3.1 · slides 15 e 16"
 
 - id: privatista-funcionamento
   tag: militar
@@ -332,34 +171,22 @@ cards:
   frente: "Como funcionava o modelo médico-assistencial privatista?"
   verso: "A previdência arrecadava e **comprava serviços** de hospitais privados, **pagando por procedimento**; quem não tinha carteira ficava de fora."
   img: p3-privatista.svg
-  fonte: "Parte 3 · seção 6.3 · slides 16 a 18"
-
-- id: pagamento-procedimento
-  tag: militar
-  tema: "Médico-assistencial privatista"
-  frente: "Por que o pagamento por procedimento era um problema?"
-  verso: "**Premiava a quantidade**, e não a resolução: estimulava internações e exames desnecessários, e as fraudes se multiplicaram."
-  fonte: "Parte 3 · seções 6.3 e 8.1"
+  extra: "O pagamento por procedimento premiava a quantidade, e não a resolução."
+  fonte: "Parte 3 · seção 3.2 · slides 16 a 18"
 
 - id: fas-ppa
   tag: militar
   tema: "Médico-assistencial privatista"
-  cloze: "Em 1974, o {{c1::FAS}} emprestava dinheiro subsidiado para construir hospitais (a maioria privados), e o {{c2::PPA}} ampliou a contratação de hospitais e clínicas particulares para urgências."
-  fonte: "Parte 3 · seção 6.3"
+  cloze: "Em 1974, o {{c1::FAS}} financiou a construção de hospitais (a maioria privados), e o {{c2::PPA}} ampliou a contratação de hospitais e clínicas particulares para urgências."
+  fonte: "Parte 3 · seção 3.2 · slide 18"
 
-- id: medicina-grupo
+- id: binomio-pegadinha
   tag: militar
-  tema: "Médico-assistencial privatista"
-  frente: "O que era a **medicina de grupo** no Regime Militar?"
-  verso: "Empresas contratavam firmas médicas para atender seus empregados, com compensação da previdência: a **origem dos planos de saúde empresariais**."
-  fonte: "Parte 3 · seção 6.3 · slide 17"
-
-- id: lei-6229
-  tag: militar
-  tema: "Regime Militar"
-  frente: "O que a Lei nº 6.229/1975 (Sistema Nacional de Saúde) oficializou?"
-  verso: "A **dicotomia**: ao Ministério da Saúde, as ações coletivas; à Previdência, o atendimento médico individual."
-  fonte: "Parte 3 · seção 6.3"
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “na Nova República (1985–1988), as políticas de saúde fortaleceram o setor privado com a compra de serviços e empréstimos subsidiados”."
+  verso: "**Errado.** Isso descreve o **Regime Militar** (binômio Previdência–Assistência Médica)."
+  prova: "Prova 82 (Q4, item V); Compilado B (Q4)"
+  fonte: "Parte 3 · seção 3.2 · Na prova"
 
 - id: inamps
   tag: militar
@@ -368,251 +195,163 @@ cards:
   verso: "A **assistência médica individual e curativa**, prestada por serviços **privados e conveniados**."
   img: p3-sinpas.svg
   extra: "INPS paga os benefícios, INAMPS trata os segurados, IAPAS arrecada."
-  fonte: "Parte 3 · seção 6.4 · slide 19"
+  fonte: "Parte 3 · seção 3.3 · slide 19"
 
-- id: binomio-pegadinha
-  tag: militar
-  tema: "Pegadinha"
-  frente: "Certo ou errado: “na Nova República (1985–1988), as políticas de saúde fortaleceram o setor privado com a compra de serviços e empréstimos subsidiados”."
-  verso: "**Errado.** Isso descreve o **Regime Militar** (binômio Previdência–Assistência Médica)."
-  prova: "Prova 82 (Q4, item V); Compilado B (Q4)"
-  fonte: "Parte 3 · seção 6.3"
-
-# ---------------------------------------------------------------- 7 · Os três subsistemas
 - id: sub-caps
-  tag: subsistemas
+  tag: militar
   tema: "Os três subsistemas"
   frente: "Como eram as **CAPs** quanto à organização, ao financiamento e à gestão?"
   oculta: p3-previdencia-oculta-caps.svg
   revelada: p3-previdencia.svg
   verso: "Por **empresa**; financiamento **bipartite** (empregados e empregadores); gestão **privada**, por colegiado."
   prova: "Prova 85 (Q8); Compilado A (Q6); Turmas 84 e 86"
-  fonte: "Parte 3 · seção 7 · slide 9"
+  fonte: "Parte 3 · seção 3.4 · slide 9"
 
 - id: sub-iaps
-  tag: subsistemas
+  tag: militar
   tema: "Os três subsistemas"
   frente: "Como eram os **IAPs** quanto à organização, ao financiamento e à gestão?"
   oculta: p3-previdencia-oculta-iaps.svg
   revelada: p3-previdencia.svg
   verso: "Por **categoria profissional**; financiamento **tripartite** (empregados, empregadores e Estado); gestão **semipública**."
   prova: "Prova 85 (Q8); Compilado A (Q6); Turmas 84 e 86"
-  fonte: "Parte 3 · seção 7 · slide 11"
+  fonte: "Parte 3 · seção 3.4 · slide 11"
 
 - id: sub-inps
-  tag: subsistemas
+  tag: militar
   tema: "Os três subsistemas"
   frente: "Como era o **INPS** quanto à organização, ao financiamento e à gestão?"
   oculta: p3-previdencia-oculta-inps.svg
   revelada: p3-previdencia.svg
   verso: "**Instituto único**, com benefícios iguais; **contribuições sobre a folha**; gestão **centralizada**, sem a participação tripartite."
   prova: "Prova 85 (Q8); Compilado A (Q6); Turmas 84 e 86"
-  fonte: "Parte 3 · seção 7 · slide 16"
-
-- id: sub-seguro
-  tag: subsistemas
-  tema: "Os três subsistemas"
-  frente: "CAPs, IAPs e INPS eram formas de qual modelo de proteção social?"
-  verso: "De **seguro social**: só tinha direito quem contribuía."
-  extra: "A CF88 adotou outro modelo, a seguridade social (Parte 4)."
-  fonte: "Parte 3 · seção 7.1"
-
-- id: sub-tendencias
-  tag: subsistemas
-  tema: "Os três subsistemas"
-  frente: "Que três tendências aparecem de CAPs → IAPs → INPS?"
-  verso: "A **escala cresce**; o **Estado assume o controle**; o direito continua **ligado ao trabalho formal**."
-  fonte: "Parte 3 · seção 7.1"
+  fonte: "Parte 3 · seção 3.4 · slide 16"
 
 - id: sub-resposta
-  tag: subsistemas
+  tag: militar
   tema: "Os três subsistemas"
   frente: "Na questão “caracterize os três subsistemas que vieram antes do SUS”, quais são eles e que critérios usar?"
   verso: "**CAPs, IAPs e INPS**, por **organização, financiamento e gestão** (e cobertura)."
-  extra: "<span class=\"div\">⚠ Alguns gabaritos de alunos usam o tripé da seguridade, mas ele é da CF88. Os slides 9, 11 e 16 caracterizam CAPs, IAPs e INPS.</span>"
+  extra: "<span class=\"div\">⚠ Alguns gabaritos de alunos usam os modelos de atenção ou o tripé da seguridade, que é da CF88. Os slides 9, 11 e 16 caracterizam CAPs, IAPs e INPS.</span>"
   prova: "Prova 85 (Q8); Compilado A (Q6); Prova 89"
-  fonte: "Parte 3 · seção 7 · Na prova"
+  fonte: "Parte 3 · seção 3.4"
 
-# ---------------------------------------------------------------- 8 · Crise e primeiras reformas
-- id: crise-modelo
-  tag: reformas
-  tema: "A crise do modelo"
-  frente: "Por que o modelo médico-assistencial privatista entrou em crise no fim dos anos 1970?"
-  verso: "**Custos crescentes**, menos arrecadação com a recessão, **pouca resolutividade** e **exclusão** de quem não tinha carteira."
-  fonte: "Parte 3 · seção 8.1"
+- id: sub-seguro
+  tag: militar
+  tema: "Pegadinha"
+  frente: "Certo ou errado: “por adotar uma concepção ampla do direito à saúde, a CF88 escolheu o seguro social”."
+  verso: "**Errado.** A CF88 adotou a **seguridade social**. O **seguro social**, em que só tem direito quem contribui, era o modelo das CAPs, dos IAPs e do INPS."
+  prova: "Prova 82 (Q4, item I); Compilado B (Q4)"
+  fonte: "Parte 3 · seção 3.4"
 
-- id: piass
-  tag: reformas
-  tema: "PIASS (1976)"
-  frente: "O que propunha o PIASS (1976)?"
-  verso: "Levar **ações básicas de saúde e saneamento ao interior**, a começar pelo **Nordeste**."
-  extra: "Postos de saúde e agentes recrutados na comunidade. Foi estendido a todo o país em 1979."
-  fonte: "Parte 3 · seção 8.2 · slide 20"
+# ---------------------------------------------------------------- 4 · Da crise do modelo ao SUDS
+- id: alma-ata-iniciativas
+  tag: reforma-sanitaria
+  tema: "Iniciativas na linha de Alma-Ata"
+  frente: "Cite duas iniciativas brasileiras em consonância com Alma-Ata (1978) que buscavam ampliar a cobertura."
+  verso: "Duas entre **PIASS** (1976), **PREV-SAÚDE** (1980) e **AIS** (1983)."
+  extra: "<span class=\"div\">⚠ Uma versão do gabarito traz “AIS e SUDS”; PIASS e AIS são mais seguras, por serem de atenção básica.</span> O PREV-SAÚDE não chegou a ser implantado."
+  prova: "Compilado B (Q8); Prova 82 (Q7); prova do grupo (2020.2)"
+  fonte: "Parte 3 · seção 4.1 · slide 20"
 
 - id: piass-pegadinha
-  tag: reformas
+  tag: reforma-sanitaria
   tema: "Pegadinha"
   frente: "Certo ou errado: “o PIASS tinha como objetivo levar assistência à saúde aos trabalhadores rurais, até então excluídos das ações previdenciárias”."
-  verso: "**Errado.** Os rurais tinham cobertura desde **1971** (FUNRURAL); o PIASS **interiorizou** as ações básicas."
+  verso: "**Errado.** Os rurais tinham cobertura desde **1971** (FUNRURAL). O PIASS (1976) **interiorizou** as ações básicas de saúde e saneamento, a começar pelo Nordeste."
   prova: "Prova 89 (Q4, item I); Turma 90"
-  fonte: "Parte 3 · seção 8.4"
-
-- id: prev-saude
-  tag: reformas
-  tema: "PREV-SAÚDE (1980)"
-  frente: "O que foi o PREV-SAÚDE (1980), e o que aconteceu com ele?"
-  verso: "Um programa para estender a rede básica a todo o país. **Não chegou a ser implantado**, por resistência do setor privado e da própria previdência."
-  fonte: "Parte 3 · seção 8.2"
+  fonte: "Parte 3 · seção 4.1 · slide 20"
 
 - id: conasp
-  tag: reformas
+  tag: reforma-sanitaria
   tema: "CONASP (1981)"
-  frente: "O que o plano do CONASP propôs para o modelo assistencial?"
-  verso: "**Melhorar a qualidade**, **ampliar** os serviços, **descentralizar** a gestão e **hierarquizar** por complexidade."
-  extra: "Dele saíram a AIH, que pagava internações por valores fixos, e o programa que originou as AIS."
-  fonte: "Parte 3 · seção 8.3 · slide 21"
+  frente: "O que o CONASP (1981) propôs para o modelo assistencial?"
+  verso: "**Melhorar a qualidade**, **ampliar** os serviços, **descentralizar** e **hierarquizar** por complexidade."
+  extra: "Era ligado ao INAMPS. Dele vieram as AIS."
+  fonte: "Parte 3 · seção 4.2 · slide 21"
 
 - id: ais-objetivo
-  tag: reformas
+  tag: reforma-sanitaria
   tema: "AIS (1983)"
   frente: "Qual era o objetivo das Ações Integradas de Saúde (AIS, 1983)?"
-  verso: "**Articular os serviços** públicos de uma região e **integrar as ações preventivas e curativas**."
-  extra: "São vistas como o embrião do SUDS e do SUS."
-  fonte: "Parte 3 · seção 8.4 · slide 22"
-
-- id: ais-inamps
-  tag: reformas
-  tema: "AIS (1983)"
-  frente: "Nas AIS, que parte da arrecadação o INAMPS repassava, e para quem?"
-  verso: "**10%**, para as **Secretarias Estaduais de Saúde**, o que expandiu a atenção básica."
-  fonte: "Parte 3 · seção 8.4 · slide 22"
+  verso: "**Articular os serviços** de uma região e **integrar as ações preventivas e curativas**."
+  extra: "O INAMPS repassava **10%** da arrecadação às Secretarias Estaduais de Saúde. As AIS são o embrião do SUDS e do SUS."
+  fonte: "Parte 3 · seção 4.2 · slide 22"
 
 - id: ais-pegadinha
-  tag: reformas
+  tag: reforma-sanitaria
   tema: "Pegadinha"
   frente: "Certo ou errado: “as AIS foram estabelecidas no final da década de 1960”."
   verso: "**Errado.** As AIS são de **1983**."
   prova: "Prova 89 (Q4, item II); Turma 90"
-  fonte: "Parte 3 · seção 8.4"
-
-# ---------------------------------------------------------------- 9 · Reforma Sanitária
-- id: rsb-atores
-  tag: rsb
-  tema: "Reforma Sanitária"
-  frente: "Quem fez o Movimento da Reforma Sanitária (slide 23)?"
-  verso: "**Trabalhadores, sindicatos, intelectuais, lideranças populares e estudantes**, a partir dos departamentos de medicina preventiva e social."
-  fonte: "Parte 3 · seção 9.1 · slide 23"
+  fonte: "Parte 3 · seção 4.2"
 
 - id: cebes-abrasco
-  tag: rsb
+  tag: reforma-sanitaria
   tema: "Reforma Sanitária"
   cloze: "Duas entidades da Reforma Sanitária: o {{c1::CEBES}} (1976), com a revista *Saúde em Debate*, e a {{c2::ABRASCO}} (1978 no slide; fundada formalmente em 1979)."
   img: a3-s23.jpg
-  fonte: "Parte 3 · seção 9.1 · slide 23"
-
-- id: simposio-1979
-  tag: rsb
-  tema: "Reforma Sanitária"
-  frente: "Em 1979, onde o CEBES apresentou a proposta de um Sistema Único de Saúde?"
-  verso: "No **Simpósio de Política Nacional de Saúde da Câmara dos Deputados** (documento *A questão democrática na área da saúde*)."
-  fonte: "Parte 3 · seção 9.1"
-
-- id: rsb-critica
-  tag: rsb
-  tema: "Reforma Sanitária"
-  frente: "O que a Reforma Sanitária criticava no sistema da época (slide 24)?"
-  verso: "A **assistência médica curativa** ligada ao setor privado: **excludente, pouco resolutiva e dispendiosa**."
-  extra: "E a divisão entre Ministério da Saúde e INAMPS, cada um com sua rede e seu orçamento."
-  fonte: "Parte 3 · seção 9.2 · slide 24"
+  extra: "Os atores do slide 23: trabalhadores, sindicatos, intelectuais, lideranças populares e estudantes."
+  fonte: "Parte 3 · seção 4.3 · slide 23"
 
 - id: rsb-proposta
-  tag: rsb
+  tag: reforma-sanitaria
   tema: "Reforma Sanitária"
   frente: "O que a Reforma Sanitária propunha (slides 24 e 25)?"
   verso: "Um **Sistema Único de Saúde**, com **universalização** do direito, **integralidade** e **descentralização**."
   img: p3-reforma.svg
-  fonte: "Parte 3 · seção 9.2 · slides 24 e 25"
+  fonte: "Parte 3 · seção 4.3 · slides 24 e 25"
 
 - id: rsb-nomeie
-  tag: rsb
+  tag: reforma-sanitaria
   tema: "Reconheça"
   frente: "“Projeto articulado nos anos 70 e 80 para reformular um sistema de assistência curativa, privada e lucrativa, excludente, pouco resolutiva e dispendiosa.” Como se chama?"
   verso: "**Movimento da Reforma Sanitária Brasileira.**"
   extra: "<span class=\"div\">⚠ “Modelo médico-assistencial privatista” e “INAMPS” são o modelo criticado e o órgão que o executava, e não o projeto de reforma.</span>"
   prova: "Compilado B (Q7); Prova 82 (Q6); prova do grupo (2020.2)"
-  fonte: "Parte 3 · seção 9 · Na prova"
+  fonte: "Parte 3 · seção 4.3 · Na prova"
 
-- id: rsb-democracia
-  tag: rsb
-  tema: "Reforma Sanitária"
-  frente: "Por que a Reforma Sanitária cresceu junto com a luta pela redemocratização?"
-  verso: "Porque, para o movimento, **não havia saúde sem democracia** e sem participação popular nas decisões."
-  img: p3-diretas-ja.jpg
-  fonte: "Parte 3 · seção 9.1"
-
-# ---------------------------------------------------------------- 10 · Nova República
 - id: oitava-marco
-  tag: novarepublica
+  tag: reforma-sanitaria
   tema: "8ª CNS (1986)"
   frente: "Qual é o marco da Reforma Sanitária Brasileira?"
   verso: "A **8ª Conferência Nacional de Saúde (1986)**."
-  extra: "Na discursiva: participação popular, conceito ampliado de saúde e saúde como direito de todos e dever do Estado, que entraria no art. 196 da CF88."
+  extra: "Na discursiva: participação popular, conceito ampliado de saúde e saúde como direito de todos e dever do Estado, base do texto da saúde na CF88. Foi presidida por Sergio Arouca."
   prova: "Prova 85 (Q1); Compilado A (Q1); Prova 89 (Q8); Turma 86"
-  fonte: "Parte 3 · seção 10.1 · slide 26"
+  fonte: "Parte 3 · seção 4.4 · slide 26"
 
 - id: oitava-usuarios
-  tag: novarepublica
+  tag: reforma-sanitaria
   tema: "8ª CNS (1986)"
   frente: "O que a 8ª CNS teve de inédito em relação às conferências anteriores?"
   verso: "Foi a **primeira com a participação dos usuários**."
   extra: "Daí vem a participação da comunidade, que se tornaria diretriz do SUS."
-  fonte: "Parte 3 · seção 10.1 · slide 26"
-
-- id: oitava-arouca
-  tag: novarepublica
-  tema: "8ª CNS (1986)"
-  frente: "Quem presidiu a 8ª Conferência Nacional de Saúde?"
-  verso: "**Sergio Arouca.**"
-  extra: "Março de 1986, em Brasília, com cerca de 4 mil participantes e mil delegados."
-  fonte: "Parte 3 · seção 10.1"
-
-- id: oitava-eixos
-  tag: novarepublica
-  tema: "8ª CNS (1986)"
-  cloze: "Os três eixos da 8ª CNS: {{c1::saúde como direito}}, {{c2::reformulação do sistema nacional de saúde}} e {{c3::financiamento do setor}}."
-  fonte: "Parte 3 · seção 10.1"
-
-- id: oitava-legado
-  tag: novarepublica
-  tema: "8ª CNS (1986)"
-  frente: "O que a 8ª CNS deixou, segundo o slide 26?"
-  verso: "O **conceito ampliado de saúde**, a saúde como **direito de cidadania** e a base do texto da saúde na **Constituinte**."
-  fonte: "Parte 3 · seção 10.1 · slide 26"
+  fonte: "Parte 3 · seção 4.4 · slide 26"
 
 - id: suds
-  tag: novarepublica
+  tag: reforma-sanitaria
   tema: "SUDS (1987)"
   frente: "O que foi o SUDS (1987)?"
   verso: "O Sistema Unificado e Descentralizado de Saúde: aprofundou as AIS e transferiu rede e recursos do INAMPS para os **estados**."
-  fonte: "Parte 3 · seção 10.3 · slides 28 e 29"
+  fonte: "Parte 3 · seção 4.5 · slides 28 e 29"
 
 - id: suds-caracteristicas
-  tag: novarepublica
+  tag: reforma-sanitaria
   tema: "SUDS (1987)"
   cloze: "SUDS (1987):\n\n- convênios entre União, estados e municípios;\n- {{c1::conselhos estaduais e municipais de saúde}};\n- {{c2::estadualização do INAMPS}};\n- investimentos dirigidos ao setor público;\n- cobertura ainda {{c3::insuficiente}};\n- poder concentrado nas secretarias estaduais e {{c4::relação clientelista}} entre estado e município."
-  fonte: "Parte 3 · seção 10.3 · slide 29"
+  fonte: "Parte 3 · seção 4.5 · slide 29"
 
 - id: suds-pegadinha
-  tag: novarepublica
+  tag: reforma-sanitaria
   tema: "Pegadinha"
   frente: "Certo ou errado: “com a implantação do SUDS, ocorreu a municipalização do INAMPS”."
   verso: "**Errado.** O SUDS promoveu a **estadualização** do INAMPS. A municipalização é marca do SUS."
   extra: "<span class=\"div\">⚠ Um gabarito marca V-F-V nesse V ou F; as justificativas da Prova 89 sustentam F-F-F.</span>"
   prova: "Prova 89 (Q4, item III); Turma 90; Prova 85 (Q5)"
-  fonte: "Parte 3 · seção 10.3"
+  fonte: "Parte 3 · seção 4.5"
 
 - id: linha-reformas
-  tag: novarepublica
+  tag: reforma-sanitaria
   tema: "Linha do tempo"
   cloze: "PIASS ({{c1::1976}}) → INAMPS ({{c2::1977}}) → CONASP ({{c3::1981}}) → AIS ({{c4::1983}}) → 8ª CNS ({{c5::1986}}) → SUDS ({{c6::1987}}) → SUS na Constituição (1988)."
   fonte: "Parte 3 · Resumo"

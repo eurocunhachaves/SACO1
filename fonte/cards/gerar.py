@@ -365,8 +365,13 @@ def campos_comuns(c, aula):
             inline(str(c.get("fonte", ""))), f"Aula {aula} · {NOMES[aula]}"]
 
 
+# Toda nota leva a tag da versão. Importar não apaga as notas que saíram do baralho;
+# quem já tinha a versão anterior as encontra com: "deck:SACO 1" -tag:SACO1::versao::2026-10-04
+VERSAO = "2026-10-04"
+
+
 def nota(c, aula):
-    tags = [f"SACO1::Aula{aula}::{c['tag']}"]
+    tags = [f"SACO1::Aula{aula}::{c['tag']}", f"SACO1::versao::{VERSAO}"]
     if c.get("prova"):
         tags.append("SACO1::prova")
     guid = genanki.guid_for("saco1", aula, c["id"])

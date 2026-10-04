@@ -382,7 +382,7 @@ def cover(meta):
 </section>"""
 
 
-def opening(meta, pages):
+def opening(meta, pages, body_html):
     toc = []
     h1s = [h for h in HEADS if h["level"] == 1]
     for idx, h in enumerate(h1s):
@@ -403,6 +403,8 @@ def opening(meta, pages):
     dense = " dense" if len(h1s) > 9 else ""
     leg = []
     for k in ("def", "prova", "alerta", "mnemo", "conexao", "alem"):
+        if f'class="box {k}' not in body_html:   # a legenda só mostra as caixas que a parte usa
+            continue
         label, ic = BOX[k]
         col = {"def": "var(--c)", "prova": "var(--prova)", "alerta": "var(--alerta)", "mnemo": "var(--mnemo)",
                "conexao": "var(--conexao)", "alem": "var(--alem)"}[k]
@@ -450,21 +452,46 @@ def build_html(meta, body_html, pages):
 </head>
 <body class="p{meta['parte']}">
 {cover(meta)}
-{opening(meta, pages)}
+{opening(meta, pages, body_html)}
 <main>
 {body_html}
 </main>
 </body></html>"""
 
 
+# Reamostra cada foto para o tamanho em que aparece na página (~200 dpi) antes de
+# imprimir. Sem isso o Chromium embute o JPEG original inteiro e cada PDF passa de 6 MB.
+ENXUGAR_FOTOS = """async () => {
+  const DPI = 200 / 96, Q = 0.82;
+  const imgs = [...document.images].filter(i => /\\.(jpe?g|png)$/i.test(i.getAttribute('src') || ''));
+  await Promise.all(imgs.map(i => i.decode().catch(() => {})));
+  await Promise.all(imgs.map(async i => {
+    const r = i.getBoundingClientRect();
+    if (!r.width || !r.height || !i.naturalWidth) return;
+    const f = Math.min(1, Math.max(r.width * DPI / i.naturalWidth, r.height * DPI / i.naturalHeight));
+    if (f > 0.9) return;
+    const w = Math.round(i.naturalWidth * f), h = Math.round(i.naturalHeight * f);
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    const g = c.getContext('2d'); g.imageSmoothingQuality = 'high';
+    g.fillStyle = '#fff'; g.fillRect(0, 0, w, h); g.drawImage(i, 0, 0, w, h);
+    // a densidade no srcset mantém o tamanho intrínseco original, e o layout não muda
+    i.srcset = c.toDataURL('image/jpeg', Q) + ' ' + (w / i.naturalWidth) + 'x';
+    i.removeAttribute('src');
+    await i.decode().catch(() => {});
+  }));
+}"""
+
+
 async def to_pdf(html_path, pdf_path):
     from playwright.async_api import async_playwright
 
     async with async_playwright() as p:
-        b = await p.chromium.launch()
-        pg = await b.new_page()
+        b = await p.chromium.launch(args=["--allow-file-access-from-files"])
+        pg = await b.new_page(viewport={"width": 794, "height": 1123})   # A4 a 96 dpi
+        await pg.emulate_media(media="print")
         await pg.goto(html_path.as_uri())
         await pg.evaluate("document.fonts.ready")
+        await pg.evaluate(ENXUGAR_FOTOS)
         await pg.wait_for_timeout(300)
         await pg.pdf(path=str(pdf_path), prefer_css_page_size=True, print_background=True,
                      outline=True, tagged=True)
@@ -520,7 +547,7 @@ def fix_outline(pdf_path, pages):
             cur_page = pg
     doc.set_toc(toc)
     tmp = pdf_path.with_suffix(".tmp.pdf")
-    doc.save(tmp, garbage=3, deflate=True)
+    doc.save(tmp, garbage=4, deflate=True, use_objstms=1)
     doc.close()
     tmp.replace(pdf_path)
 
