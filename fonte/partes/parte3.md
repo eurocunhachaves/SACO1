@@ -340,7 +340,7 @@ Julgue e justifique os falsos. **I.** O PIASS queria levar assistência aos trab
 <span class="div">Um gabarito marca V-F-V. As justificativas da Prova 89 e os slides 20, 22 e 29 sustentam F-F-F.</span>
 :::
 
-:::q Discursiva · os três subsistemas | Prova 85 Q8, Compilado A Q6, Turmas 84 e 86, Prova 89
+:::q Discursiva · os três subsistemas | Prova 85 Q8, Compilado A Q6, Turmas 84 e 86
 Caracterize os três subsistemas que vieram antes do SUS.
 >>>
 :::tbl | compact

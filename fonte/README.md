@@ -14,15 +14,17 @@ python3 -m playwright install chromium
 | O quê | Comando | Saída |
 |---|---|---|
 | Diagramas | `python3 fonte/diagramas.py [p1 p2 p3 p4]` | `fonte/svg/*.svg` |
-| PDFs | `python3 fonte/build.py [1 2 3 4]` | `PDFs/*.pdf` |
+| PDFs de estudo | `python3 fonte/build.py [1 2 3 4]` | `PDFs/SACO1-ParteN-*.pdf` |
+| Listas de questões | `python3 fonte/build.py [L1 L2 L3 L4]` | `PDFs/SACO1-ListaN-*.pdf` |
 | Flashcards | `python3 fonte/cards/gerar.py [1 2 3 4]` | `Flashcards/*.apkg` |
 | Imagens | `python3 fonte/imagens.py` | `fonte/img/` |
 
-Sem argumentos, cada comando gera tudo. O baralho completo (`SACO1-Completo.apkg`) só sai quando as quatro aulas são geradas juntas. O `imagens.py` serve apenas para reimportar as imagens: ele precisa das páginas dos slides originais renderizadas e das imagens baixadas do Wikimedia Commons, e o resultado já está no repositório.
+Sem argumentos, cada comando gera tudo (o `build.py` gera as partes e as listas). O baralho completo (`SACO1-Completo.apkg`) só sai quando as quatro aulas são geradas juntas. O `imagens.py` serve apenas para reimportar as imagens: ele precisa das páginas dos slides originais renderizadas e das imagens baixadas do Wikimedia Commons, e o resultado já está no repositório.
 
 ## Onde mexer
 
 - **Texto de uma parte:** `partes/parteN.md`. Além do Markdown comum, há caixas, quadros, questões de prova e figuras; a sintaxe está no topo de `build.py`.
+- **Lista de questões:** `listas/listaN.md`, com a mesma sintaxe das partes. Cada questão é um bloco `:::q`; `!autoral` marca uma questão autoral e `!linhasN` acrescenta N linhas para resposta. O gabarito fica na seção final, com um bloco `:::r` por questão. Os detalhes estão no topo de `build.py`.
 - **Cards:** `cards/aulaN.yaml`. O formato está no topo de `cards/aula1.yaml`. Nunca mude nem reaproveite o `id` de um card: é por ele que o Anki reconhece o card ao importar de novo e mantém o histórico de revisões.
 - **Visual:** `estilo/base.css` para os PDFs; o CSS dos cards fica em `cards/gerar.py`.
 - **Diagramas:** cada um é uma função em `diagramas.py`. Os cards usam os mesmos SVGs, convertidos em PNG por `rasterizar.py`. As versões com partes escondidas (`*-oculta-*.svg`) alimentam os cards de oclusão.

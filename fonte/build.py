@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Gera os PDFs do material de estudo a partir de fonte/partes/parteN.md.
 
-Uso:  python3 fonte/build.py [1 2 3 4]   (sem argumentos gera todas as partes)
+Uso:  python3 fonte/build.py [1 2 3 4] [L1 L2 L3 L4]
+      Números geram as partes (fonte/partes/parteN.md); LN gera a lista de questões
+      da aula N (fonte/listas/listaN.md). Sem argumentos gera as partes e as listas.
 
 Sintaxe extra no Markdown (além de Markdown padrão com tabelas):
   # Kicker || Título                 -> título de seção com linha de apoio
@@ -11,6 +13,9 @@ Sintaxe extra no Markdown (além de Markdown padrão com tabelas):
   :::card Título | etiqueta ... :::  -> cartão (use dentro de :::cols)
   :::tbl Legenda | classes ... :::   -> quadro (tabela Markdown dentro)
   :::q Cabeçalho | fonte ... >>> resposta ... :::  -> questão de prova com resposta-modelo
+       flags no cabeçalho: !split (pode quebrar a página), !autoral (questão própria),
+       !linhasN (N linhas para responder à mão)
+  :::r Cabeçalho | fonte ... :::     -> resposta comentada (gabarito no fim das listas)
   :::recap Título ... :::            -> resumo final
   :::tl ... :::                      -> linha do tempo (linhas "- ano | texto", "- == Era", "- *ano | texto" destaca)
   :::side arquivo | classes | legenda | crédito ... :::  -> texto ao lado de uma figura
@@ -188,9 +193,15 @@ def render_block(name, args, body_lines):
     if name == "q":
         head, _, src = args.partition("|")
         cls = ""
-        if "!split" in head:
-            cls = " split"
-            head = head.replace("!split", "")
+        for flag in ("split", "autoral"):
+            if f"!{flag}" in head:
+                cls += f" {flag}"
+                head = head.replace(f"!{flag}", "")
+        linhas = ""
+        m = re.search(r"!linhas(\d+)", head)
+        if m:
+            linhas = f'<div class="linhas" style="--n:{m.group(1)}"></div>'
+            head = head.replace(m.group(0), "")
         qtext, _, ans = body.partition("\n>>>")
         ans_html = ""
         if ans.strip():
@@ -198,7 +209,16 @@ def render_block(name, args, body_lines):
         return (
             f'<div class="q{cls}"><div class="qh"><span>{inline(head.strip())}</span>'
             f'<span class="src">{inline(src.strip())}</span></div>'
-            f'<div class="qb">{expand(qtext)}</div>{ans_html}</div>'
+            f'<div class="qb">{expand(qtext)}</div>{linhas}{ans_html}</div>'
+        )
+    if name == "r":
+        head, _, src = args.partition("|")
+        cls = " autoral" if "!autoral" in head else ""
+        head = head.replace("!autoral", "")
+        return (
+            f'<div class="q gab{cls}"><div class="qh"><span>{inline(head.strip())}</span>'
+            f'<span class="src">{inline(src.strip())}</span></div>'
+            f'<div class="qa">{expand(body)}</div></div>'
         )
     if name == "recap":
         return f'<div class="recap"><h4>{inline(args.strip() or "Resumo em 1 minuto")}</h4>{md(body)}</div>'
@@ -372,11 +392,11 @@ def cover(meta):
   <div class="top"><span>Saúde Coletiva I · Medicina UFCG</span><span class="pill">{meta['aula']}</span></div>
   <div class="num">0{meta['parte']}</div>
   <div class="titles">
-    <div class="kicker">Parte {meta['parte']} de 4</div>
+    <div class="kicker">{meta['rotulo']} {meta['parte']} de 4</div>
     <h1 class="ctitle">{inline(meta['titulo'])}</h1>
     <div class="csub">{inline(meta['subtitulo'])}</div>
   </div>
-  <div class="inside"><h4>Nesta parte</h4><ol>{items}</ol></div>
+  <div class="inside"><h4>Nesta {meta['rotulo'].lower()}</h4><ol>{items}</ol></div>
   {hero}
   <div class="foot"><span>Baseado nos slides do <b>Prof. Dr. Cristiano Moura</b><br>{inline(meta.get('base',''))}</span><span>Material de estudo · {meta.get('semestre','2026')}</span></div>
 </section>"""
@@ -400,6 +420,7 @@ def opening(meta, pages, body_html):
             f'<li><span class="n">{num}</span><span class="t">{inline(h["text"])}{sm}</span><span class="pg">{pg}</span></li>'
         )
     goals = "".join(f"<li>{inline(g)}</li>" for g in meta.get("objetivos", []))
+    goals_t = meta.get("objetivos_titulo", "Ao final desta parte você deve conseguir")
     dense = " dense" if len(h1s) > 9 else ""
     leg = []
     for k in ("def", "prova", "alerta", "mnemo", "conexao", "alem"):
@@ -422,19 +443,30 @@ def opening(meta, pages, body_html):
             f'<div class="it"><span class="sw" style="background:{bg};color:{col}">{icon(ic)}</span>'
             f'<span><b>{label}</b>{desc}</span></div>'
         )
+    if meta["rotulo"] == "Lista":   # nas listas, a legenda explica os dois tipos de questão
+        for cls, label, desc, bg, col in (
+            ("q", "Questão de prova", "já caiu; o cabeçalho diz em que provas", "var(--prova-bg)", "var(--prova)"),
+            ("q autoral", "Questão autoral", "tema importante que as provas ainda não cobraram", "var(--c-tint)", "var(--c)"),
+        ):
+            if f'class="{cls}' in body_html:
+                leg.append(
+                    f'<div class="it"><span class="sw" style="background:{bg};color:{col}">{icon("pencil-line")}</span>'
+                    f'<span><b>{label}</b>{desc}</span></div>'
+                )
+    legenda = (f'<div class="eyebrow" style="margin:0 0 2mm">Como ler as caixas</div><div class="legend">{"".join(leg)}</div>'
+               if leg else "")
     return f"""
 <section class="opening{dense}">
-  <div class="eyebrow">Parte {meta['parte']} · {meta['aula']}</div>
+  <div class="eyebrow">{meta['rotulo']} {meta['parte']} · {meta['aula']}</div>
   <h2 class="toc-title">Sumário</h2>
   <ol class="toc">{''.join(toc)}</ol>
-  <div class="goals"><h4>Ao final desta parte você deve conseguir</h4><ul>{goals}</ul></div>
-  <div class="eyebrow" style="margin:0 0 2mm">Como ler as caixas</div>
-  <div class="legend">{''.join(leg)}</div>
+  <div class="goals"><h4>{goals_t}</h4><ul>{goals}</ul></div>
+  {legenda}
 </section>"""
 
 
 def page_style(meta):
-    left = f"SAÚDE COLETIVA I  ·  PARTE {meta['parte']}"
+    left = f"SAÚDE COLETIVA I  ·  {meta['rotulo'].upper()} {meta['parte']}"
     right = meta.get("cabecalho", meta["titulo"]).upper()
     return (
         "<style>@page { @top-left { content: \"%s\"; } @top-right { content: \"%s\"; } }</style>"
@@ -446,7 +478,7 @@ def build_html(meta, body_html, pages):
     css = (ESTILO / "base.css").as_uri()
     return f"""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
-<title>SACO 1 · Parte {meta['parte']} · {re.sub('<.*?>','',meta['titulo'])}</title>
+<title>SACO 1 · {meta['rotulo']} {meta['parte']} · {re.sub('<.*?>','',meta['titulo'])}</title>
 <link rel="stylesheet" href="{css}">
 {page_style(meta)}
 </head>
@@ -552,18 +584,20 @@ def fix_outline(pdf_path, pages):
     tmp.replace(pdf_path)
 
 
-def build(n):
+def build(n, lista=False):
     global HEADS
-    src = FONTE / "partes" / f"parte{n}.md"
+    nome = f"lista{n}" if lista else f"parte{n}"
+    src = FONTE / ("listas" if lista else "partes") / f"{nome}.md"
     text = src.read_text()
     _, fm, body = text.split("---\n", 2)
     meta = yaml.safe_load(fm)
     meta["parte"] = n
+    meta["rotulo"] = "Lista" if lista else "Parte"
     body = pre_inline(body)
     HEADS = []
     body_html = expand(body)
     TMP.mkdir(exist_ok=True)
-    html_path = FONTE / f"_parte{n}.html"   # na raiz de fonte/ para os caminhos relativos funcionarem
+    html_path = FONTE / f"_{nome}.html"   # na raiz de fonte/ para os caminhos relativos funcionarem
     pdf_path = SAIDA / meta["arquivo"]
     SAIDA.mkdir(exist_ok=True)
     # passadas: renderiza, descobre a página de cada seção e repete até estabilizar
@@ -577,11 +611,12 @@ def build(n):
         pages = novo
     fix_outline(pdf_path, pages)
     h1s = [h for h in HEADS if h["level"] == 1]
-    print(f"Parte {n}: {pdf_path.name}  ({len(pages)}/{len(h1s)} seções paginadas)")
+    print(f"{meta['rotulo']} {n}: {pdf_path.name}  ({len(pages)}/{len(h1s)} seções paginadas)")
     return pdf_path
 
 
 if __name__ == "__main__":
-    partes = [int(a) for a in sys.argv[1:]] or [1, 2, 3, 4]
-    for n in partes:
-        build(n)
+    alvos = sys.argv[1:] or ["1", "2", "3", "4", "L1", "L2", "L3", "L4"]
+    for a in alvos:
+        lista = a.upper().startswith("L")
+        build(int(a.lstrip("Ll")), lista)

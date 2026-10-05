@@ -1,6 +1,6 @@
 # SACO 1 · Saúde Coletiva I
 
-Material de estudo da disciplina **Saúde Coletiva I** (Medicina, UFCG, Prof. Dr. Cristiano Moura), dividido em quatro partes, uma por aula. Cada parte tem um PDF e um baralho de flashcards para o Anki, ligados entre si: as mesmas imagens aparecem nos dois, e cada card diz em que seção do PDF está o assunto.
+Material de estudo da disciplina **Saúde Coletiva I** (Medicina, UFCG, Prof. Dr. Cristiano Moura), dividido em quatro partes, uma por aula. Cada parte tem um PDF de estudo, uma lista de questões e um baralho de flashcards para o Anki, ligados entre si: as mesmas imagens aparecem nos três, e cada card e cada resposta da lista dizem em que seção do PDF está o assunto.
 
 | Parte | PDF | Flashcards |
 |---|---|---|
@@ -8,6 +8,13 @@ Material de estudo da disciplina **Saúde Coletiva I** (Medicina, UFCG, Prof. Dr
 | 2 · Promoção da Saúde | [SACO1-Parte2-Promocao-da-Saude.pdf](PDFs/SACO1-Parte2-Promocao-da-Saude.pdf) · 21 páginas | [Aula 2](Flashcards/SACO1-Aula2-Promocao-da-Saude.apkg) · 53 notas, 80 cards |
 | 3 · Políticas de Saúde antes do SUS | [SACO1-Parte3-Politicas-de-Saude-antes-do-SUS.pdf](PDFs/SACO1-Parte3-Politicas-de-Saude-antes-do-SUS.pdf) · 17 páginas | [Aula 3](Flashcards/SACO1-Aula3-Politicas-de-Saude-antes-do-SUS.apkg) · 43 notas, 64 cards |
 | 4 · O SUS na CF88 | [SACO1-Parte4-O-SUS-na-CF88.pdf](PDFs/SACO1-Parte4-O-SUS-na-CF88.pdf) · 16 páginas | [Aula 4](Flashcards/SACO1-Aula4-O-SUS-na-CF88.apkg) · 59 notas, 85 cards |
+
+| Aula | Lista de questões |
+|---|---|
+| 1 · Conceito de Saúde | [SACO1-Lista1-Conceito-de-Saude.pdf](PDFs/SACO1-Lista1-Conceito-de-Saude.pdf) · 10 páginas · 12 questões (5 de prova, 7 autorais) |
+| 2 · Promoção da Saúde | [SACO1-Lista2-Promocao-da-Saude.pdf](PDFs/SACO1-Lista2-Promocao-da-Saude.pdf) · 16 páginas · 22 questões (15 de prova, 7 autorais) |
+| 3 · Políticas de Saúde antes do SUS | [SACO1-Lista3-Politicas-de-Saude-antes-do-SUS.pdf](PDFs/SACO1-Lista3-Politicas-de-Saude-antes-do-SUS.pdf) · 12 páginas · 15 questões (8 de prova, 7 autorais) |
+| 4 · O SUS na CF88 | [SACO1-Lista4-O-SUS-na-CF88.pdf](PDFs/SACO1-Lista4-O-SUS-na-CF88.pdf) · 16 páginas · 26 questões (18 de prova, 8 autorais) |
 
 O arquivo [SACO1-Completo.apkg](Flashcards/SACO1-Completo.apkg) traz os quatro baralhos de uma vez (191 notas, 288 cards).
 
@@ -18,6 +25,17 @@ Cada parte cobre todos os slides da aula (o título de cada seção diz quais) e
 - As caixas **Na prova** mostram como cada assunto já foi cobrado.
 - Cada PDF termina com um **Resumo em 1 minuto** e com **Como cai na prova**: as questões que mais caem nos compilados de provas, com resposta-modelo.
 - Onde os gabaritos dos alunos divergem entre si ou dos textos, a resposta segue os slides e as fontes oficiais, e o aviso **⚠** explica a escolha. O mesmo aviso aparece nos cards.
+
+## As listas de questões
+
+Cada lista reúne **todas as questões identificadas nos dois compilados de provas** sobre a aula, agrupadas pelos mesmos temas do PDF de estudo, e acrescenta **questões autorais** para os assuntos importantes que as provas ainda não cobraram.
+
+- **Questão de prova** (cabeçalho roxo): quando a mesma questão caiu em várias provas, ela aparece uma vez só, e o cabeçalho lista todas as provas em que caiu. Algumas provas só deixaram o tema lembrado pelos alunos, sem o enunciado; nesses casos o enunciado foi reconstruído a partir do tema, e o cabeçalho avisa.
+- **Questão autoral** (cabeçalho na cor da aula): o cabeçalho diz qual lacuna ela cobre.
+- As questões vêm primeiro, com linhas para responder à mão. O **gabarito comentado** fica no fim, e cada resposta diz que seção da parte revisar.
+- O aviso **⚠** marca onde os gabaritos dos alunos divergem, com a resposta mais segura.
+
+Uma forma de usar: estude a parte, faça os cards dela por alguns dias e então responda a lista sem consultar nada. Depois confira no gabarito e volte às seções indicadas.
 
 ## Os flashcards
 
@@ -53,7 +71,7 @@ Cada card tem a tag `SACO1::AulaN::<seção>`, que segue as seções do PDF (por
 ## Estrutura
 
 ```
-PDFs/          os quatro PDFs
+PDFs/          os quatro PDFs de estudo e as quatro listas de questões
 Flashcards/    os baralhos do Anki (um por aula e o completo)
 fonte/         tudo o que gera os PDFs e os cards (veja fonte/README.md)
 CREDITOS.md    origem das imagens, fontes tipográficas e ícones

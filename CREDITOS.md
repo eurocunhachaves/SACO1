@@ -14,7 +14,7 @@ Todas as fotos e ilustrações de `fonte/img/web/` vêm do Wikimedia Commons, co
 
 | Arquivo | O que mostra | Autor | Licença | Onde aparece |
 |---|---|---|---|---|
-| [p1-asclepio](https://commons.wikimedia.org/wiki/File:1671_-_Archaeological_Museum,_Athens_-_Asklepios_-_Photo_by_Giovanni_Dall%27Orto,_Nov_11_2009.jpg) | Asclépio | Giovanni Dall'Orto | Attribution | alternativa |
+| [p1-asclepio](https://commons.wikimedia.org/wiki/File:1671_-_Archaeological_Museum,_Athens_-_Asklepios_-_Photo_by_Giovanni_Dall%27Orto,_Nov_11_2009.jpg) | Asclépio | Giovanni Dall'Orto | Attribution | PDF |
 | [p1-asclepio-alt](https://commons.wikimedia.org/wiki/File:Statuette_of_Asclepius_from_Epidaurus_%283rd_-_4th_cent._A.D.%29_at_the_National_Archaeological_Museum_of_Athens_on_27_March_2018.jpg) | Asclépio | George E. Koronaios | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | alternativa |
 | [p1-flexner](https://commons.wikimedia.org/wiki/File:Abraham_Flexner,_head-and-shoulders_portrait,_facing_left%29_-_Klauber,_photographer_and_art_dealer,_Louisville,_Ky_LCCN91788348.jpg) | Abraham Flexner | Edward Klauber (fotógrafo) | Domínio público | alternativa |
 | [p1-flexner-alt](https://commons.wikimedia.org/wiki/File:A._Flexner,_%22Medical_Education%22,_1910;_title_page_Wellcome_L0015353.jpg) | Relatório Flexner | Wellcome Collection | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | alternativa |
@@ -44,7 +44,7 @@ Todas as fotos e ilustrações de `fonte/img/web/` vêm do Wikimedia Commons, co
 | [p2-horta](https://commons.wikimedia.org/wiki/File:Horta_Comunit%C3%A1ria_Plantando_Sa%C3%BAde1.jpg) | Horta comunitária | Douglas Lopes | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | capa |
 | [p2-horta-alt](https://commons.wikimedia.org/wiki/File:Horta_Comunit%C3%A1ria_Plantando_Sa%C3%BAde5.jpg) | Horta comunitária | Douglas Lopes | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | alternativa |
 | [p2-ottawa](https://commons.wikimedia.org/wiki/File:Centre_Block_-_Parliament_Hill.jpg) | Carta de Ottawa | Saffron Blaze | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | alternativa |
-| [p2-roda-conversa](https://commons.wikimedia.org/wiki/File:Roda_de_conversa_-_Sa%C3%BAde_Mental_e_Educa%C3%A7%C3%A3o_Popular_-_o_cuidado_como_pr%C3%A1tica_educativa.jpg) | Educação em saúde | Projeto de Educação Comunitária Integrar | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | alternativa |
+| [p2-roda-conversa](https://commons.wikimedia.org/wiki/File:Roda_de_conversa_-_Sa%C3%BAde_Mental_e_Educa%C3%A7%C3%A3o_Popular_-_o_cuidado_como_pr%C3%A1tica_educativa.jpg) | Educação em saúde | Projeto de Educação Comunitária Integrar | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | PDF |
 | [p2-saneamento](https://commons.wikimedia.org/wiki/File:EsgotoCeuAbertoValterCampanatoAgenciaBrasil.jpg) | Saneamento | Valter Campanato/Agência Brasil | [CC BY 3.0 BR](https://creativecommons.org/licenses/by/3.0/br/deed.en) | cards |
 | [p2-sigerist](https://commons.wikimedia.org/wiki/File:H.E._Sigerist_1934.jpg) | Henry Sigerist | Autor desconhecido | Domínio público | PDF, cards |
 | [p2-tabaco](https://commons.wikimedia.org/wiki/File:Cigarettes_brazil.JPG) | Controle do tabaco | Ministério da Saúde/INCA | Attribution | alternativa |
@@ -63,7 +63,7 @@ Todas as fotos e ilustrações de `fonte/img/web/` vêm do Wikimedia Commons, co
 | [p3-ferrovia](https://commons.wikimedia.org/wiki/File:Esta%C3%A7%C3%A3o_da_Companhia_Paulista_de_Estradas_de_Ferro,_Centro_de_Mem%C3%B3ria_-_Unicamp_%28APS_1.1.0438%29.jpg) | Ferroviários e as CAPs | Aristides Pedro da Silva/Centro de Memória – Unicamp | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | alternativa |
 | [p3-ferrovia-alt](https://commons.wikimedia.org/wiki/File:Guilherme_Gaensly_-_S%C3%A3o_Paulo,_Esta%C3%A7%C3%A3o_da_Luz,_Acervo_do_Museu_Paulista_da_USP_%28cropped%29.jpg) | Ferroviários e as CAPs | Guilherme Gaensly | Domínio público | alternativa |
 | [p3-lazareto](https://commons.wikimedia.org/wiki/File:20210116081318_ru%C3%ADnas_lazareto_ilha_grande.jpg) | Lazareto da Ilha Grande | VALDOGILDO | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | cards |
-| [p3-oswaldo-cruz](https://commons.wikimedia.org/wiki/File:PSM_V87_D173_Oswaldo_Concalves_Cruz.png) | Oswaldo Cruz | Autor desconhecido (Popular Science Monthly, 1915) | Domínio público | alternativa |
+| [p3-oswaldo-cruz](https://commons.wikimedia.org/wiki/File:PSM_V87_D173_Oswaldo_Concalves_Cruz.png) | Oswaldo Cruz | Autor desconhecido (Popular Science Monthly, 1915) | Domínio público | PDF |
 | [p3-oswaldo-cruz-alt](https://commons.wikimedia.org/wiki/File:Osvaldo_Gon%C3%A7alves_Cruz.tif) | Oswaldo Cruz | Autor desconhecido (Fundo Agência Nacional, Arquivo Nacional) | Domínio público | alternativa |
 | [p3-revolta-bonde](https://commons.wikimedia.org/wiki/File:Bonde_-_Revolta_da_Vacina.JPG) | Revolta da Vacina | Revista da Semana (27/11/1904) | Domínio público | alternativa |
 | [p3-revolta-bonde-alt](https://commons.wikimedia.org/wiki/File:Bonde_virado_%28Revolta_da_Vacina%29.jpg) | Revolta da Vacina | Autor desconhecido | Domínio público | alternativa |
@@ -88,7 +88,7 @@ Todas as fotos e ilustrações de `fonte/img/web/` vêm do Wikimedia Commons, co
 | [p4-samu](https://commons.wikimedia.org/wiki/File:SAMU_de_Campo_Maior,_Piau%C3%AD.JPG) | SAMU | Moacir Ximenes | Domínio público | alternativa |
 | [p4-samu-alt](https://commons.wikimedia.org/wiki/File:Ambul%C3%A2ncia_do_Servi%C3%A7o_de_Atendimento_M%C3%B3vel_de_Urg%C3%AAncia_%28SAMU%29_%283575367073%29.jpg) | SAMU | Passarinho/Prefeitura de Olinda | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | alternativa |
 | [p4-sus-logo](https://commons.wikimedia.org/wiki/File:Logo_SUS.svg) | Logotipo do SUS | Ministério da Saúde (Portal da Saúde) | Domínio público | alternativa |
-| [p4-ubs](https://commons.wikimedia.org/wiki/File:Unidade_B%C3%A1sica_de_Sa%C3%BAde_Vila_Jardim.jpg) | Unidade Básica de Saúde | Paulo rsmenezes | [CC BY-SA 3.0 BR](https://creativecommons.org/licenses/by-sa/3.0/br/deed.en) | alternativa |
+| [p4-ubs](https://commons.wikimedia.org/wiki/File:Unidade_B%C3%A1sica_de_Sa%C3%BAde_Vila_Jardim.jpg) | Unidade Básica de Saúde | Paulo rsmenezes | [CC BY-SA 3.0 BR](https://creativecommons.org/licenses/by-sa/3.0/br/deed.en) | PDF |
 | [p4-ulysses](https://commons.wikimedia.org/wiki/File:Ulyssesguimaraesconstituicao_restored.jpg) | Constituição de 1988 | Arquivo Agência Brasil (restauração digital: Wilfredor) | [CC BY 3.0 BR](https://creativecommons.org/licenses/by/3.0/br/deed.en) | capa |
 | [p4-ulysses-alt](https://commons.wikimedia.org/wiki/File:Promulga%C3%A7%C3%A3o-Constitui%C3%A7%C3%A3o-1988.jpg) | Constituição de 1988 | Agência Brasil | [CC BY 3.0 BR](https://creativecommons.org/licenses/by/3.0/br/deed.en) | alternativa |
 | [p4-vacinacao](https://commons.wikimedia.org/wiki/File:IBPA_16576_-_Dia_D_da_vacina%C3%A7%C3%A3o_contra_a_poliomielite_e_o_sarampo_-_2018-09-15_-_Cristine_Rochol-PMPA.JPG) | Vacinação | Cristine Rochol/PMPA | Attribution | alternativa |

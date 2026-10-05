@@ -412,6 +412,16 @@ figcaption .cred { display: block; margin-top: .8mm; color: var(--muted); font-s
 .q > .qa { background: var(--ok-bg); padding: 3mm 4.2mm 1.6mm; border-top: 1px dashed #bfe3c9; }
 .q > .qa p, .q > .qa li { font: 400 8.9pt/1.5 var(--sans); }
 .q > .qa .lbl { font: 800 7.2pt/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--ok); margin-bottom: 1.6mm; display: block; }
+/* listas de questões: questões autorais, linhas para responder e gabarito comentado */
+.q.autoral { border-color: var(--c-light); }
+.q.autoral > .qh { background: var(--c-tint); border-bottom-color: var(--c-light); color: var(--c-dark); }
+.q.autoral > .qh .src { color: var(--c); }
+.q > .linhas { height: calc(var(--n) * 7mm); margin: 0 4.2mm 3.2mm;
+  background: repeating-linear-gradient(to bottom, transparent 0 6.6mm, #dcd6ea 6.6mm 7mm); }
+.q.autoral > .linhas { background: repeating-linear-gradient(to bottom, transparent 0 6.6mm, var(--c-light) 6.6mm 7mm); }
+.q.gab { margin: 2.6mm 0 3.4mm; }
+.q.gab > .qh { padding: 1.6mm 4mm; }
+.q.gab > .qa { border-top: 0; padding-top: 2.4mm; }
 .div { color: var(--alerta); }
 .div::before { content: "⚠ "; }
 

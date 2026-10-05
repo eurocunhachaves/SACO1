@@ -348,7 +348,7 @@ Quarenta anos depois de Ottawa, o recado do terceiro artigo é que, mais do que 
 - **Lalonde (Canadá, 1974):** campo da saúde (biologia, ambiente, estilo de vida, assistência); marco da promoção moderna.
 - **Dois enfoques:** comportamental ou regulador (hábitos, educação) × socioambiental ou emancipador (determinantes, políticas, intersetorialidade).
 - **Alma-Ata (1978, OMS e UNICEF):** cuidados primários e "Saúde para Todos no Ano 2000"; oito elementos; no Brasil, PIASS e AIS.
-- **Ottawa (1986):** promoção é o **processo de capacitação da comunidade**; oito pré-requisitos; três estratégias (defesa de causa, capacitação, mediação); cinco campos.
+- **Ottawa (1986):** promoção é o **processo de capacitação da comunidade**; nove pré-requisitos; três estratégias (defesa de causa, capacitação, mediação); cinco campos.
 - **Conferências:** Adelaide (políticas públicas), Sundsvall (ambientes), Jacarta (ação comunitária), México, Bangkok, Nairóbi, Helsinque (Saúde em Todas as Políticas), Xangai (sustentável), Genebra (bem-estar).
 - **Dahlgren e Whitehead:** camadas do núcleo aos macrodeterminantes; níveis 1º comportamento, 2º comunidade, 3º condições (intersetorial), 4º contexto. **Diderichsen:** estratificação e posição social.
 - **Promoção × prevenção:** DSS × HND; impulsionar × impedir; participativo × receptivo.
