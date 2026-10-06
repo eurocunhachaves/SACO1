@@ -16,6 +16,8 @@ Material de estudo da disciplina **Saúde Coletiva I** (Medicina, UFCG, Prof. Dr
 | 3 · Políticas de Saúde antes do SUS | [SACO1-Lista3-Politicas-de-Saude-antes-do-SUS.pdf](PDFs/SACO1-Lista3-Politicas-de-Saude-antes-do-SUS.pdf) · 12 páginas · 15 questões (8 de prova, 7 autorais) |
 | 4 · O SUS na CF88 | [SACO1-Lista4-O-SUS-na-CF88.pdf](PDFs/SACO1-Lista4-O-SUS-na-CF88.pdf) · 16 páginas · 26 questões (18 de prova, 8 autorais) |
 
+Os seis textos indicados para a Aula 2 têm um resumo de uma página cada em [SACO1-Resumos-dos-Textos.pdf](PDFs/SACO1-Resumos-dos-Textos.pdf) (8 páginas, com capa e sumário).
+
 O arquivo [SACO1-Completo.apkg](Flashcards/SACO1-Completo.apkg) traz os quatro baralhos de uma vez (191 notas, 288 cards).
 
 ## Os PDFs
@@ -25,6 +27,10 @@ Cada parte cobre todos os slides da aula (o título de cada seção diz quais) e
 - As caixas **Na prova** mostram como cada assunto já foi cobrado.
 - Cada PDF termina com um **Resumo em 1 minuto** e com **Como cai na prova**: as questões que mais caem nos compilados de provas, com resposta-modelo.
 - Onde os gabaritos dos alunos divergem entre si ou dos textos, a resposta segue os slides e as fontes oficiais, e o aviso **⚠** explica a escolha. O mesmo aviso aparece nos cards.
+
+## Os resumos dos textos
+
+Uma página para cada texto, na ordem: Buss e Pellegrini Filho (2007), Sícoli e Nascimento (2003), Buss et al. (2020), Declaração de Alma-Ata (1978), Carta de Ottawa (1986) e PNPS (edição de 2018). Cada página traz a ficha do texto, as ideias centrais, uma caixa **Na prova** com as questões dos compilados que saíram dele e uma caixa **Conexão** com a seção da Parte 2, as questões da Lista 2 e a tag dos cards.
 
 ## As listas de questões
 
@@ -71,7 +77,7 @@ Cada card tem a tag `SACO1::AulaN::<seção>`, que segue as seções do PDF (por
 ## Estrutura
 
 ```
-PDFs/          os quatro PDFs de estudo e as quatro listas de questões
+PDFs/          os quatro PDFs de estudo, as quatro listas de questões e os resumos dos textos
 Flashcards/    os baralhos do Anki (um por aula e o completo)
 fonte/         tudo o que gera os PDFs e os cards (veja fonte/README.md)
 CREDITOS.md    origem das imagens, fontes tipográficas e ícones

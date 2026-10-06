@@ -37,6 +37,7 @@ body.p1 { --c: #0f766e; --c-dark: #0b4f4a; --c-mid: #2a9d8f; --c-light: #e3f4f1;
 body.p2 { --c: #4d7c0f; --c-dark: #355708; --c-mid: #6f9f2a; --c-light: #edf5df; --c-tint: #f6faef; --c-2: #d9663b; }
 body.p3 { --c: #b45309; --c-dark: #7c3a0a; --c-mid: #d97a2b; --c-light: #fbefe1; --c-tint: #fdf7f0; --c-2: #2f6f8f;  --c-cov: #c6e6f5; }
 body.p4 { --c: #1d4ed8; --c-dark: #1e3a8a; --c-mid: #3b6ff0; --c-light: #e4ecfd; --c-tint: #f3f6fe; --c-2: #f2b33d; }
+body.p5 { --c: #8a1538; --c-dark: #5c0e26; --c-mid: #b4325a; --c-light: #f8e3ea; --c-tint: #fcf4f6; --c-2: #f2b33d; }
 
 /* ---------- Página ---------- */
 @page {
@@ -477,3 +478,32 @@ svg.dg { font-family: var(--sans); overflow: visible; }
 .goals li::marker, .toc li::marker, .cover li::marker, .tl li::marker, .refs li::marker { content: none; }
 /* imagens altas dentro de colunas */
 .cols figure .art img, .side figure .art img { max-height: 96mm; width: auto; max-width: 100%; margin: 0 auto; }
+
+/* ---------- Resumos: uma página por texto, tipografia mais compacta ---------- */
+body.p5 main { font-size: 9.3pt; line-height: 1.44; }
+body.p5 main h1 { font-size: 17pt; margin-bottom: 2.6mm; padding-bottom: 3mm; }
+body.p5 main h1::before { font-size: 38pt; }
+body.p5 main h1 .kick { margin-bottom: 1.6mm; }
+body.p5 main h2 { font-size: 11pt; margin: 3.6mm 0 1.4mm; }
+body.p5 main h2::before { font-size: 8.6pt; }
+body.p5 main p { margin-bottom: 1.7mm; }
+body.p5 main li { margin-bottom: .4mm; }
+body.p5 .lead { font-size: 10.2pt; line-height: 1.45; margin-bottom: 2.6mm; }
+body.p5 .lead::first-letter { font-size: 27pt; }
+body.p5 .box { margin: 2.6mm 0; padding: 2.4mm 3.8mm 2mm 4.6mm; }
+body.p5 .box > .bh { margin-bottom: 1mm; }
+body.p5 .box p, body.p5 .box li { font-size: 8.7pt; line-height: 1.42; }
+body.p5 .tbl { margin: 2.2mm 0 2.8mm; }
+body.p5 .tbl table { font-size: 8pt; line-height: 1.35; }
+body.p5 .tbl.compact td { padding: 1mm 2.4mm; }
+body.p5 .tbl.compact th { padding: 1.4mm 2.4mm; }
+body.p5 .tbl .cap { margin-bottom: 1.4mm; }
+body.p5 .cols { gap: 3.6mm; margin: 2mm 0 2.4mm; }
+body.p5 .cols .box { margin: 0; height: 100%; box-sizing: border-box; }
+body.p5 .card { padding: 2.6mm 3.4mm; }
+body.p5 .card p { font-size: 8.4pt; line-height: 1.4; }
+.ficha {
+  display: flex; flex-wrap: wrap; gap: 1mm 5mm; margin: -.6mm 0 3mm; padding-bottom: 2.4mm;
+  border-bottom: 1px solid var(--rule); font: 400 7.9pt/1.4 var(--sans); color: var(--ink-2);
+}
+.ficha b { font: 700 6.6pt/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--c); margin-right: 1.6mm; }

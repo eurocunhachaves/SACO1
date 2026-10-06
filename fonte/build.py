@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Gera os PDFs do material de estudo a partir de fonte/partes/parteN.md.
 
-Uso:  python3 fonte/build.py [1 2 3 4] [L1 L2 L3 L4]
+Uso:  python3 fonte/build.py [1 2 3 4] [L1 L2 L3 L4] [R]
       Números geram as partes (fonte/partes/parteN.md); LN gera a lista de questões
-      da aula N (fonte/listas/listaN.md). Sem argumentos gera as partes e as listas.
+      da aula N (fonte/listas/listaN.md); R gera os resumos dos textos da disciplina
+      (fonte/resumos/resumos.md), um por página. Sem argumentos gera tudo.
 
 Sintaxe extra no Markdown (além de Markdown padrão com tabelas):
   # Kicker || Título                 -> título de seção com linha de apoio
@@ -375,6 +376,15 @@ def cover_bg(parte):
                     s.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="#fff" stroke-opacity=".12" stroke-width="0.45"/>')
         for x, y in pts:
             s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="1.5" fill="#fff" fill-opacity=".28"/>')
+    elif parte == 5:  # resumos: folhas de texto empilhadas
+        for k in range(6):
+            x, y, r = 118 + k * 9, 14 + k * 8, -9 + k * 3.2
+            s.append(f'<g transform="rotate({r:.1f} {x + 30} {y + 40})">'
+                     f'<rect x="{x}" y="{y}" width="60" height="80" rx="2" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="0.5"/>')
+            for t in range(9):
+                w = 44 - (t * 7 % 15)
+                s.append(f'<line x1="{x + 8}" y1="{y + 14 + t * 7}" x2="{x + 8 + w}" y2="{y + 14 + t * 7}" stroke="#fff" stroke-opacity=".10" stroke-width="0.6"/>')
+            s.append("</g>")
     s.append("</svg>")
     return "".join(s)
 
@@ -390,13 +400,13 @@ def cover(meta):
 <section class="cover">
   <div class="bg">{cover_bg(meta['parte'])}</div>
   <div class="top"><span>Saúde Coletiva I · Medicina UFCG</span><span class="pill">{meta['aula']}</span></div>
-  <div class="num">0{meta['parte']}</div>
+  <div class="num">{meta.get('numero', f"0{meta['parte']}")}</div>
   <div class="titles">
-    <div class="kicker">{meta['rotulo']} {meta['parte']} de 4</div>
+    <div class="kicker">{meta.get('kicker', f"{meta['rotulo']} {meta['parte']} de 4")}</div>
     <h1 class="ctitle">{inline(meta['titulo'])}</h1>
     <div class="csub">{inline(meta['subtitulo'])}</div>
   </div>
-  <div class="inside"><h4>Nesta {meta['rotulo'].lower()}</h4><ol>{items}</ol></div>
+  <div class="inside"><h4>{meta.get('nesta_titulo', f"Nesta {meta['rotulo'].lower()}")}</h4><ol>{items}</ol></div>
   {hero}
   <div class="foot"><span>Baseado nos slides do <b>Prof. Dr. Cristiano Moura</b><br>{inline(meta.get('base',''))}</span><span>Material de estudo · {meta.get('semestre','2026')}</span></div>
 </section>"""
@@ -457,7 +467,7 @@ def opening(meta, pages, body_html):
                if leg else "")
     return f"""
 <section class="opening{dense}">
-  <div class="eyebrow">{meta['rotulo']} {meta['parte']} · {meta['aula']}</div>
+  <div class="eyebrow">{meta['rotulo_n']} · {meta['aula']}</div>
   <h2 class="toc-title">Sumário</h2>
   <ol class="toc">{''.join(toc)}</ol>
   <div class="goals"><h4>{goals_t}</h4><ul>{goals}</ul></div>
@@ -466,7 +476,7 @@ def opening(meta, pages, body_html):
 
 
 def page_style(meta):
-    left = f"SAÚDE COLETIVA I  ·  {meta['rotulo'].upper()} {meta['parte']}"
+    left = f"SAÚDE COLETIVA I  ·  {meta['rotulo_n'].upper()}"
     right = meta.get("cabecalho", meta["titulo"]).upper()
     return (
         "<style>@page { @top-left { content: \"%s\"; } @top-right { content: \"%s\"; } }</style>"
@@ -478,7 +488,7 @@ def build_html(meta, body_html, pages):
     css = (ESTILO / "base.css").as_uri()
     return f"""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
-<title>SACO 1 · {meta['rotulo']} {meta['parte']} · {re.sub('<.*?>','',meta['titulo'])}</title>
+<title>SACO 1 · {meta['rotulo_n']} · {re.sub('<.*?>','',meta['titulo'])}</title>
 <link rel="stylesheet" href="{css}">
 {page_style(meta)}
 </head>
@@ -584,15 +594,17 @@ def fix_outline(pdf_path, pages):
     tmp.replace(pdf_path)
 
 
-def build(n, lista=False):
+def build(n, tipo="parte"):
+    """tipo: "parte", "lista" ou "resumos" (este último é único e usa a cor 5)"""
     global HEADS
-    nome = f"lista{n}" if lista else f"parte{n}"
-    src = FONTE / ("listas" if lista else "partes") / f"{nome}.md"
+    nome = "resumos" if tipo == "resumos" else f"{tipo}{n}"
+    src = FONTE / {"parte": "partes", "lista": "listas", "resumos": "resumos"}[tipo] / f"{nome}.md"
     text = src.read_text()
     _, fm, body = text.split("---\n", 2)
     meta = yaml.safe_load(fm)
     meta["parte"] = n
-    meta["rotulo"] = "Lista" if lista else "Parte"
+    meta["rotulo"] = {"parte": "Parte", "lista": "Lista", "resumos": "Resumos"}[tipo]
+    meta["rotulo_n"] = "Resumos" if tipo == "resumos" else f"{meta['rotulo']} {n}"
     body = pre_inline(body)
     HEADS = []
     body_html = expand(body)
@@ -611,12 +623,16 @@ def build(n, lista=False):
         pages = novo
     fix_outline(pdf_path, pages)
     h1s = [h for h in HEADS if h["level"] == 1]
-    print(f"{meta['rotulo']} {n}: {pdf_path.name}  ({len(pages)}/{len(h1s)} seções paginadas)")
+    print(f"{meta['rotulo_n']}: {pdf_path.name}  ({len(pages)}/{len(h1s)} seções paginadas)")
     return pdf_path
 
 
 if __name__ == "__main__":
-    alvos = sys.argv[1:] or ["1", "2", "3", "4", "L1", "L2", "L3", "L4"]
+    alvos = sys.argv[1:] or ["1", "2", "3", "4", "L1", "L2", "L3", "L4", "R"]
     for a in alvos:
-        lista = a.upper().startswith("L")
-        build(int(a.lstrip("Ll")), lista)
+        if a.upper() == "R":
+            build(5, "resumos")
+        elif a.upper().startswith("L"):
+            build(int(a[1:]), "lista")
+        else:
+            build(int(a))
