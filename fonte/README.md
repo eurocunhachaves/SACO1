@@ -17,16 +17,18 @@ python3 -m playwright install chromium
 | PDFs de estudo | `python3 fonte/build.py [1 2 3 4]` | `PDFs/SACO1-ParteN-*.pdf` |
 | Listas de questões | `python3 fonte/build.py [L1 L2 L3 L4]` | `PDFs/SACO1-ListaN-*.pdf` |
 | Resumos dos textos | `python3 fonte/build.py R` | `PDFs/SACO1-Resumos-dos-Textos.pdf` |
+| Compilado de objetivas | `python3 fonte/build.py O` | `PDFs/SACO1-Compilado-Questoes-Objetivas.pdf` |
 | Flashcards | `python3 fonte/cards/gerar.py [1 2 3 4]` | `Flashcards/*.apkg` |
 | Imagens | `python3 fonte/imagens.py` | `fonte/img/` |
 
-Sem argumentos, cada comando gera tudo (o `build.py` gera as partes, as listas e os resumos). O baralho completo (`SACO1-Completo.apkg`) só sai quando as quatro aulas são geradas juntas. O `imagens.py` serve apenas para reimportar as imagens: ele precisa das páginas dos slides originais renderizadas e das imagens baixadas do Wikimedia Commons, e o resultado já está no repositório.
+Sem argumentos, cada comando gera tudo (o `build.py` gera as partes, as listas, os resumos e o compilado). Se o Playwright não achar o próprio Chromium, aponte `PW_CHROMIUM` para um Chromium já instalado. O baralho completo (`SACO1-Completo.apkg`) só sai quando as quatro aulas são geradas juntas. O `imagens.py` serve apenas para reimportar as imagens: ele precisa das páginas dos slides originais renderizadas e das imagens baixadas do Wikimedia Commons, e o resultado já está no repositório.
 
 ## Onde mexer
 
 - **Texto de uma parte:** `partes/parteN.md`. Além do Markdown comum, há caixas, quadros, questões de prova e figuras; a sintaxe está no topo de `build.py`.
 - **Lista de questões:** `listas/listaN.md`, com a mesma sintaxe das partes. Cada questão é um bloco `:::q`; `!autoral` marca uma questão autoral e `!linhasN` acrescenta N linhas para resposta. O gabarito fica na seção final, com um bloco `:::r` por questão. Os detalhes estão no topo de `build.py`.
 - **Resumos dos textos:** `resumos/resumos.md`, um título `#` por texto. Cada texto precisa caber em uma página: depois de gerar, confira que o PDF tem 8 páginas (capa, sumário e seis resumos). A tipografia mais compacta dos resumos fica no fim de `estilo/base.css` (`body.p5`).
+- **Compilado de objetivas:** `compilado/objetivas.md`, um título `#` por faixa de recorrência. Cada questão é um bloco `:::q` com o gabarito depois de `>>>`; a chave `rotulo_resposta` do cabeçalho troca o rótulo "Resposta-modelo" por "Gabarito comentado". Ao acrescentar uma questão, atualize a contagem no `kicker`, a seção certa e o gabarito rápido do fim. A cor é a `body.p6` de `estilo/base.css`.
 - **Cards:** `cards/aulaN.yaml`. O formato está no topo de `cards/aula1.yaml`. Nunca mude nem reaproveite o `id` de um card: é por ele que o Anki reconhece o card ao importar de novo e mantém o histórico de revisões.
 - **Visual:** `estilo/base.css` para os PDFs; o CSS dos cards fica em `cards/gerar.py`.
 - **Diagramas:** cada um é uma função em `diagramas.py`. Os cards usam os mesmos SVGs, convertidos em PNG por `rasterizar.py`. As versões com partes escondidas (`*-oculta-*.svg`) alimentam os cards de oclusão.

@@ -206,7 +206,7 @@ def render_block(name, args, body_lines):
         qtext, _, ans = body.partition("\n>>>")
         ans_html = ""
         if ans.strip():
-            ans_html = f'<div class="qa"><span class="lbl">Resposta-modelo</span>{expand(ans.strip())}</div>'
+            ans_html = f'<div class="qa"><span class="lbl">{QA_LBL}</span>{expand(ans.strip())}</div>'
         return (
             f'<div class="q{cls}"><div class="qh"><span>{inline(head.strip())}</span>'
             f'<span class="src">{inline(src.strip())}</span></div>'
@@ -385,6 +385,16 @@ def cover_bg(parte):
                 w = 44 - (t * 7 % 15)
                 s.append(f'<line x1="{x + 8}" y1="{y + 14 + t * 7}" x2="{x + 8 + w}" y2="{y + 14 + t * 7}" stroke="#fff" stroke-opacity=".10" stroke-width="0.6"/>')
             s.append("</g>")
+    elif parte == 6:  # compilado de objetivas: folha de respostas, uma bolha marcada por linha
+        import random
+        rnd = random.Random(11)
+        for k in range(15):
+            y = 16 + k * 9.2
+            marcada = rnd.randrange(5)
+            for t in range(5):
+                cx = 128 + t * 15
+                s.append(f'<circle cx="{cx}" cy="{y:.1f}" r="3.1" fill="#fff" fill-opacity="{.30 if t == marcada else 0}" '
+                         f'stroke="#fff" stroke-opacity=".16" stroke-width="0.5"/>')
     s.append("</svg>")
     return "".join(s)
 
@@ -453,7 +463,7 @@ def opening(meta, pages, body_html):
             f'<div class="it"><span class="sw" style="background:{bg};color:{col}">{icon(ic)}</span>'
             f'<span><b>{label}</b>{desc}</span></div>'
         )
-    if meta["rotulo"] == "Lista":   # nas listas, a legenda explica os dois tipos de questão
+    if meta["rotulo"] in ("Lista", "Compilado"):   # nas listas, a legenda explica os dois tipos de questão
         for cls, label, desc, bg, col in (
             ("q", "Questão de prova", "já caiu; o cabeçalho diz em que provas", "var(--prova-bg)", "var(--prova)"),
             ("q autoral", "Questão autoral", "tema importante que as provas ainda não cobraram", "var(--c-tint)", "var(--c)"),
@@ -528,7 +538,9 @@ async def to_pdf(html_path, pdf_path):
     from playwright.async_api import async_playwright
 
     async with async_playwright() as p:
-        b = await p.chromium.launch(args=["--allow-file-access-from-files"])
+        import os   # PW_CHROMIUM: caminho de um Chromium já instalado, se o do Playwright faltar
+        b = await p.chromium.launch(args=["--allow-file-access-from-files"],
+                                    executable_path=os.environ.get("PW_CHROMIUM") or None)
         pg = await b.new_page(viewport={"width": 794, "height": 1123})   # A4 a 96 dpi
         await pg.emulate_media(media="print")
         await pg.goto(html_path.as_uri())
@@ -594,17 +606,23 @@ def fix_outline(pdf_path, pages):
     tmp.replace(pdf_path)
 
 
+UNICOS = {"resumos": ("resumos", "Resumos"), "objetivas": ("compilado", "Compilado")}   # tipo: (pasta, rótulo)
+QA_LBL = "Resposta-modelo"
+
+
 def build(n, tipo="parte"):
-    """tipo: "parte", "lista" ou "resumos" (este último é único e usa a cor 5)"""
-    global HEADS
-    nome = "resumos" if tipo == "resumos" else f"{tipo}{n}"
-    src = FONTE / {"parte": "partes", "lista": "listas", "resumos": "resumos"}[tipo] / f"{nome}.md"
+    """tipo: "parte", "lista", "resumos" (cor 5) ou "objetivas" (cor 6); os dois últimos são únicos"""
+    global HEADS, QA_LBL
+    nome = tipo if tipo in UNICOS else f"{tipo}{n}"
+    pasta = UNICOS[tipo][0] if tipo in UNICOS else {"parte": "partes", "lista": "listas"}[tipo]
+    src = FONTE / pasta / f"{nome}.md"
     text = src.read_text()
     _, fm, body = text.split("---\n", 2)
     meta = yaml.safe_load(fm)
     meta["parte"] = n
-    meta["rotulo"] = {"parte": "Parte", "lista": "Lista", "resumos": "Resumos"}[tipo]
-    meta["rotulo_n"] = "Resumos" if tipo == "resumos" else f"{meta['rotulo']} {n}"
+    meta["rotulo"] = UNICOS[tipo][1] if tipo in UNICOS else {"parte": "Parte", "lista": "Lista"}[tipo]
+    meta["rotulo_n"] = meta["rotulo"] if tipo in UNICOS else f"{meta['rotulo']} {n}"
+    QA_LBL = meta.get("rotulo_resposta", "Resposta-modelo")
     body = pre_inline(body)
     HEADS = []
     body_html = expand(body)
@@ -628,10 +646,12 @@ def build(n, tipo="parte"):
 
 
 if __name__ == "__main__":
-    alvos = sys.argv[1:] or ["1", "2", "3", "4", "L1", "L2", "L3", "L4", "R"]
+    alvos = sys.argv[1:] or ["1", "2", "3", "4", "L1", "L2", "L3", "L4", "R", "O"]
     for a in alvos:
         if a.upper() == "R":
             build(5, "resumos")
+        elif a.upper() == "O":
+            build(6, "objetivas")
         elif a.upper().startswith("L"):
             build(int(a[1:]), "lista")
         else:

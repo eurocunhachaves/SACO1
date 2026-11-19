@@ -38,6 +38,7 @@ body.p2 { --c: #4d7c0f; --c-dark: #355708; --c-mid: #6f9f2a; --c-light: #edf5df;
 body.p3 { --c: #b45309; --c-dark: #7c3a0a; --c-mid: #d97a2b; --c-light: #fbefe1; --c-tint: #fdf7f0; --c-2: #2f6f8f;  --c-cov: #c6e6f5; }
 body.p4 { --c: #1d4ed8; --c-dark: #1e3a8a; --c-mid: #3b6ff0; --c-light: #e4ecfd; --c-tint: #f3f6fe; --c-2: #f2b33d; }
 body.p5 { --c: #8a1538; --c-dark: #5c0e26; --c-mid: #b4325a; --c-light: #f8e3ea; --c-tint: #fcf4f6; --c-2: #f2b33d; }
+body.p6 { --c: #44403c; --c-dark: #292524; --c-mid: #78716c; --c-light: #ece9e6; --c-tint: #f7f6f4; --c-2: #e0a526; }
 
 /* ---------- Página ---------- */
 @page {
@@ -507,3 +508,9 @@ body.p5 .card p { font-size: 8.4pt; line-height: 1.4; }
   border-bottom: 1px solid var(--rule); font: 400 7.9pt/1.4 var(--sans); color: var(--ink-2);
 }
 .ficha b { font: 700 6.6pt/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--c); margin-right: 1.6mm; }
+
+/* ---------- Compilado de objetivas: a questão pode quebrar entre enunciado e gabarito ---------- */
+body.p6 .q { break-inside: auto; }
+body.p6 .q > .qh { break-after: avoid; }
+body.p6 .q > .qb { break-inside: avoid; }
+body.p6 .q > .qa { break-inside: avoid; }
